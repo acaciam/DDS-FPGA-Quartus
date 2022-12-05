@@ -1,0 +1,11 @@
+module freqSwitch(sw, set, tuner);
+	input sw[9 : 0];
+	input set;
+	output reg [27:0] tuner;
+	int m0, m1, m2, m3, m4, m5, m6, m7, m8, m9 = 0;
+	
+	
+	always@(negedge set)
+	begin
+	case(sw):
+		sw[0]

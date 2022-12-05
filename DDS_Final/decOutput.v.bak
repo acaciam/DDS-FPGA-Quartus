@@ -1,0 +1,8 @@
+module decOutput(dec, display);
+	input [9:0]dec;
+	output reg [6:0] display;
+	
+	//when new dec value is passed
+	always@(dec)
+	begin
+	

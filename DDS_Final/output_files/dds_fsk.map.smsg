@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at freqSwitch.v(10): always construct contains both blocking and non-blocking assignments File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/freqSwitch.v Line: 10
