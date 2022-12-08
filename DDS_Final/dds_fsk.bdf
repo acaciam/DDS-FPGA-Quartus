@@ -104,7 +104,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 117 12)(pt 121 8))
 	)
 	(text "VCC" (rect 136 7 160 20)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect -224 88 -152 112))
+	(annotation_block (location)(rect -224 0 -152 200))
 )
 (pin
 	(output)
@@ -308,7 +308,7 @@ https://fpgasoftware.intel.com/eula.
 		(pt 48 16)
 		(output)
 		(text "OUT" (rect 32 7 56 23)(font "Courier New" (bold))(invisible))
-		(text "OUT" (rect 32 7 52 23)(font "Courier New" (bold))(invisible))
+		(text "OUT" (rect 32 7 56 23)(font "Courier New" (bold))(invisible))
 		(line (pt 39 16)(pt 48 16))
 	)
 	(drawing
@@ -650,7 +650,7 @@ https://fpgasoftware.intel.com/eula.
 		(pt 176 32)
 		(output)
 		(text "lights[6..0]" (rect 0 0 66 15)(font "Arial" ))
-		(text "lights[6..0]" (rect 100 27 155 42)(font "Arial" ))
+		(text "lights[6..0]" (rect 100 27 166 42)(font "Arial" ))
 		(line (pt 176 32)(pt 160 32)(line_width 3))
 	)
 	(drawing
@@ -679,7 +679,7 @@ https://fpgasoftware.intel.com/eula.
 		(pt 176 32)
 		(output)
 		(text "lights[6..0]" (rect 0 0 66 15)(font "Arial" ))
-		(text "lights[6..0]" (rect 100 27 155 42)(font "Arial" ))
+		(text "lights[6..0]" (rect 100 27 166 42)(font "Arial" ))
 		(line (pt 176 32)(pt 160 32)(line_width 3))
 	)
 	(drawing
@@ -708,7 +708,7 @@ https://fpgasoftware.intel.com/eula.
 		(pt 176 32)
 		(output)
 		(text "lights[6..0]" (rect 0 0 66 15)(font "Arial" ))
-		(text "lights[6..0]" (rect 100 27 155 42)(font "Arial" ))
+		(text "lights[6..0]" (rect 100 27 166 42)(font "Arial" ))
 		(line (pt 176 32)(pt 160 32)(line_width 3))
 	)
 	(drawing
@@ -737,7 +737,7 @@ https://fpgasoftware.intel.com/eula.
 		(pt 176 32)
 		(output)
 		(text "lights[6..0]" (rect 0 0 66 15)(font "Arial" ))
-		(text "lights[6..0]" (rect 100 27 155 42)(font "Arial" ))
+		(text "lights[6..0]" (rect 100 27 166 42)(font "Arial" ))
 		(line (pt 176 32)(pt 160 32)(line_width 3))
 	)
 	(drawing
@@ -1023,11 +1023,6 @@ https://fpgasoftware.intel.com/eula.
 	(pt 384 240)
 )
 (connector
-	(pt 16 80)
-	(pt 24 80)
-	(bus)
-)
-(connector
 	(text "SW[9..0]" (rect 26 56 80 75)(font "Intel Clear" ))
 	(pt 24 80)
 	(pt 152 80)
@@ -1086,6 +1081,11 @@ https://fpgasoftware.intel.com/eula.
 	(pt 400 184)
 	(pt 240 184)
 )
+(connector
+	(text "clk10" (rect 594 464 628 483)(font "Intel Clear" ))
+	(pt 584 488)
+	(pt 656 488)
+)
 (junction (pt 280 528))
 (junction (pt 280 456))
 (junction (pt 760 344))
@@ -1093,7 +1093,6 @@ https://fpgasoftware.intel.com/eula.
 (junction (pt 768 880))
 (junction (pt 768 984))
 (junction (pt 216 528))
-(junction (pt 24 80))
 (text "square wave output" (rect 1624 120 1765 140)(font "Intel Clear" (font_size 8)))
 (text "Output to DAC" (rect 1504 88 1607 108)(font "Intel Clear" (font_size 8)))
 (rectangle (rect 1496 80 1944 432)(color 85 255 255))

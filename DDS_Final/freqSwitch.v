@@ -5,7 +5,6 @@ module phase_accum(clk, clr, sw, set, fout, decVal);
 	output reg [15:0] decVal;
 	reg [27:0] tuner;
 	integer baseTune = 26843.5456;
-	intitial fout = 0;
 	//update when key[0] is pressed
 	always
 	begin
