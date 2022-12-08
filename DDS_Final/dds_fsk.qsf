@@ -230,11 +230,7 @@ set_global_assignment -name QIP_FILE point.qip
 set_global_assignment -name SIGNALTAP_FILE stp1.stp
 set_global_assignment -name BDF_FILE ../DDS_Final/dds_fsk.bdf
 set_global_assignment -name BDF_FILE ../DDS_Final/dds_final.bdf
-<<<<<<< HEAD
-set_global_assignment -name QIP_FILE mux_OUT.qip
-=======
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
->>>>>>> a531553d1e02ad9b88d491ee1951d5c68a5f6653
 set_global_assignment -name SLD_FILE db/stp1_auto_stripped.stp
