@@ -47,13 +47,6 @@ set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
-set_global_assignment -name QIP_FILE pll.qip
-set_global_assignment -name QIP_FILE mux_in.qip
-set_global_assignment -name BDF_FILE dds_fsk.bdf
-set_global_assignment -name VERILOG_FILE phase_accum.v
-set_global_assignment -name QIP_FILE mux_tune.qip
-set_global_assignment -name QIP_FILE freq0.qip
-set_global_assignment -name QIP_FILE freq1.qip
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
@@ -64,15 +57,6 @@ set_location_assignment PIN_A7 -to KEY[1]
 set_location_assignment PIN_P11 -to CLOCK_50
 set_location_assignment PIN_V10 -to GPIO_0
 set_location_assignment PIN_W10 -to GPIO_1
-set_global_assignment -name QIP_FILE mux_LUT.qip
-set_global_assignment -name MIF_FILE sinLUT.mif
-set_global_assignment -name QIP_FILE sinLUT.qip
-set_global_assignment -name VERILOG_FILE freqSwitch.v
-set_global_assignment -name MIF_FILE triLUT.mif
-set_global_assignment -name QIP_FILE triLUT.qip
-set_global_assignment -name VERILOG_FILE decOutput.v
-set_global_assignment -name QIP_FILE decZero.qip
-set_global_assignment -name QIP_FILE point.qip
 set_location_assignment PIN_C17 -to HEX0[6]
 set_location_assignment PIN_D17 -to HEX0[5]
 set_location_assignment PIN_E16 -to HEX0[4]
@@ -148,7 +132,6 @@ set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -
 set_location_assignment PIN_W13 -to GPIO_[13]
 set_global_assignment -name ENABLE_SIGNALTAP ON
 set_global_assignment -name USE_SIGNALTAP_FILE stp1.stp
-set_global_assignment -name SIGNALTAP_FILE stp1.stp
 set_global_assignment -name SLD_NODE_CREATOR_ID 110 -section_id auto_signaltap_0
 set_global_assignment -name SLD_NODE_ENTITY_NAME sld_signaltap -section_id auto_signaltap_0
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_RAM_BLOCK_TYPE=AUTO" -section_id auto_signaltap_0
@@ -229,8 +212,29 @@ set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[28] -
 set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[29] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
 set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[30] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
 set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[31] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name VERILOG_FILE phase_accum.v
+set_global_assignment -name QIP_FILE pll.qip
+set_global_assignment -name QIP_FILE mux_in.qip
+set_global_assignment -name BDF_FILE dds_fsk.bdf
+set_global_assignment -name QIP_FILE mux_tune.qip
+set_global_assignment -name QIP_FILE freq0.qip
+set_global_assignment -name QIP_FILE freq1.qip
+set_global_assignment -name QIP_FILE mux_LUT.qip
+set_global_assignment -name MIF_FILE sinLUT.mif
+set_global_assignment -name QIP_FILE sinLUT.qip
+set_global_assignment -name MIF_FILE triLUT.mif
+set_global_assignment -name QIP_FILE triLUT.qip
+set_global_assignment -name VERILOG_FILE decOutput.v
+set_global_assignment -name QIP_FILE decZero.qip
+set_global_assignment -name QIP_FILE point.qip
+set_global_assignment -name SIGNALTAP_FILE stp1.stp
 set_global_assignment -name BDF_FILE ../DDS_Final/dds_fsk.bdf
 set_global_assignment -name BDF_FILE ../DDS_Final/dds_final.bdf
+<<<<<<< HEAD
 set_global_assignment -name QIP_FILE mux_OUT.qip
+=======
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+>>>>>>> a531553d1e02ad9b88d491ee1951d5c68a5f6653
 set_global_assignment -name SLD_FILE db/stp1_auto_stripped.stp
