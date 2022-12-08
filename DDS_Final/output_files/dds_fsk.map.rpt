@@ -1,5 +1,5 @@
 Analysis & Synthesis report for dds_fsk
-Thu Nov 17 10:23:38 2022
+Wed Dec  7 22:00:41 2022
 Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 
 
@@ -15,8 +15,8 @@ Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
   9. Analysis & Synthesis IP Cores Summary
- 10. Registers Removed During Synthesis
- 11. Removed Registers Triggering Further Register Optimizations
+ 10. User-Specified and Inferred Latches
+ 11. Registers Removed During Synthesis
  12. General Register Statistics
  13. Inverted Register Statistics
  14. Multiplexer Restructuring Statistics (Restructuring Performed)
@@ -31,23 +31,15 @@ Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
  23. Parameter Settings for User Entity Instance: decZero:inst11|lpm_constant:LPM_CONSTANT_component
  24. Parameter Settings for User Entity Instance: point:inst12|lpm_constant:LPM_CONSTANT_component
  25. Parameter Settings for Inferred Entity Instance: sld_signaltap:auto_signaltap_0
- 26. Parameter Settings for Inferred Entity Instance: freqSwitch:inst7|lpm_divide:Mod0
- 27. Parameter Settings for Inferred Entity Instance: freqSwitch:inst7|lpm_divide:Div0
- 28. Parameter Settings for Inferred Entity Instance: freqSwitch:inst7|lpm_divide:Mod1
- 29. Parameter Settings for Inferred Entity Instance: freqSwitch:inst7|lpm_divide:Div1
- 30. Parameter Settings for Inferred Entity Instance: freqSwitch:inst7|lpm_divide:Mod2
- 31. Parameter Settings for Inferred Entity Instance: freqSwitch:inst7|lpm_divide:Div2
- 32. Parameter Settings for Inferred Entity Instance: freqSwitch:inst7|lpm_divide:Mod3
- 33. Parameter Settings for Inferred Entity Instance: freqSwitch:inst7|lpm_mult:Mult0
- 34. altpll Parameter Settings by Entity Instance
- 35. altsyncram Parameter Settings by Entity Instance
- 36. lpm_mult Parameter Settings by Entity Instance
- 37. Signal Tap Logic Analyzer Settings
- 38. Post-Synthesis Netlist Statistics for Top Partition
- 39. Elapsed Time Per Partition
- 40. Connections to In-System Debugging Instance "auto_signaltap_0"
- 41. Analysis & Synthesis Messages
- 42. Analysis & Synthesis Suppressed Messages
+ 26. Parameter Settings for Inferred Entity Instance: phase_accum:inst6|lpm_mult:Mult0
+ 27. altpll Parameter Settings by Entity Instance
+ 28. altsyncram Parameter Settings by Entity Instance
+ 29. lpm_mult Parameter Settings by Entity Instance
+ 30. Signal Tap Logic Analyzer Settings
+ 31. Post-Synthesis Netlist Statistics for Top Partition
+ 32. Elapsed Time Per Partition
+ 33. Connections to In-System Debugging Instance "auto_signaltap_0"
+ 34. Analysis & Synthesis Messages
 
 
 
@@ -74,15 +66,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Nov 17 10:23:38 2022       ;
+; Analysis & Synthesis Status        ; Successful - Wed Dec  7 22:00:41 2022       ;
 ; Quartus Prime Version              ; 21.1.1 Build 850 06/23/2022 SJ Lite Edition ;
 ; Revision Name                      ; dds_fsk                                     ;
 ; Top-level Entity Name              ; dds_fsk                                     ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 1,250                                       ;
-;     Total combinational functions  ; 993                                         ;
-;     Dedicated logic registers      ; 655                                         ;
-; Total registers                    ; 655                                         ;
+; Total logic elements               ; 904                                         ;
+;     Total combinational functions  ; 662                                         ;
+;     Dedicated logic registers      ; 604                                         ;
+; Total registers                    ; 604                                         ;
 ; Total pins                         ; 70                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 40,960                                      ;
@@ -192,132 +184,131 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processors 3-8         ;   0.0%      ;
+;     Processors 2-8         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                   ;
-+--------------------------------------------------------------------+-----------------+----------------------------------------------+----------------------------------------------------------------------------------------------------------------------+-------------+
-; File Name with User-Entered Path                                   ; Used in Netlist ; File Type                                    ; File Name with Absolute Path                                                                                         ; Library     ;
-+--------------------------------------------------------------------+-----------------+----------------------------------------------+----------------------------------------------------------------------------------------------------------------------+-------------+
-; pll.v                                                              ; yes             ; User Wizard-Generated File                   ; C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/pll.v                                                              ;             ;
-; dds_fsk.bdf                                                        ; yes             ; User Block Diagram/Schematic File            ; C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/dds_fsk.bdf                                                        ;             ;
-; phase_accum.v                                                      ; yes             ; User Verilog HDL File                        ; C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/phase_accum.v                                                      ;             ;
-; mux_LUT.v                                                          ; yes             ; User Wizard-Generated File                   ; C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/mux_LUT.v                                                          ;             ;
-; sinLUT.mif                                                         ; yes             ; User Memory Initialization File              ; C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/sinLUT.mif                                                         ;             ;
-; sinLUT.v                                                           ; yes             ; User Wizard-Generated File                   ; C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/sinLUT.v                                                           ;             ;
-; freqSwitch.v                                                       ; yes             ; User Verilog HDL File                        ; C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/freqSwitch.v                                                       ;             ;
-; triLUT.mif                                                         ; yes             ; User Memory Initialization File              ; C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/triLUT.mif                                                         ;             ;
-; triLUT.v                                                           ; yes             ; User Wizard-Generated File                   ; C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/triLUT.v                                                           ;             ;
-; decOutput.v                                                        ; yes             ; User Verilog HDL File                        ; C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/decOutput.v                                                        ;             ;
-; decZero.v                                                          ; yes             ; User Wizard-Generated File                   ; C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/decZero.v                                                          ;             ;
-; point.v                                                            ; yes             ; User Wizard-Generated File                   ; C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/point.v                                                            ;             ;
-; altpll.tdf                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altpll.tdf                                                    ;             ;
-; aglobal211.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/aglobal211.inc                                                ;             ;
-; stratix_pll.inc                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/stratix_pll.inc                                               ;             ;
-; stratixii_pll.inc                                                  ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/stratixii_pll.inc                                             ;             ;
-; cycloneii_pll.inc                                                  ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/cycloneii_pll.inc                                             ;             ;
-; db/pll_altpll.v                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/pll_altpll.v                                                    ;             ;
-; lpm_mux.tdf                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_mux.tdf                                                   ;             ;
-; muxlut.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/muxlut.inc                                                    ;             ;
-; bypassff.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/bypassff.inc                                                  ;             ;
-; altshift.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altshift.inc                                                  ;             ;
-; db/mux_d7c.tdf                                                     ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/mux_d7c.tdf                                                     ;             ;
-; altsyncram.tdf                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altsyncram.tdf                                                ;             ;
-; stratix_ram_block.inc                                              ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                         ;             ;
-; lpm_mux.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_mux.inc                                                   ;             ;
-; lpm_decode.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_decode.inc                                                ;             ;
-; a_rdenreg.inc                                                      ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/a_rdenreg.inc                                                 ;             ;
-; altrom.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altrom.inc                                                    ;             ;
-; altram.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altram.inc                                                    ;             ;
-; altdpram.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altdpram.inc                                                  ;             ;
-; db/altsyncram_mn81.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/altsyncram_mn81.tdf                                             ;             ;
-; db/altsyncram_hn81.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/altsyncram_hn81.tdf                                             ;             ;
-; lpm_constant.tdf                                                   ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_constant.tdf                                              ;             ;
-; sld_signaltap.vhd                                                  ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/sld_signaltap.vhd                                             ;             ;
-; sld_signaltap_impl.vhd                                             ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/sld_signaltap_impl.vhd                                        ;             ;
-; sld_ela_control.vhd                                                ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/sld_ela_control.vhd                                           ;             ;
-; lpm_shiftreg.tdf                                                   ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_shiftreg.tdf                                              ;             ;
-; lpm_constant.inc                                                   ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_constant.inc                                              ;             ;
-; dffeea.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/dffeea.inc                                                    ;             ;
-; sld_mbpmg.vhd                                                      ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/sld_mbpmg.vhd                                                 ;             ;
-; sld_ela_trigger_flow_mgr.vhd                                       ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/sld_ela_trigger_flow_mgr.vhd                                  ;             ;
-; sld_buffer_manager.vhd                                             ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/sld_buffer_manager.vhd                                        ;             ;
-; db/altsyncram_al14.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/altsyncram_al14.tdf                                             ;             ;
-; altdpram.tdf                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altdpram.tdf                                                  ;             ;
-; memmodes.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/others/maxplus2/memmodes.inc                                                ;             ;
-; a_hdffe.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/a_hdffe.inc                                                   ;             ;
-; alt_le_rden_reg.inc                                                ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/alt_le_rden_reg.inc                                           ;             ;
-; altsyncram.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altsyncram.inc                                                ;             ;
-; db/mux_h7c.tdf                                                     ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/mux_h7c.tdf                                                     ;             ;
-; lpm_decode.tdf                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_decode.tdf                                                ;             ;
-; declut.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/declut.inc                                                    ;             ;
-; lpm_compare.inc                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_compare.inc                                               ;             ;
-; db/decode_3af.tdf                                                  ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/decode_3af.tdf                                                  ;             ;
-; lpm_counter.tdf                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_counter.tdf                                               ;             ;
-; lpm_add_sub.inc                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_add_sub.inc                                               ;             ;
-; cmpconst.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/cmpconst.inc                                                  ;             ;
-; lpm_counter.inc                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_counter.inc                                               ;             ;
-; alt_counter_stratix.inc                                            ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/alt_counter_stratix.inc                                       ;             ;
-; db/cntr_vqh.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/cntr_vqh.tdf                                                    ;             ;
-; db/cmpr_grb.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/cmpr_grb.tdf                                                    ;             ;
-; db/cntr_6ki.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/cntr_6ki.tdf                                                    ;             ;
-; db/cntr_5rh.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/cntr_5rh.tdf                                                    ;             ;
-; db/cmpr_hrb.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/cmpr_hrb.tdf                                                    ;             ;
-; db/cntr_odi.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/cntr_odi.tdf                                                    ;             ;
-; db/cmpr_drb.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/cmpr_drb.tdf                                                    ;             ;
-; sld_rom_sr.vhd                                                     ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/sld_rom_sr.vhd                                                ;             ;
-; sld_jtag_endpoint_adapter.vhd                                      ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd                                 ;             ;
-; sld_jtag_endpoint_adapter_impl.sv                                  ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter_impl.sv                             ;             ;
-; sld_hub.vhd                                                        ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/sld_hub.vhd                                                   ; altera_sld  ;
-; db/ip/sld7592f0f3/alt_sld_fab.v                                    ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/ip/sld7592f0f3/alt_sld_fab.v                                    ; alt_sld_fab ;
-; db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab.v             ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab.v             ; alt_sld_fab ;
-; db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; yes             ; Auto-Found SystemVerilog HDL File            ; C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; alt_sld_fab ;
-; db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; alt_sld_fab ;
-; db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; yes             ; Encrypted Auto-Found VHDL File               ; C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; alt_sld_fab ;
-; db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; alt_sld_fab ;
-; sld_jtag_hub.vhd                                                   ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                              ;             ;
-; lpm_divide.tdf                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_divide.tdf                                                ;             ;
-; abs_divider.inc                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/abs_divider.inc                                               ;             ;
-; sign_div_unsign.inc                                                ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/sign_div_unsign.inc                                           ;             ;
-; db/lpm_divide_i3o.tdf                                              ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/lpm_divide_i3o.tdf                                              ;             ;
-; db/abs_divider_kbg.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/abs_divider_kbg.tdf                                             ;             ;
-; db/alt_u_div_she.tdf                                               ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/alt_u_div_she.tdf                                               ;             ;
-; db/add_sub_t3c.tdf                                                 ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/add_sub_t3c.tdf                                                 ;             ;
-; db/add_sub_u3c.tdf                                                 ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/add_sub_u3c.tdf                                                 ;             ;
-; db/lpm_abs_o99.tdf                                                 ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/lpm_abs_o99.tdf                                                 ;             ;
-; db/lpm_abs_8b9.tdf                                                 ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/lpm_abs_8b9.tdf                                                 ;             ;
-; db/lpm_divide_fbo.tdf                                              ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/lpm_divide_fbo.tdf                                              ;             ;
-; db/lpm_divide_ibo.tdf                                              ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/lpm_divide_ibo.tdf                                              ;             ;
-; db/abs_divider_nbg.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/abs_divider_nbg.tdf                                             ;             ;
-; db/alt_u_div_2ie.tdf                                               ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/alt_u_div_2ie.tdf                                               ;             ;
-; db/lpm_abs_r99.tdf                                                 ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/lpm_abs_r99.tdf                                                 ;             ;
-; db/lpm_divide_sco.tdf                                              ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/lpm_divide_sco.tdf                                              ;             ;
-; db/abs_divider_1dg.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/abs_divider_1dg.tdf                                             ;             ;
-; db/alt_u_div_mke.tdf                                               ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/alt_u_div_mke.tdf                                               ;             ;
-; db/lpm_abs_5b9.tdf                                                 ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/lpm_abs_5b9.tdf                                                 ;             ;
-; lpm_mult.tdf                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_mult.tdf                                                  ;             ;
-; multcore.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/multcore.inc                                                  ;             ;
-; multcore.tdf                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/multcore.tdf                                                  ;             ;
-; csa_add.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/csa_add.inc                                                   ;             ;
-; mpar_add.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/mpar_add.inc                                                  ;             ;
-; muleabz.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/muleabz.inc                                                   ;             ;
-; mul_lfrg.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/mul_lfrg.inc                                                  ;             ;
-; mul_boothc.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/mul_boothc.inc                                                ;             ;
-; alt_ded_mult.inc                                                   ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/alt_ded_mult.inc                                              ;             ;
-; alt_ded_mult_y.inc                                                 ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/alt_ded_mult_y.inc                                            ;             ;
-; dffpipe.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/dffpipe.inc                                                   ;             ;
-; mpar_add.tdf                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/mpar_add.tdf                                                  ;             ;
-; lpm_add_sub.tdf                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_add_sub.tdf                                               ;             ;
-; addcore.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/addcore.inc                                                   ;             ;
-; look_add.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/look_add.inc                                                  ;             ;
-; alt_stratix_add_sub.inc                                            ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/alt_stratix_add_sub.inc                                       ;             ;
-; db/add_sub_irg.tdf                                                 ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/add_sub_irg.tdf                                                 ;             ;
-; db/add_sub_drg.tdf                                                 ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/add_sub_drg.tdf                                                 ;             ;
-; altshift.tdf                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altshift.tdf                                                  ;             ;
-+--------------------------------------------------------------------+-----------------+----------------------------------------------+----------------------------------------------------------------------------------------------------------------------+-------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                         ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+-------------+
+; File Name with User-Entered Path                                   ; Used in Netlist ; File Type                                    ; File Name with Absolute Path                                                                                               ; Library     ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+-------------+
+; phase_accum.v                                                      ; yes             ; User Verilog HDL File                        ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v                                                      ;             ;
+; pll.v                                                              ; yes             ; User Wizard-Generated File                   ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/pll.v                                                              ;             ;
+; dds_fsk.bdf                                                        ; yes             ; User Block Diagram/Schematic File            ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/dds_fsk.bdf                                                        ;             ;
+; mux_LUT.v                                                          ; yes             ; User Wizard-Generated File                   ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/mux_LUT.v                                                          ;             ;
+; sinLUT.mif                                                         ; yes             ; User Memory Initialization File              ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/sinLUT.mif                                                         ;             ;
+; sinLUT.v                                                           ; yes             ; User Wizard-Generated File                   ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/sinLUT.v                                                           ;             ;
+; triLUT.mif                                                         ; yes             ; User Memory Initialization File              ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/triLUT.mif                                                         ;             ;
+; triLUT.v                                                           ; yes             ; User Wizard-Generated File                   ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/triLUT.v                                                           ;             ;
+; decOutput.v                                                        ; yes             ; User Verilog HDL File                        ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/decOutput.v                                                        ;             ;
+; decZero.v                                                          ; yes             ; User Wizard-Generated File                   ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/decZero.v                                                          ;             ;
+; point.v                                                            ; yes             ; User Wizard-Generated File                   ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/point.v                                                            ;             ;
+; altpll.tdf                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altpll.tdf                                                          ;             ;
+; aglobal211.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/aglobal211.inc                                                      ;             ;
+; stratix_pll.inc                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/stratix_pll.inc                                                     ;             ;
+; stratixii_pll.inc                                                  ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/stratixii_pll.inc                                                   ;             ;
+; cycloneii_pll.inc                                                  ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/cycloneii_pll.inc                                                   ;             ;
+; db/pll_altpll.v                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/pll_altpll.v                                                    ;             ;
+; lpm_mux.tdf                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_mux.tdf                                                         ;             ;
+; muxlut.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/muxlut.inc                                                          ;             ;
+; bypassff.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/bypassff.inc                                                        ;             ;
+; altshift.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altshift.inc                                                        ;             ;
+; db/mux_d7c.tdf                                                     ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/mux_d7c.tdf                                                     ;             ;
+; altsyncram.tdf                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altsyncram.tdf                                                      ;             ;
+; stratix_ram_block.inc                                              ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                               ;             ;
+; lpm_mux.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_mux.inc                                                         ;             ;
+; lpm_decode.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_decode.inc                                                      ;             ;
+; a_rdenreg.inc                                                      ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/a_rdenreg.inc                                                       ;             ;
+; altrom.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altrom.inc                                                          ;             ;
+; altram.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altram.inc                                                          ;             ;
+; altdpram.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altdpram.inc                                                        ;             ;
+; db/altsyncram_mn81.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/altsyncram_mn81.tdf                                             ;             ;
+; db/altsyncram_hn81.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/altsyncram_hn81.tdf                                             ;             ;
+; lpm_constant.tdf                                                   ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_constant.tdf                                                    ;             ;
+; sld_signaltap.vhd                                                  ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/sld_signaltap.vhd                                                   ;             ;
+; sld_signaltap_impl.vhd                                             ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/sld_signaltap_impl.vhd                                              ;             ;
+; sld_ela_control.vhd                                                ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/sld_ela_control.vhd                                                 ;             ;
+; lpm_shiftreg.tdf                                                   ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_shiftreg.tdf                                                    ;             ;
+; lpm_constant.inc                                                   ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_constant.inc                                                    ;             ;
+; dffeea.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/dffeea.inc                                                          ;             ;
+; sld_mbpmg.vhd                                                      ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/sld_mbpmg.vhd                                                       ;             ;
+; sld_ela_trigger_flow_mgr.vhd                                       ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/sld_ela_trigger_flow_mgr.vhd                                        ;             ;
+; sld_buffer_manager.vhd                                             ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/sld_buffer_manager.vhd                                              ;             ;
+; db/altsyncram_al14.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/altsyncram_al14.tdf                                             ;             ;
+; altdpram.tdf                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altdpram.tdf                                                        ;             ;
+; memmodes.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/others/maxplus2/memmodes.inc                                                      ;             ;
+; a_hdffe.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/a_hdffe.inc                                                         ;             ;
+; alt_le_rden_reg.inc                                                ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/alt_le_rden_reg.inc                                                 ;             ;
+; altsyncram.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altsyncram.inc                                                      ;             ;
+; db/mux_h7c.tdf                                                     ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/mux_h7c.tdf                                                     ;             ;
+; lpm_decode.tdf                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_decode.tdf                                                      ;             ;
+; declut.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/declut.inc                                                          ;             ;
+; lpm_compare.inc                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_compare.inc                                                     ;             ;
+; db/decode_3af.tdf                                                  ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/decode_3af.tdf                                                  ;             ;
+; lpm_counter.tdf                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_counter.tdf                                                     ;             ;
+; lpm_add_sub.inc                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_add_sub.inc                                                     ;             ;
+; cmpconst.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/cmpconst.inc                                                        ;             ;
+; lpm_counter.inc                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_counter.inc                                                     ;             ;
+; alt_counter_stratix.inc                                            ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/alt_counter_stratix.inc                                             ;             ;
+; db/cntr_vqh.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/cntr_vqh.tdf                                                    ;             ;
+; db/cmpr_grb.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/cmpr_grb.tdf                                                    ;             ;
+; db/cntr_6ki.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/cntr_6ki.tdf                                                    ;             ;
+; db/cntr_5rh.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/cntr_5rh.tdf                                                    ;             ;
+; db/cmpr_hrb.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/cmpr_hrb.tdf                                                    ;             ;
+; db/cntr_odi.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/cntr_odi.tdf                                                    ;             ;
+; db/cmpr_drb.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/cmpr_drb.tdf                                                    ;             ;
+; sld_rom_sr.vhd                                                     ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/sld_rom_sr.vhd                                                      ;             ;
+; sld_jtag_endpoint_adapter.vhd                                      ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd                                       ;             ;
+; sld_jtag_endpoint_adapter_impl.sv                                  ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter_impl.sv                                   ;             ;
+; sld_hub.vhd                                                        ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/sld_hub.vhd                                                         ; altera_sld  ;
+; db/ip/sld7592f0f3/alt_sld_fab.v                                    ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/ip/sld7592f0f3/alt_sld_fab.v                                    ; alt_sld_fab ;
+; db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab.v             ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab.v             ; alt_sld_fab ;
+; db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; yes             ; Auto-Found SystemVerilog HDL File            ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; alt_sld_fab ;
+; db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; alt_sld_fab ;
+; db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; yes             ; Encrypted Auto-Found VHDL File               ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; alt_sld_fab ;
+; db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; alt_sld_fab ;
+; sld_jtag_hub.vhd                                                   ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                                    ;             ;
+; lpm_mult.tdf                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_mult.tdf                                                        ;             ;
+; multcore.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/multcore.inc                                                        ;             ;
+; multcore.tdf                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/multcore.tdf                                                        ;             ;
+; csa_add.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/csa_add.inc                                                         ;             ;
+; mpar_add.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/mpar_add.inc                                                        ;             ;
+; muleabz.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/muleabz.inc                                                         ;             ;
+; mul_lfrg.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/mul_lfrg.inc                                                        ;             ;
+; mul_boothc.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/mul_boothc.inc                                                      ;             ;
+; alt_ded_mult.inc                                                   ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/alt_ded_mult.inc                                                    ;             ;
+; alt_ded_mult_y.inc                                                 ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/alt_ded_mult_y.inc                                                  ;             ;
+; dffpipe.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/dffpipe.inc                                                         ;             ;
+; mpar_add.tdf                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/mpar_add.tdf                                                        ;             ;
+; lpm_add_sub.tdf                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_add_sub.tdf                                                     ;             ;
+; addcore.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/addcore.inc                                                         ;             ;
+; look_add.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/look_add.inc                                                        ;             ;
+; alt_stratix_add_sub.inc                                            ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/alt_stratix_add_sub.inc                                             ;             ;
+; db/add_sub_irg.tdf                                                 ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/add_sub_irg.tdf                                                 ;             ;
+; db/add_sub_drg.tdf                                                 ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/add_sub_drg.tdf                                                 ;             ;
+; altshift.tdf                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altshift.tdf                                                        ;             ;
+; freqSwitch.v                                                       ; yes             ; User Verilog HDL File                        ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/freqSwitch.v                                                       ;             ;
+; lpm_divide.tdf                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_divide.tdf                                                      ;             ;
+; abs_divider.inc                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/abs_divider.inc                                                     ;             ;
+; sign_div_unsign.inc                                                ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/sign_div_unsign.inc                                                 ;             ;
+; db/lpm_divide_i3o.tdf                                              ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/lpm_divide_i3o.tdf                                              ;             ;
+; db/abs_divider_kbg.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/abs_divider_kbg.tdf                                             ;             ;
+; db/alt_u_div_she.tdf                                               ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/alt_u_div_she.tdf                                               ;             ;
+; db/add_sub_t3c.tdf                                                 ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/add_sub_t3c.tdf                                                 ;             ;
+; db/add_sub_u3c.tdf                                                 ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/add_sub_u3c.tdf                                                 ;             ;
+; db/lpm_abs_o99.tdf                                                 ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/lpm_abs_o99.tdf                                                 ;             ;
+; db/lpm_abs_8b9.tdf                                                 ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/lpm_abs_8b9.tdf                                                 ;             ;
+; db/lpm_divide_fbo.tdf                                              ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/lpm_divide_fbo.tdf                                              ;             ;
+; db/lpm_divide_ibo.tdf                                              ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/lpm_divide_ibo.tdf                                              ;             ;
+; db/abs_divider_nbg.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/abs_divider_nbg.tdf                                             ;             ;
+; db/alt_u_div_2ie.tdf                                               ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/alt_u_div_2ie.tdf                                               ;             ;
+; db/lpm_abs_r99.tdf                                                 ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/lpm_abs_r99.tdf                                                 ;             ;
+; db/lpm_divide_sco.tdf                                              ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/lpm_divide_sco.tdf                                              ;             ;
+; db/abs_divider_1dg.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/abs_divider_1dg.tdf                                             ;             ;
+; db/alt_u_div_mke.tdf                                               ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/alt_u_div_mke.tdf                                               ;             ;
+; db/lpm_abs_5b9.tdf                                                 ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/lpm_abs_5b9.tdf                                                 ;             ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+-------------+
 
 
 +------------------------------------------------------------------------+
@@ -325,20 +316,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------------------------+
 ; Resource                                    ; Usage                    ;
 +---------------------------------------------+--------------------------+
-; Estimated Total logic elements              ; 1,250                    ;
+; Estimated Total logic elements              ; 904                      ;
 ;                                             ;                          ;
-; Total combinational functions               ; 993                      ;
+; Total combinational functions               ; 662                      ;
 ; Logic element usage by number of LUT inputs ;                          ;
-;     -- 4 input functions                    ; 287                      ;
-;     -- 3 input functions                    ; 313                      ;
-;     -- <=2 input functions                  ; 393                      ;
+;     -- 4 input functions                    ; 267                      ;
+;     -- 3 input functions                    ; 214                      ;
+;     -- <=2 input functions                  ; 181                      ;
 ;                                             ;                          ;
 ; Logic elements by mode                      ;                          ;
-;     -- normal mode                          ; 716                      ;
-;     -- arithmetic mode                      ; 277                      ;
+;     -- normal mode                          ; 517                      ;
+;     -- arithmetic mode                      ; 145                      ;
 ;                                             ;                          ;
-; Total registers                             ; 655                      ;
-;     -- Dedicated logic registers            ; 655                      ;
+; Total registers                             ; 604                      ;
+;     -- Dedicated logic registers            ; 604                      ;
 ;     -- I/O registers                        ; 0                        ;
 ;                                             ;                          ;
 ; I/O pins                                    ; 70                       ;
@@ -351,8 +342,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                          ;
 ; Maximum fan-out node                        ; altera_internal_jtag~TDO ;
 ; Maximum fan-out                             ; 368                      ;
-; Total fan-out                               ; 5502                     ;
-; Average fan-out                             ; 3.01                     ;
+; Total fan-out                               ; 4602                     ;
+; Average fan-out                             ; 3.18                     ;
 +---------------------------------------------+--------------------------+
 
 
@@ -361,45 +352,22 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                 ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |dds_fsk                                                                                                                                ; 993 (0)             ; 655 (0)                   ; 40960       ; 0          ; 0            ; 0       ; 0         ; 70   ; 0            ; 0          ; |dds_fsk                                                                                                                                                                                                                                                                                                                                            ; dds_fsk                           ; work         ;
+; |dds_fsk                                                                                                                                ; 662 (0)             ; 604 (0)                   ; 40960       ; 0          ; 0            ; 0       ; 0         ; 70   ; 0            ; 0          ; |dds_fsk                                                                                                                                                                                                                                                                                                                                            ; dds_fsk                           ; work         ;
 ;    |decOutput:inst4|                                                                                                                    ; 8 (8)               ; 7 (7)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|decOutput:inst4                                                                                                                                                                                                                                                                                                                            ; decOutput                         ; work         ;
 ;    |decOutput:inst5|                                                                                                                    ; 8 (8)               ; 7 (7)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|decOutput:inst5                                                                                                                                                                                                                                                                                                                            ; decOutput                         ; work         ;
-;    |decOutput:inst8|                                                                                                                    ; 8 (8)               ; 7 (7)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|decOutput:inst8                                                                                                                                                                                                                                                                                                                            ; decOutput                         ; work         ;
-;    |decOutput:inst9|                                                                                                                    ; 0 (0)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|decOutput:inst9                                                                                                                                                                                                                                                                                                                            ; decOutput                         ; work         ;
-;    |freqSwitch:inst7|                                                                                                                   ; 432 (17)            ; 46 (46)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|freqSwitch:inst7                                                                                                                                                                                                                                                                                                                           ; freqSwitch                        ; work         ;
-;       |lpm_divide:Div0|                                                                                                                 ; 101 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|freqSwitch:inst7|lpm_divide:Div0                                                                                                                                                                                                                                                                                                           ; lpm_divide                        ; work         ;
-;          |lpm_divide_fbo:auto_generated|                                                                                                ; 101 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|freqSwitch:inst7|lpm_divide:Div0|lpm_divide_fbo:auto_generated                                                                                                                                                                                                                                                                             ; lpm_divide_fbo                    ; work         ;
-;             |abs_divider_kbg:divider|                                                                                                   ; 101 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|freqSwitch:inst7|lpm_divide:Div0|lpm_divide_fbo:auto_generated|abs_divider_kbg:divider                                                                                                                                                                                                                                                     ; abs_divider_kbg                   ; work         ;
-;                |alt_u_div_she:divider|                                                                                                  ; 101 (101)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|freqSwitch:inst7|lpm_divide:Div0|lpm_divide_fbo:auto_generated|abs_divider_kbg:divider|alt_u_div_she:divider                                                                                                                                                                                                                               ; alt_u_div_she                     ; work         ;
-;       |lpm_divide:Div1|                                                                                                                 ; 79 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|freqSwitch:inst7|lpm_divide:Div1                                                                                                                                                                                                                                                                                                           ; lpm_divide                        ; work         ;
-;          |lpm_divide_ibo:auto_generated|                                                                                                ; 79 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|freqSwitch:inst7|lpm_divide:Div1|lpm_divide_ibo:auto_generated                                                                                                                                                                                                                                                                             ; lpm_divide_ibo                    ; work         ;
-;             |abs_divider_nbg:divider|                                                                                                   ; 79 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|freqSwitch:inst7|lpm_divide:Div1|lpm_divide_ibo:auto_generated|abs_divider_nbg:divider                                                                                                                                                                                                                                                     ; abs_divider_nbg                   ; work         ;
-;                |alt_u_div_2ie:divider|                                                                                                  ; 79 (79)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|freqSwitch:inst7|lpm_divide:Div1|lpm_divide_ibo:auto_generated|abs_divider_nbg:divider|alt_u_div_2ie:divider                                                                                                                                                                                                                               ; alt_u_div_2ie                     ; work         ;
-;       |lpm_divide:Div2|                                                                                                                 ; 10 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|freqSwitch:inst7|lpm_divide:Div2                                                                                                                                                                                                                                                                                                           ; lpm_divide                        ; work         ;
-;          |lpm_divide_sco:auto_generated|                                                                                                ; 10 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|freqSwitch:inst7|lpm_divide:Div2|lpm_divide_sco:auto_generated                                                                                                                                                                                                                                                                             ; lpm_divide_sco                    ; work         ;
-;             |abs_divider_1dg:divider|                                                                                                   ; 10 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|freqSwitch:inst7|lpm_divide:Div2|lpm_divide_sco:auto_generated|abs_divider_1dg:divider                                                                                                                                                                                                                                                     ; abs_divider_1dg                   ; work         ;
-;                |alt_u_div_mke:divider|                                                                                                  ; 10 (10)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|freqSwitch:inst7|lpm_divide:Div2|lpm_divide_sco:auto_generated|abs_divider_1dg:divider|alt_u_div_mke:divider                                                                                                                                                                                                                               ; alt_u_div_mke                     ; work         ;
-;       |lpm_divide:Mod0|                                                                                                                 ; 104 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|freqSwitch:inst7|lpm_divide:Mod0                                                                                                                                                                                                                                                                                                           ; lpm_divide                        ; work         ;
-;          |lpm_divide_i3o:auto_generated|                                                                                                ; 104 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|freqSwitch:inst7|lpm_divide:Mod0|lpm_divide_i3o:auto_generated                                                                                                                                                                                                                                                                             ; lpm_divide_i3o                    ; work         ;
-;             |abs_divider_kbg:divider|                                                                                                   ; 104 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|freqSwitch:inst7|lpm_divide:Mod0|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider                                                                                                                                                                                                                                                     ; abs_divider_kbg                   ; work         ;
-;                |alt_u_div_she:divider|                                                                                                  ; 104 (104)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|freqSwitch:inst7|lpm_divide:Mod0|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider|alt_u_div_she:divider                                                                                                                                                                                                                               ; alt_u_div_she                     ; work         ;
-;       |lpm_divide:Mod1|                                                                                                                 ; 56 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|freqSwitch:inst7|lpm_divide:Mod1                                                                                                                                                                                                                                                                                                           ; lpm_divide                        ; work         ;
-;          |lpm_divide_i3o:auto_generated|                                                                                                ; 56 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|freqSwitch:inst7|lpm_divide:Mod1|lpm_divide_i3o:auto_generated                                                                                                                                                                                                                                                                             ; lpm_divide_i3o                    ; work         ;
-;             |abs_divider_kbg:divider|                                                                                                   ; 56 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|freqSwitch:inst7|lpm_divide:Mod1|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider                                                                                                                                                                                                                                                     ; abs_divider_kbg                   ; work         ;
-;                |alt_u_div_she:divider|                                                                                                  ; 56 (56)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|freqSwitch:inst7|lpm_divide:Mod1|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider|alt_u_div_she:divider                                                                                                                                                                                                                               ; alt_u_div_she                     ; work         ;
-;       |lpm_divide:Mod2|                                                                                                                 ; 11 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|freqSwitch:inst7|lpm_divide:Mod2                                                                                                                                                                                                                                                                                                           ; lpm_divide                        ; work         ;
-;          |lpm_divide_i3o:auto_generated|                                                                                                ; 11 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|freqSwitch:inst7|lpm_divide:Mod2|lpm_divide_i3o:auto_generated                                                                                                                                                                                                                                                                             ; lpm_divide_i3o                    ; work         ;
-;             |abs_divider_kbg:divider|                                                                                                   ; 11 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|freqSwitch:inst7|lpm_divide:Mod2|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider                                                                                                                                                                                                                                                     ; abs_divider_kbg                   ; work         ;
-;                |alt_u_div_she:divider|                                                                                                  ; 11 (11)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|freqSwitch:inst7|lpm_divide:Mod2|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider|alt_u_div_she:divider                                                                                                                                                                                                                               ; alt_u_div_she                     ; work         ;
-;       |lpm_mult:Mult0|                                                                                                                  ; 54 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|freqSwitch:inst7|lpm_mult:Mult0                                                                                                                                                                                                                                                                                                            ; lpm_mult                          ; work         ;
-;          |multcore:mult_core|                                                                                                           ; 54 (37)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|freqSwitch:inst7|lpm_mult:Mult0|multcore:mult_core                                                                                                                                                                                                                                                                                         ; multcore                          ; work         ;
-;             |mpar_add:padder|                                                                                                           ; 17 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|freqSwitch:inst7|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder                                                                                                                                                                                                                                                                         ; mpar_add                          ; work         ;
-;                |lpm_add_sub:adder[0]|                                                                                                   ; 17 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|freqSwitch:inst7|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                                                                                                                                                                                                                    ; lpm_add_sub                       ; work         ;
-;                   |add_sub_irg:auto_generated|                                                                                          ; 17 (17)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|freqSwitch:inst7|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_irg:auto_generated                                                                                                                                                                                                                         ; add_sub_irg                       ; work         ;
+;    |decOutput:inst8|                                                                                                                    ; 4 (4)               ; 6 (6)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|decOutput:inst8                                                                                                                                                                                                                                                                                                                            ; decOutput                         ; work         ;
 ;    |mux_LUT:inst13|                                                                                                                     ; 10 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|mux_LUT:inst13                                                                                                                                                                                                                                                                                                                             ; mux_LUT                           ; work         ;
 ;       |lpm_mux:LPM_MUX_component|                                                                                                       ; 10 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|mux_LUT:inst13|lpm_mux:LPM_MUX_component                                                                                                                                                                                                                                                                                                   ; lpm_mux                           ; work         ;
 ;          |mux_d7c:auto_generated|                                                                                                       ; 10 (10)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|mux_LUT:inst13|lpm_mux:LPM_MUX_component|mux_d7c:auto_generated                                                                                                                                                                                                                                                                            ; mux_d7c                           ; work         ;
-;    |phase_accum:inst6|                                                                                                                  ; 26 (26)             ; 26 (26)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|phase_accum:inst6                                                                                                                                                                                                                                                                                                                          ; phase_accum                       ; work         ;
+;    |phase_accum:inst6|                                                                                                                  ; 131 (67)            ; 26 (26)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|phase_accum:inst6                                                                                                                                                                                                                                                                                                                          ; phase_accum                       ; work         ;
+;       |lpm_mult:Mult0|                                                                                                                  ; 64 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|phase_accum:inst6|lpm_mult:Mult0                                                                                                                                                                                                                                                                                                           ; lpm_mult                          ; work         ;
+;          |multcore:mult_core|                                                                                                           ; 64 (32)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|phase_accum:inst6|lpm_mult:Mult0|multcore:mult_core                                                                                                                                                                                                                                                                                        ; multcore                          ; work         ;
+;             |mpar_add:padder|                                                                                                           ; 32 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|phase_accum:inst6|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder                                                                                                                                                                                                                                                                        ; mpar_add                          ; work         ;
+;                |lpm_add_sub:adder[0]|                                                                                                   ; 17 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|phase_accum:inst6|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                                                                                                                                                                                                                   ; lpm_add_sub                       ; work         ;
+;                   |add_sub_irg:auto_generated|                                                                                          ; 17 (17)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|phase_accum:inst6|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_irg:auto_generated                                                                                                                                                                                                                        ; add_sub_irg                       ; work         ;
+;                |mpar_add:sub_par_add|                                                                                                   ; 15 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|phase_accum:inst6|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                                                                                                                                                                                                                   ; mpar_add                          ; work         ;
+;                   |lpm_add_sub:adder[0]|                                                                                                ; 15 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|phase_accum:inst6|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                                                                                                                                                                                                                              ; lpm_add_sub                       ; work         ;
+;                      |add_sub_drg:auto_generated|                                                                                       ; 15 (15)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|phase_accum:inst6|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_drg:auto_generated                                                                                                                                                                                                   ; add_sub_drg                       ; work         ;
 ;    |pll:inst|                                                                                                                           ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|pll:inst                                                                                                                                                                                                                                                                                                                                   ; pll                               ; work         ;
 ;       |altpll:altpll_component|                                                                                                         ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|pll:inst|altpll:altpll_component                                                                                                                                                                                                                                                                                                           ; altpll                            ; work         ;
 ;          |pll_altpll:auto_generated|                                                                                                    ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|pll:inst|altpll:altpll_component|pll_altpll:auto_generated                                                                                                                                                                                                                                                                                 ; pll_altpll                        ; work         ;
@@ -496,33 +464,61 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
 
 
++----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                ;
++-----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------+------------------------+
+; phase_accum:inst6|tuner[24]                         ; KEY[0]              ; yes                    ;
+; phase_accum:inst6|tuner[23]                         ; KEY[0]              ; yes                    ;
+; phase_accum:inst6|tuner[22]                         ; KEY[0]              ; yes                    ;
+; phase_accum:inst6|tuner[21]                         ; KEY[0]              ; yes                    ;
+; phase_accum:inst6|tuner[20]                         ; KEY[0]              ; yes                    ;
+; phase_accum:inst6|tuner[19]                         ; KEY[0]              ; yes                    ;
+; phase_accum:inst6|tuner[18]                         ; KEY[0]              ; yes                    ;
+; phase_accum:inst6|tuner[17]                         ; KEY[0]              ; yes                    ;
+; phase_accum:inst6|tuner[16]                         ; KEY[0]              ; yes                    ;
+; phase_accum:inst6|tuner[15]                         ; KEY[0]              ; yes                    ;
+; phase_accum:inst6|tuner[14]                         ; KEY[0]              ; yes                    ;
+; phase_accum:inst6|tuner[13]                         ; KEY[0]              ; yes                    ;
+; phase_accum:inst6|tuner[12]                         ; KEY[0]              ; yes                    ;
+; phase_accum:inst6|tuner[11]                         ; KEY[0]              ; yes                    ;
+; phase_accum:inst6|tuner[10]                         ; KEY[0]              ; yes                    ;
+; phase_accum:inst6|tuner[9]                          ; KEY[0]              ; yes                    ;
+; phase_accum:inst6|tuner[8]                          ; KEY[0]              ; yes                    ;
+; phase_accum:inst6|tuner[7]                          ; KEY[0]              ; yes                    ;
+; phase_accum:inst6|tuner[6]                          ; KEY[0]              ; yes                    ;
+; phase_accum:inst6|tuner[5]                          ; KEY[0]              ; yes                    ;
+; phase_accum:inst6|tuner[4]                          ; KEY[0]              ; yes                    ;
+; phase_accum:inst6|tuner[3]                          ; KEY[0]              ; yes                    ;
+; phase_accum:inst6|tuner[2]                          ; KEY[0]              ; yes                    ;
+; phase_accum:inst6|decVal[3]                         ; KEY[0]              ; yes                    ;
+; phase_accum:inst6|decVal[1]                         ; KEY[0]              ; yes                    ;
+; phase_accum:inst6|decVal[0]                         ; KEY[0]              ; yes                    ;
+; phase_accum:inst6|decVal[2]                         ; KEY[0]              ; yes                    ;
+; phase_accum:inst6|decVal[7]                         ; KEY[0]              ; yes                    ;
+; phase_accum:inst6|decVal[5]                         ; KEY[0]              ; yes                    ;
+; phase_accum:inst6|decVal[4]                         ; KEY[0]              ; yes                    ;
+; phase_accum:inst6|decVal[6]                         ; KEY[0]              ; yes                    ;
+; phase_accum:inst6|decVal[9]                         ; KEY[0]              ; yes                    ;
+; phase_accum:inst6|decVal[8]                         ; KEY[0]              ; yes                    ;
+; Number of user-specified and inferred latches = 33  ;                     ;                        ;
++-----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
 +---------------------------------------------------------------------------------+
 ; Registers Removed During Synthesis                                              ;
 +----------------------------------------+----------------------------------------+
 ; Register name                          ; Reason for Removal                     ;
 +----------------------------------------+----------------------------------------+
-; freqSwitch:inst7|decVal[10..31]        ; Stuck at GND due to stuck port data_in ;
-; freqSwitch:inst7|tuner[0,1,25..27]     ; Stuck at GND due to stuck port data_in ;
-; phase_accum:inst6|fout[0,1]            ; Stuck at GND due to stuck port data_in ;
-; freqSwitch:inst7|splitDec[13..15]      ; Stuck at GND due to stuck port data_in ;
+; decOutput:inst9|lights[1..5]           ; Stuck at GND due to stuck port data_in ;
 ; decOutput:inst9|lights[6]              ; Stuck at VCC due to stuck port data_in ;
-; decOutput:inst9|lights[1,2]            ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 35 ;                                        ;
+; decOutput:inst9|lights[0]              ; Stuck at GND due to stuck port data_in ;
+; decOutput:inst8|lights[1]              ; Stuck at GND due to stuck port data_in ;
+; phase_accum:inst6|fout[0,1]            ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 10 ;                                        ;
 +----------------------------------------+----------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                    ;
-+-----------------------------+---------------------------+--------------------------------------------------------------------------------------+
-; Register name               ; Reason for Removal        ; Registers Removed due to This Register                                               ;
-+-----------------------------+---------------------------+--------------------------------------------------------------------------------------+
-; freqSwitch:inst7|decVal[10] ; Stuck at GND              ; freqSwitch:inst7|tuner[25], freqSwitch:inst7|tuner[26], freqSwitch:inst7|tuner[27],  ;
-;                             ; due to stuck port data_in ; freqSwitch:inst7|splitDec[15], freqSwitch:inst7|splitDec[13],                        ;
-;                             ;                           ; freqSwitch:inst7|splitDec[14], decOutput:inst9|lights[6], decOutput:inst9|lights[2], ;
-;                             ;                           ; decOutput:inst9|lights[1]                                                            ;
-; freqSwitch:inst7|tuner[1]   ; Stuck at GND              ; phase_accum:inst6|fout[1]                                                            ;
-;                             ; due to stuck port data_in ;                                                                                      ;
-+-----------------------------+---------------------------+--------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -530,12 +526,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 655   ;
+; Total registers                              ; 604   ;
 ; Number of registers using Synchronous Clear  ; 74    ;
 ; Number of registers using Synchronous Load   ; 67    ;
 ; Number of registers using Asynchronous Clear ; 204   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 415   ;
+; Number of registers using Clock Enable       ; 362   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -568,10 +564,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
-; 16:1               ; 7 bits    ; 70 LEs        ; 42 LEs               ; 28 LEs                 ; Yes        ; |dds_fsk|decOutput:inst4|lights[6] ;
+; 3:1                ; 26 bits   ; 52 LEs        ; 26 LEs               ; 26 LEs                 ; Yes        ; |dds_fsk|phase_accum:inst6|fout[3] ;
+; 16:1               ; 7 bits    ; 70 LEs        ; 42 LEs               ; 28 LEs                 ; Yes        ; |dds_fsk|decOutput:inst4|lights[5] ;
 ; 16:1               ; 7 bits    ; 70 LEs        ; 42 LEs               ; 28 LEs                 ; Yes        ; |dds_fsk|decOutput:inst5|lights[6] ;
-; 16:1               ; 7 bits    ; 70 LEs        ; 42 LEs               ; 28 LEs                 ; Yes        ; |dds_fsk|decOutput:inst8|lights[1] ;
-; 16:1               ; 7 bits    ; 70 LEs        ; 42 LEs               ; 28 LEs                 ; Yes        ; |dds_fsk|decOutput:inst9|lights[6] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
 
 
@@ -1223,198 +1218,37 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-----------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: freqSwitch:inst7|lpm_divide:Mod0 ;
-+------------------------+----------------+-----------------------------------------+
-; Parameter Name         ; Value          ; Type                                    ;
-+------------------------+----------------+-----------------------------------------+
-; LPM_WIDTHN             ; 32             ; Untyped                                 ;
-; LPM_WIDTHD             ; 5              ; Untyped                                 ;
-; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                 ;
-; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                 ;
-; LPM_PIPELINE           ; 0              ; Untyped                                 ;
-; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                 ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                 ;
-; CBXI_PARAMETER         ; lpm_divide_i3o ; Untyped                                 ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                 ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                 ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                              ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                            ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                            ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                          ;
-+------------------------+----------------+-----------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: freqSwitch:inst7|lpm_divide:Div0 ;
-+------------------------+----------------+-----------------------------------------+
-; Parameter Name         ; Value          ; Type                                    ;
-+------------------------+----------------+-----------------------------------------+
-; LPM_WIDTHN             ; 32             ; Untyped                                 ;
-; LPM_WIDTHD             ; 5              ; Untyped                                 ;
-; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                 ;
-; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                 ;
-; LPM_PIPELINE           ; 0              ; Untyped                                 ;
-; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                 ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                 ;
-; CBXI_PARAMETER         ; lpm_divide_fbo ; Untyped                                 ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                 ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                 ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                              ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                            ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                            ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                          ;
-+------------------------+----------------+-----------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: freqSwitch:inst7|lpm_divide:Mod1 ;
-+------------------------+----------------+-----------------------------------------+
-; Parameter Name         ; Value          ; Type                                    ;
-+------------------------+----------------+-----------------------------------------+
-; LPM_WIDTHN             ; 32             ; Untyped                                 ;
-; LPM_WIDTHD             ; 5              ; Untyped                                 ;
-; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                 ;
-; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                 ;
-; LPM_PIPELINE           ; 0              ; Untyped                                 ;
-; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                 ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                 ;
-; CBXI_PARAMETER         ; lpm_divide_i3o ; Untyped                                 ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                 ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                 ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                              ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                            ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                            ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                          ;
-+------------------------+----------------+-----------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: freqSwitch:inst7|lpm_divide:Div1 ;
-+------------------------+----------------+-----------------------------------------+
-; Parameter Name         ; Value          ; Type                                    ;
-+------------------------+----------------+-----------------------------------------+
-; LPM_WIDTHN             ; 32             ; Untyped                                 ;
-; LPM_WIDTHD             ; 8              ; Untyped                                 ;
-; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                 ;
-; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                 ;
-; LPM_PIPELINE           ; 0              ; Untyped                                 ;
-; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                 ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                 ;
-; CBXI_PARAMETER         ; lpm_divide_ibo ; Untyped                                 ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                 ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                 ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                              ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                            ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                            ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                          ;
-+------------------------+----------------+-----------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: freqSwitch:inst7|lpm_divide:Mod2 ;
-+------------------------+----------------+-----------------------------------------+
-; Parameter Name         ; Value          ; Type                                    ;
-+------------------------+----------------+-----------------------------------------+
-; LPM_WIDTHN             ; 32             ; Untyped                                 ;
-; LPM_WIDTHD             ; 5              ; Untyped                                 ;
-; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                 ;
-; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                 ;
-; LPM_PIPELINE           ; 0              ; Untyped                                 ;
-; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                 ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                 ;
-; CBXI_PARAMETER         ; lpm_divide_i3o ; Untyped                                 ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                 ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                 ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                              ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                            ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                            ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                          ;
-+------------------------+----------------+-----------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: freqSwitch:inst7|lpm_divide:Div2 ;
-+------------------------+----------------+-----------------------------------------+
-; Parameter Name         ; Value          ; Type                                    ;
-+------------------------+----------------+-----------------------------------------+
-; LPM_WIDTHN             ; 32             ; Untyped                                 ;
-; LPM_WIDTHD             ; 11             ; Untyped                                 ;
-; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                 ;
-; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                 ;
-; LPM_PIPELINE           ; 0              ; Untyped                                 ;
-; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                 ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                 ;
-; CBXI_PARAMETER         ; lpm_divide_sco ; Untyped                                 ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                 ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                 ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                              ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                            ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                            ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                          ;
-+------------------------+----------------+-----------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: freqSwitch:inst7|lpm_divide:Mod3 ;
-+------------------------+----------------+-----------------------------------------+
-; Parameter Name         ; Value          ; Type                                    ;
-+------------------------+----------------+-----------------------------------------+
-; LPM_WIDTHN             ; 32             ; Untyped                                 ;
-; LPM_WIDTHD             ; 5              ; Untyped                                 ;
-; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                 ;
-; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                 ;
-; LPM_PIPELINE           ; 0              ; Untyped                                 ;
-; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                 ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                 ;
-; CBXI_PARAMETER         ; lpm_divide_i3o ; Untyped                                 ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                 ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                 ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                              ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                            ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                            ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                          ;
-+------------------------+----------------+-----------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: freqSwitch:inst7|lpm_mult:Mult0 ;
-+------------------------------------------------+----------+----------------------+
-; Parameter Name                                 ; Value    ; Type                 ;
-+------------------------------------------------+----------+----------------------+
-; AUTO_CARRY_CHAINS                              ; ON       ; AUTO_CARRY           ;
-; IGNORE_CARRY_BUFFERS                           ; OFF      ; IGNORE_CARRY         ;
-; AUTO_CASCADE_CHAINS                            ; ON       ; AUTO_CASCADE         ;
-; IGNORE_CASCADE_BUFFERS                         ; OFF      ; IGNORE_CASCADE       ;
-; LPM_WIDTHA                                     ; 15       ; Untyped              ;
-; LPM_WIDTHB                                     ; 10       ; Untyped              ;
-; LPM_WIDTHP                                     ; 25       ; Untyped              ;
-; LPM_WIDTHR                                     ; 25       ; Untyped              ;
-; LPM_WIDTHS                                     ; 1        ; Untyped              ;
-; LPM_REPRESENTATION                             ; UNSIGNED ; Untyped              ;
-; LPM_PIPELINE                                   ; 0        ; Untyped              ;
-; LATENCY                                        ; 0        ; Untyped              ;
-; INPUT_A_IS_CONSTANT                            ; YES      ; Untyped              ;
-; INPUT_B_IS_CONSTANT                            ; NO       ; Untyped              ;
-; USE_EAB                                        ; OFF      ; Untyped              ;
-; MAXIMIZE_SPEED                                 ; 5        ; Untyped              ;
-; DEVICE_FAMILY                                  ; MAX 10   ; Untyped              ;
-; CARRY_CHAIN                                    ; MANUAL   ; Untyped              ;
-; APEX20K_TECHNOLOGY_MAPPER                      ; LUT      ; TECH_MAPPER_APEX20K  ;
-; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO     ; Untyped              ;
-; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0        ; Untyped              ;
-; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0        ; Untyped              ;
-; CBXI_PARAMETER                                 ; NOTHING  ; Untyped              ;
-; INPUT_A_FIXED_VALUE                            ; Bx       ; Untyped              ;
-; INPUT_B_FIXED_VALUE                            ; Bx       ; Untyped              ;
-; USE_AHDL_IMPLEMENTATION                        ; OFF      ; Untyped              ;
-+------------------------------------------------+----------+----------------------+
+; Parameter Settings for Inferred Entity Instance: phase_accum:inst6|lpm_mult:Mult0 ;
++------------------------------------------------+----------+-----------------------+
+; Parameter Name                                 ; Value    ; Type                  ;
++------------------------------------------------+----------+-----------------------+
+; AUTO_CARRY_CHAINS                              ; ON       ; AUTO_CARRY            ;
+; IGNORE_CARRY_BUFFERS                           ; OFF      ; IGNORE_CARRY          ;
+; AUTO_CASCADE_CHAINS                            ; ON       ; AUTO_CASCADE          ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF      ; IGNORE_CASCADE        ;
+; LPM_WIDTHA                                     ; 15       ; Untyped               ;
+; LPM_WIDTHB                                     ; 10       ; Untyped               ;
+; LPM_WIDTHP                                     ; 25       ; Untyped               ;
+; LPM_WIDTHR                                     ; 25       ; Untyped               ;
+; LPM_WIDTHS                                     ; 1        ; Untyped               ;
+; LPM_REPRESENTATION                             ; UNSIGNED ; Untyped               ;
+; LPM_PIPELINE                                   ; 0        ; Untyped               ;
+; LATENCY                                        ; 0        ; Untyped               ;
+; INPUT_A_IS_CONSTANT                            ; YES      ; Untyped               ;
+; INPUT_B_IS_CONSTANT                            ; NO       ; Untyped               ;
+; USE_EAB                                        ; OFF      ; Untyped               ;
+; MAXIMIZE_SPEED                                 ; 5        ; Untyped               ;
+; DEVICE_FAMILY                                  ; MAX 10   ; Untyped               ;
+; CARRY_CHAIN                                    ; MANUAL   ; Untyped               ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT      ; TECH_MAPPER_APEX20K   ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO     ; Untyped               ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0        ; Untyped               ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0        ; Untyped               ;
+; CBXI_PARAMETER                                 ; NOTHING  ; Untyped               ;
+; INPUT_A_FIXED_VALUE                            ; Bx       ; Untyped               ;
+; INPUT_B_FIXED_VALUE                            ; Bx       ; Untyped               ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF      ; Untyped               ;
++------------------------------------------------+----------+-----------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -1466,24 +1300,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+----------------------------------------------+
 
 
-+-------------------------------------------------------------------------+
-; lpm_mult Parameter Settings by Entity Instance                          ;
-+---------------------------------------+---------------------------------+
-; Name                                  ; Value                           ;
-+---------------------------------------+---------------------------------+
-; Number of entity instances            ; 1                               ;
-; Entity Instance                       ; freqSwitch:inst7|lpm_mult:Mult0 ;
-;     -- LPM_WIDTHA                     ; 15                              ;
-;     -- LPM_WIDTHB                     ; 10                              ;
-;     -- LPM_WIDTHP                     ; 25                              ;
-;     -- LPM_REPRESENTATION             ; UNSIGNED                        ;
-;     -- INPUT_A_IS_CONSTANT            ; YES                             ;
-;     -- INPUT_B_IS_CONSTANT            ; NO                              ;
-;     -- USE_EAB                        ; OFF                             ;
-;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                            ;
-;     -- INPUT_A_FIXED_VALUE            ; Bx                              ;
-;     -- INPUT_B_FIXED_VALUE            ; Bx                              ;
-+---------------------------------------+---------------------------------+
++--------------------------------------------------------------------------+
+; lpm_mult Parameter Settings by Entity Instance                           ;
++---------------------------------------+----------------------------------+
+; Name                                  ; Value                            ;
++---------------------------------------+----------------------------------+
+; Number of entity instances            ; 1                                ;
+; Entity Instance                       ; phase_accum:inst6|lpm_mult:Mult0 ;
+;     -- LPM_WIDTHA                     ; 15                               ;
+;     -- LPM_WIDTHB                     ; 10                               ;
+;     -- LPM_WIDTHP                     ; 25                               ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                         ;
+;     -- INPUT_A_IS_CONSTANT            ; YES                              ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                               ;
+;     -- USE_EAB                        ; OFF                              ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                             ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                               ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                               ;
++---------------------------------------+----------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1501,26 +1335,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 71                          ;
-; cycloneiii_ff         ; 97                          ;
-;     ENA               ; 67                          ;
+; cycloneiii_ff         ; 46                          ;
+;     ENA               ; 14                          ;
 ;     SCLR              ; 26                          ;
-;     plain             ; 4                           ;
-; cycloneiii_lcell_comb ; 495                         ;
-;     arith             ; 187                         ;
-;         1 data inputs ; 12                          ;
-;         2 data inputs ; 34                          ;
-;         3 data inputs ; 141                         ;
-;     normal            ; 308                         ;
-;         0 data inputs ; 26                          ;
-;         1 data inputs ; 6                           ;
-;         2 data inputs ; 154                         ;
-;         3 data inputs ; 22                          ;
-;         4 data inputs ; 100                         ;
+;     plain             ; 6                           ;
+; cycloneiii_lcell_comb ; 163                         ;
+;     arith             ; 55                          ;
+;         2 data inputs ; 6                           ;
+;         3 data inputs ; 49                          ;
+;     normal            ; 108                         ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 3                           ;
+;         2 data inputs ; 8                           ;
+;         3 data inputs ; 15                          ;
+;         4 data inputs ; 80                          ;
 ; cycloneiii_pll        ; 1                           ;
 ; cycloneiii_ram_block  ; 20                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 17.50                       ;
-; Average LUT depth     ; 10.14                       ;
+; Max LUT depth         ; 5.80                        ;
+; Average LUT depth     ; 3.06                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1529,7 +1362,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -1600,44 +1433,92 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
-    Info: Processing started: Thu Nov 17 10:23:11 2022
+    Info: Processing started: Wed Dec  7 22:00:16 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off dds_fsk_sinTri -c dds_fsk
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file phase_accum.v
+    Info (12023): Found entity 1: phase_accum File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file pll.v
-    Info (12023): Found entity 1: pll File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/pll.v Line: 40
+    Info (12023): Found entity 1: pll File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/pll.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file mux_in.v
-    Info (12023): Found entity 1: mux_in File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/mux_in.v Line: 40
+    Info (12023): Found entity 1: mux_in File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/mux_in.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file dds_fsk.bdf
     Info (12023): Found entity 1: dds_fsk
-Info (12021): Found 1 design units, including 1 entities, in source file phase_accum.v
-    Info (12023): Found entity 1: phase_accum File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/phase_accum.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux_tune.v
-    Info (12023): Found entity 1: mux_tune File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/mux_tune.v Line: 40
+    Info (12023): Found entity 1: mux_tune File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/mux_tune.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file freq0.v
-    Info (12023): Found entity 1: freq0 File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/freq0.v Line: 40
+    Info (12023): Found entity 1: freq0 File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/freq0.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file freq1.v
-    Info (12023): Found entity 1: freq1 File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/freq1.v Line: 40
+    Info (12023): Found entity 1: freq1 File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/freq1.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file mux_lut.v
-    Info (12023): Found entity 1: mux_LUT File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/mux_LUT.v Line: 40
+    Info (12023): Found entity 1: mux_LUT File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/mux_LUT.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file sinlut.v
-    Info (12023): Found entity 1: sinLUT File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/sinLUT.v Line: 40
-Info (12021): Found 1 design units, including 1 entities, in source file freqswitch.v
-    Info (12023): Found entity 1: freqSwitch File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/freqSwitch.v Line: 1
+    Info (12023): Found entity 1: sinLUT File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/sinLUT.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file trilut.v
-    Info (12023): Found entity 1: triLUT File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/triLUT.v Line: 40
+    Info (12023): Found entity 1: triLUT File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/triLUT.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file decoutput.v
-    Info (12023): Found entity 1: decOutput File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/decOutput.v Line: 1
+    Info (12023): Found entity 1: decOutput File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/decOutput.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file deczero.v
-    Info (12023): Found entity 1: decZero File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/decZero.v Line: 40
+    Info (12023): Found entity 1: decZero File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/decZero.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file point.v
-    Info (12023): Found entity 1: point File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/point.v Line: 40
+    Info (12023): Found entity 1: point File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/point.v Line: 40
+Warning (12019): Can't analyze file -- file dds_final.bdf is missing
 Info (12127): Elaborating entity "dds_fsk" for the top level hierarchy
 Info (12128): Elaborating entity "phase_accum" for hierarchy "phase_accum:inst6"
+Warning (10230): Verilog HDL assignment warning at phase_accum.v(7): truncated value with size 64 to match size of target (32) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 7
+Warning (10230): Verilog HDL assignment warning at phase_accum.v(17): truncated value with size 32 to match size of target (16) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
+Warning (10230): Verilog HDL assignment warning at phase_accum.v(18): truncated value with size 32 to match size of target (28) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 18
+Warning (10240): Verilog HDL Always Construct warning at phase_accum.v(12): inferring latch(es) for variable "decVal", which holds its previous value in one or more paths through the always construct File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 12
+Warning (10240): Verilog HDL Always Construct warning at phase_accum.v(12): inferring latch(es) for variable "tuner", which holds its previous value in one or more paths through the always construct File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 12
+Info (10041): Inferred latch for "tuner[0]" at phase_accum.v(12) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 12
+Info (10041): Inferred latch for "tuner[1]" at phase_accum.v(12) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 12
+Info (10041): Inferred latch for "tuner[2]" at phase_accum.v(12) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 12
+Info (10041): Inferred latch for "tuner[3]" at phase_accum.v(12) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 12
+Info (10041): Inferred latch for "tuner[4]" at phase_accum.v(12) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 12
+Info (10041): Inferred latch for "tuner[5]" at phase_accum.v(12) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 12
+Info (10041): Inferred latch for "tuner[6]" at phase_accum.v(12) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 12
+Info (10041): Inferred latch for "tuner[7]" at phase_accum.v(12) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 12
+Info (10041): Inferred latch for "tuner[8]" at phase_accum.v(12) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 12
+Info (10041): Inferred latch for "tuner[9]" at phase_accum.v(12) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 12
+Info (10041): Inferred latch for "tuner[10]" at phase_accum.v(12) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 12
+Info (10041): Inferred latch for "tuner[11]" at phase_accum.v(12) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 12
+Info (10041): Inferred latch for "tuner[12]" at phase_accum.v(12) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 12
+Info (10041): Inferred latch for "tuner[13]" at phase_accum.v(12) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 12
+Info (10041): Inferred latch for "tuner[14]" at phase_accum.v(12) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 12
+Info (10041): Inferred latch for "tuner[15]" at phase_accum.v(12) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 12
+Info (10041): Inferred latch for "tuner[16]" at phase_accum.v(12) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 12
+Info (10041): Inferred latch for "tuner[17]" at phase_accum.v(12) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 12
+Info (10041): Inferred latch for "tuner[18]" at phase_accum.v(12) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 12
+Info (10041): Inferred latch for "tuner[19]" at phase_accum.v(12) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 12
+Info (10041): Inferred latch for "tuner[20]" at phase_accum.v(12) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 12
+Info (10041): Inferred latch for "tuner[21]" at phase_accum.v(12) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 12
+Info (10041): Inferred latch for "tuner[22]" at phase_accum.v(12) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 12
+Info (10041): Inferred latch for "tuner[23]" at phase_accum.v(12) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 12
+Info (10041): Inferred latch for "tuner[24]" at phase_accum.v(12) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 12
+Info (10041): Inferred latch for "tuner[25]" at phase_accum.v(12) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 12
+Info (10041): Inferred latch for "tuner[26]" at phase_accum.v(12) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 12
+Info (10041): Inferred latch for "tuner[27]" at phase_accum.v(12) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 12
+Info (10041): Inferred latch for "decVal[0]" at phase_accum.v(12) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 12
+Info (10041): Inferred latch for "decVal[1]" at phase_accum.v(12) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 12
+Info (10041): Inferred latch for "decVal[2]" at phase_accum.v(12) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 12
+Info (10041): Inferred latch for "decVal[3]" at phase_accum.v(12) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 12
+Info (10041): Inferred latch for "decVal[4]" at phase_accum.v(12) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 12
+Info (10041): Inferred latch for "decVal[5]" at phase_accum.v(12) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 12
+Info (10041): Inferred latch for "decVal[6]" at phase_accum.v(12) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 12
+Info (10041): Inferred latch for "decVal[7]" at phase_accum.v(12) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 12
+Info (10041): Inferred latch for "decVal[8]" at phase_accum.v(12) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 12
+Info (10041): Inferred latch for "decVal[9]" at phase_accum.v(12) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 12
+Info (10041): Inferred latch for "decVal[10]" at phase_accum.v(12) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 12
+Info (10041): Inferred latch for "decVal[11]" at phase_accum.v(12) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 12
+Info (10041): Inferred latch for "decVal[12]" at phase_accum.v(12) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 12
+Info (10041): Inferred latch for "decVal[13]" at phase_accum.v(12) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 12
+Info (10041): Inferred latch for "decVal[14]" at phase_accum.v(12) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 12
+Info (10041): Inferred latch for "decVal[15]" at phase_accum.v(12) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 12
 Info (12128): Elaborating entity "pll" for hierarchy "pll:inst"
-Info (12128): Elaborating entity "altpll" for hierarchy "pll:inst|altpll:altpll_component" File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/pll.v Line: 100
-Info (12130): Elaborated megafunction instantiation "pll:inst|altpll:altpll_component" File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/pll.v Line: 100
-Info (12133): Instantiated megafunction "pll:inst|altpll:altpll_component" with the following parameter: File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/pll.v Line: 100
+Info (12128): Elaborating entity "altpll" for hierarchy "pll:inst|altpll:altpll_component" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/pll.v Line: 100
+Info (12130): Elaborated megafunction instantiation "pll:inst|altpll:altpll_component" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/pll.v Line: 100
+Info (12133): Instantiated megafunction "pll:inst|altpll:altpll_component" with the following parameter: File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/pll.v Line: 100
     Info (12134): Parameter "bandwidth_type" = "AUTO"
     Info (12134): Parameter "clk0_divide_by" = "5"
     Info (12134): Parameter "clk0_duty_cycle" = "50"
@@ -1693,30 +1574,23 @@ Info (12133): Instantiated megafunction "pll:inst|altpll:altpll_component" with 
     Info (12134): Parameter "port_extclk3" = "PORT_UNUSED"
     Info (12134): Parameter "width_clock" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/pll_altpll.v
-    Info (12023): Found entity 1: pll_altpll File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/pll_altpll.v Line: 30
+    Info (12023): Found entity 1: pll_altpll File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/pll_altpll.v Line: 30
 Info (12128): Elaborating entity "pll_altpll" for hierarchy "pll:inst|altpll:altpll_component|pll_altpll:auto_generated" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altpll.tdf Line: 898
-Info (12128): Elaborating entity "freqSwitch" for hierarchy "freqSwitch:inst7"
-Warning (10230): Verilog HDL assignment warning at freqSwitch.v(7): truncated value with size 64 to match size of target (32) File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/freqSwitch.v Line: 7
-Warning (10230): Verilog HDL assignment warning at freqSwitch.v(14): truncated value with size 32 to match size of target (28) File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/freqSwitch.v Line: 14
-Warning (10230): Verilog HDL assignment warning at freqSwitch.v(15): truncated value with size 32 to match size of target (4) File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/freqSwitch.v Line: 15
-Warning (10230): Verilog HDL assignment warning at freqSwitch.v(16): truncated value with size 32 to match size of target (4) File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/freqSwitch.v Line: 16
-Warning (10230): Verilog HDL assignment warning at freqSwitch.v(17): truncated value with size 32 to match size of target (4) File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/freqSwitch.v Line: 17
-Warning (10230): Verilog HDL assignment warning at freqSwitch.v(18): truncated value with size 32 to match size of target (4) File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/freqSwitch.v Line: 18
 Info (12128): Elaborating entity "mux_LUT" for hierarchy "mux_LUT:inst13"
-Info (12128): Elaborating entity "lpm_mux" for hierarchy "mux_LUT:inst13|lpm_mux:LPM_MUX_component" File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/mux_LUT.v Line: 69
-Info (12130): Elaborated megafunction instantiation "mux_LUT:inst13|lpm_mux:LPM_MUX_component" File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/mux_LUT.v Line: 69
-Info (12133): Instantiated megafunction "mux_LUT:inst13|lpm_mux:LPM_MUX_component" with the following parameter: File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/mux_LUT.v Line: 69
+Info (12128): Elaborating entity "lpm_mux" for hierarchy "mux_LUT:inst13|lpm_mux:LPM_MUX_component" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/mux_LUT.v Line: 69
+Info (12130): Elaborated megafunction instantiation "mux_LUT:inst13|lpm_mux:LPM_MUX_component" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/mux_LUT.v Line: 69
+Info (12133): Instantiated megafunction "mux_LUT:inst13|lpm_mux:LPM_MUX_component" with the following parameter: File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/mux_LUT.v Line: 69
     Info (12134): Parameter "lpm_size" = "2"
     Info (12134): Parameter "lpm_type" = "LPM_MUX"
     Info (12134): Parameter "lpm_width" = "10"
     Info (12134): Parameter "lpm_widths" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_d7c.tdf
-    Info (12023): Found entity 1: mux_d7c File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/mux_d7c.tdf Line: 23
+    Info (12023): Found entity 1: mux_d7c File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/mux_d7c.tdf Line: 23
 Info (12128): Elaborating entity "mux_d7c" for hierarchy "mux_LUT:inst13|lpm_mux:LPM_MUX_component|mux_d7c:auto_generated" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_mux.tdf Line: 87
 Info (12128): Elaborating entity "triLUT" for hierarchy "triLUT:inst2"
-Info (12128): Elaborating entity "altsyncram" for hierarchy "triLUT:inst2|altsyncram:altsyncram_component" File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/triLUT.v Line: 82
-Info (12130): Elaborated megafunction instantiation "triLUT:inst2|altsyncram:altsyncram_component" File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/triLUT.v Line: 82
-Info (12133): Instantiated megafunction "triLUT:inst2|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/triLUT.v Line: 82
+Info (12128): Elaborating entity "altsyncram" for hierarchy "triLUT:inst2|altsyncram:altsyncram_component" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/triLUT.v Line: 82
+Info (12130): Elaborated megafunction instantiation "triLUT:inst2|altsyncram:altsyncram_component" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/triLUT.v Line: 82
+Info (12133): Instantiated megafunction "triLUT:inst2|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/triLUT.v Line: 82
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
@@ -1732,12 +1606,12 @@ Info (12133): Instantiated megafunction "triLUT:inst2|altsyncram:altsyncram_comp
     Info (12134): Parameter "width_a" = "10"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_mn81.tdf
-    Info (12023): Found entity 1: altsyncram_mn81 File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/altsyncram_mn81.tdf Line: 28
+    Info (12023): Found entity 1: altsyncram_mn81 File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/altsyncram_mn81.tdf Line: 28
 Info (12128): Elaborating entity "altsyncram_mn81" for hierarchy "triLUT:inst2|altsyncram:altsyncram_component|altsyncram_mn81:auto_generated" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
 Info (12128): Elaborating entity "sinLUT" for hierarchy "sinLUT:inst1"
-Info (12128): Elaborating entity "altsyncram" for hierarchy "sinLUT:inst1|altsyncram:altsyncram_component" File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/sinLUT.v Line: 82
-Info (12130): Elaborated megafunction instantiation "sinLUT:inst1|altsyncram:altsyncram_component" File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/sinLUT.v Line: 82
-Info (12133): Instantiated megafunction "sinLUT:inst1|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/sinLUT.v Line: 82
+Info (12128): Elaborating entity "altsyncram" for hierarchy "sinLUT:inst1|altsyncram:altsyncram_component" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/sinLUT.v Line: 82
+Info (12130): Elaborated megafunction instantiation "sinLUT:inst1|altsyncram:altsyncram_component" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/sinLUT.v Line: 82
+Info (12133): Instantiated megafunction "sinLUT:inst1|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/sinLUT.v Line: 82
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
@@ -1753,48 +1627,48 @@ Info (12133): Instantiated megafunction "sinLUT:inst1|altsyncram:altsyncram_comp
     Info (12134): Parameter "width_a" = "10"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_hn81.tdf
-    Info (12023): Found entity 1: altsyncram_hn81 File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/altsyncram_hn81.tdf Line: 28
+    Info (12023): Found entity 1: altsyncram_hn81 File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/altsyncram_hn81.tdf Line: 28
 Info (12128): Elaborating entity "altsyncram_hn81" for hierarchy "sinLUT:inst1|altsyncram:altsyncram_component|altsyncram_hn81:auto_generated" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
 Info (12128): Elaborating entity "decZero" for hierarchy "decZero:inst10"
-Info (12128): Elaborating entity "lpm_constant" for hierarchy "decZero:inst10|lpm_constant:LPM_CONSTANT_component" File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/decZero.v Line: 49
-Info (12130): Elaborated megafunction instantiation "decZero:inst10|lpm_constant:LPM_CONSTANT_component" File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/decZero.v Line: 49
-Info (12133): Instantiated megafunction "decZero:inst10|lpm_constant:LPM_CONSTANT_component" with the following parameter: File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/decZero.v Line: 49
+Info (12128): Elaborating entity "lpm_constant" for hierarchy "decZero:inst10|lpm_constant:LPM_CONSTANT_component" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/decZero.v Line: 49
+Info (12130): Elaborated megafunction instantiation "decZero:inst10|lpm_constant:LPM_CONSTANT_component" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/decZero.v Line: 49
+Info (12133): Instantiated megafunction "decZero:inst10|lpm_constant:LPM_CONSTANT_component" with the following parameter: File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/decZero.v Line: 49
     Info (12134): Parameter "lpm_cvalue" = "64"
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
     Info (12134): Parameter "lpm_type" = "LPM_CONSTANT"
     Info (12134): Parameter "lpm_width" = "7"
 Info (12128): Elaborating entity "point" for hierarchy "point:inst12"
-Info (12128): Elaborating entity "lpm_constant" for hierarchy "point:inst12|lpm_constant:LPM_CONSTANT_component" File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/point.v Line: 49
-Info (12130): Elaborated megafunction instantiation "point:inst12|lpm_constant:LPM_CONSTANT_component" File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/point.v Line: 49
-Info (12133): Instantiated megafunction "point:inst12|lpm_constant:LPM_CONSTANT_component" with the following parameter: File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/point.v Line: 49
+Info (12128): Elaborating entity "lpm_constant" for hierarchy "point:inst12|lpm_constant:LPM_CONSTANT_component" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/point.v Line: 49
+Info (12130): Elaborated megafunction instantiation "point:inst12|lpm_constant:LPM_CONSTANT_component" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/point.v Line: 49
+Info (12133): Instantiated megafunction "point:inst12|lpm_constant:LPM_CONSTANT_component" with the following parameter: File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/point.v Line: 49
     Info (12134): Parameter "lpm_cvalue" = "0"
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
     Info (12134): Parameter "lpm_type" = "LPM_CONSTANT"
     Info (12134): Parameter "lpm_width" = "1"
 Info (12128): Elaborating entity "decOutput" for hierarchy "decOutput:inst4"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_al14.tdf
-    Info (12023): Found entity 1: altsyncram_al14 File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/altsyncram_al14.tdf Line: 28
+    Info (12023): Found entity 1: altsyncram_al14 File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/altsyncram_al14.tdf Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_h7c.tdf
-    Info (12023): Found entity 1: mux_h7c File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/mux_h7c.tdf Line: 23
+    Info (12023): Found entity 1: mux_h7c File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/mux_h7c.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_3af.tdf
-    Info (12023): Found entity 1: decode_3af File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/decode_3af.tdf Line: 23
+    Info (12023): Found entity 1: decode_3af File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/decode_3af.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_vqh.tdf
-    Info (12023): Found entity 1: cntr_vqh File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/cntr_vqh.tdf Line: 28
+    Info (12023): Found entity 1: cntr_vqh File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/cntr_vqh.tdf Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_grb.tdf
-    Info (12023): Found entity 1: cmpr_grb File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/cmpr_grb.tdf Line: 23
+    Info (12023): Found entity 1: cmpr_grb File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/cmpr_grb.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_6ki.tdf
-    Info (12023): Found entity 1: cntr_6ki File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/cntr_6ki.tdf Line: 26
+    Info (12023): Found entity 1: cntr_6ki File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/cntr_6ki.tdf Line: 26
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_5rh.tdf
-    Info (12023): Found entity 1: cntr_5rh File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/cntr_5rh.tdf Line: 28
+    Info (12023): Found entity 1: cntr_5rh File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/cntr_5rh.tdf Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_hrb.tdf
-    Info (12023): Found entity 1: cmpr_hrb File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/cmpr_hrb.tdf Line: 23
+    Info (12023): Found entity 1: cmpr_hrb File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/cmpr_hrb.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_odi.tdf
-    Info (12023): Found entity 1: cntr_odi File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/cntr_odi.tdf Line: 28
+    Info (12023): Found entity 1: cntr_odi File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/cntr_odi.tdf Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_drb.tdf
-    Info (12023): Found entity 1: cmpr_drb File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/cmpr_drb.tdf Line: 23
+    Info (12023): Found entity 1: cmpr_drb File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/cmpr_drb.tdf Line: 23
 Info (12033): Analysis and Synthesis generated Signal Tap or debug node instance "auto_signaltap_0"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2022.11.17.10:23:27 Progress: Loading sld7592f0f3/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2022.12.07.22:00:31 Progress: Loading sld7592f0f3/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -1805,96 +1679,22 @@ Info (11172): Ident: "alt_sld_fab" instantiated altera_connection_identification
 Info (11172): Alt_sld_fab: Done "alt_sld_fab" with 6 modules, 6 files
 Info (11171): Finished IP generation for the debug fabric: alt_sld_fab.
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld7592f0f3/alt_sld_fab.v
-    Info (12023): Found entity 1: alt_sld_fab File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/ip/sld7592f0f3/alt_sld_fab.v Line: 9
+    Info (12023): Found entity 1: alt_sld_fab File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/ip/sld7592f0f3/alt_sld_fab.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab.v
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab.v Line: 9
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_ident.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_ident File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_ident.sv Line: 33
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_ident File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_ident.sv Line: 33
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_presplit.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_presplit File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_presplit.sv Line: 3
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_presplit File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_presplit.sv Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd
-    Info (12022): Found design unit 1: alt_sld_fab_alt_sld_fab_sldfabric-rtl File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 102
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
+    Info (12022): Found design unit 1: alt_sld_fab_alt_sld_fab_sldfabric-rtl File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 102
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_splitter.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
-Info (278001): Inferred 8 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "freqSwitch:inst7|Mod0" File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/freqSwitch.v Line: 15
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "freqSwitch:inst7|Div0" File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/freqSwitch.v Line: 16
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "freqSwitch:inst7|Mod1" File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/freqSwitch.v Line: 16
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "freqSwitch:inst7|Div1" File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/freqSwitch.v Line: 17
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "freqSwitch:inst7|Mod2" File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/freqSwitch.v Line: 17
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "freqSwitch:inst7|Div2" File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/freqSwitch.v Line: 18
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "freqSwitch:inst7|Mod3" File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/freqSwitch.v Line: 18
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "freqSwitch:inst7|Mult0" File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/freqSwitch.v Line: 14
-Info (12130): Elaborated megafunction instantiation "freqSwitch:inst7|lpm_divide:Mod0" File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/freqSwitch.v Line: 15
-Info (12133): Instantiated megafunction "freqSwitch:inst7|lpm_divide:Mod0" with the following parameter: File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/freqSwitch.v Line: 15
-    Info (12134): Parameter "LPM_WIDTHN" = "32"
-    Info (12134): Parameter "LPM_WIDTHD" = "5"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
-    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_i3o.tdf
-    Info (12023): Found entity 1: lpm_divide_i3o File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/lpm_divide_i3o.tdf Line: 25
-Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_kbg.tdf
-    Info (12023): Found entity 1: abs_divider_kbg File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/abs_divider_kbg.tdf Line: 29
-Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_she.tdf
-    Info (12023): Found entity 1: alt_u_div_she File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/alt_u_div_she.tdf Line: 27
-Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_t3c.tdf
-    Info (12023): Found entity 1: add_sub_t3c File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/add_sub_t3c.tdf Line: 23
-Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_u3c.tdf
-    Info (12023): Found entity 1: add_sub_u3c File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/add_sub_u3c.tdf Line: 23
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_o99.tdf
-    Info (12023): Found entity 1: lpm_abs_o99 File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/lpm_abs_o99.tdf Line: 25
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_8b9.tdf
-    Info (12023): Found entity 1: lpm_abs_8b9 File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/lpm_abs_8b9.tdf Line: 25
-Info (12130): Elaborated megafunction instantiation "freqSwitch:inst7|lpm_divide:Div0" File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/freqSwitch.v Line: 16
-Info (12133): Instantiated megafunction "freqSwitch:inst7|lpm_divide:Div0" with the following parameter: File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/freqSwitch.v Line: 16
-    Info (12134): Parameter "LPM_WIDTHN" = "32"
-    Info (12134): Parameter "LPM_WIDTHD" = "5"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
-    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_fbo.tdf
-    Info (12023): Found entity 1: lpm_divide_fbo File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/lpm_divide_fbo.tdf Line: 25
-Info (12130): Elaborated megafunction instantiation "freqSwitch:inst7|lpm_divide:Mod1" File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/freqSwitch.v Line: 16
-Info (12133): Instantiated megafunction "freqSwitch:inst7|lpm_divide:Mod1" with the following parameter: File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/freqSwitch.v Line: 16
-    Info (12134): Parameter "LPM_WIDTHN" = "32"
-    Info (12134): Parameter "LPM_WIDTHD" = "5"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
-    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
-Info (12130): Elaborated megafunction instantiation "freqSwitch:inst7|lpm_divide:Div1" File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/freqSwitch.v Line: 17
-Info (12133): Instantiated megafunction "freqSwitch:inst7|lpm_divide:Div1" with the following parameter: File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/freqSwitch.v Line: 17
-    Info (12134): Parameter "LPM_WIDTHN" = "32"
-    Info (12134): Parameter "LPM_WIDTHD" = "8"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
-    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_ibo.tdf
-    Info (12023): Found entity 1: lpm_divide_ibo File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/lpm_divide_ibo.tdf Line: 25
-Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_nbg.tdf
-    Info (12023): Found entity 1: abs_divider_nbg File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/abs_divider_nbg.tdf Line: 29
-Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_2ie.tdf
-    Info (12023): Found entity 1: alt_u_div_2ie File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/alt_u_div_2ie.tdf Line: 27
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_r99.tdf
-    Info (12023): Found entity 1: lpm_abs_r99 File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/lpm_abs_r99.tdf Line: 25
-Info (12130): Elaborated megafunction instantiation "freqSwitch:inst7|lpm_divide:Div2" File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/freqSwitch.v Line: 18
-Info (12133): Instantiated megafunction "freqSwitch:inst7|lpm_divide:Div2" with the following parameter: File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/freqSwitch.v Line: 18
-    Info (12134): Parameter "LPM_WIDTHN" = "32"
-    Info (12134): Parameter "LPM_WIDTHD" = "11"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
-    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_sco.tdf
-    Info (12023): Found entity 1: lpm_divide_sco File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/lpm_divide_sco.tdf Line: 25
-Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_1dg.tdf
-    Info (12023): Found entity 1: abs_divider_1dg File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/abs_divider_1dg.tdf Line: 29
-Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_mke.tdf
-    Info (12023): Found entity 1: alt_u_div_mke File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/alt_u_div_mke.tdf Line: 27
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_5b9.tdf
-    Info (12023): Found entity 1: lpm_abs_5b9 File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/lpm_abs_5b9.tdf Line: 25
-Info (12130): Elaborated megafunction instantiation "freqSwitch:inst7|lpm_mult:Mult0" File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/freqSwitch.v Line: 14
-Info (12133): Instantiated megafunction "freqSwitch:inst7|lpm_mult:Mult0" with the following parameter: File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/freqSwitch.v Line: 14
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
+Info (278001): Inferred 1 megafunctions from design logic
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "phase_accum:inst6|Mult0" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 18
+Info (12130): Elaborated megafunction instantiation "phase_accum:inst6|lpm_mult:Mult0" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 18
+Info (12133): Instantiated megafunction "phase_accum:inst6|lpm_mult:Mult0" with the following parameter: File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 18
     Info (12134): Parameter "LPM_WIDTHA" = "15"
     Info (12134): Parameter "LPM_WIDTHB" = "10"
     Info (12134): Parameter "LPM_WIDTHP" = "25"
@@ -1904,16 +1704,16 @@ Info (12133): Instantiated megafunction "freqSwitch:inst7|lpm_mult:Mult0" with t
     Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "YES"
     Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
     Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
-Info (12131): Elaborated megafunction instantiation "freqSwitch:inst7|lpm_mult:Mult0|multcore:mult_core", which is child of megafunction instantiation "freqSwitch:inst7|lpm_mult:Mult0" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_mult.tdf Line: 309
-Info (12131): Elaborated megafunction instantiation "freqSwitch:inst7|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "freqSwitch:inst7|lpm_mult:Mult0" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/multcore.tdf Line: 229
-Info (12131): Elaborated megafunction instantiation "freqSwitch:inst7|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]", which is child of megafunction instantiation "freqSwitch:inst7|lpm_mult:Mult0" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 78
+Info (12131): Elaborated megafunction instantiation "phase_accum:inst6|lpm_mult:Mult0|multcore:mult_core", which is child of megafunction instantiation "phase_accum:inst6|lpm_mult:Mult0" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_mult.tdf Line: 309
+Info (12131): Elaborated megafunction instantiation "phase_accum:inst6|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "phase_accum:inst6|lpm_mult:Mult0" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/multcore.tdf Line: 229
+Info (12131): Elaborated megafunction instantiation "phase_accum:inst6|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]", which is child of megafunction instantiation "phase_accum:inst6|lpm_mult:Mult0" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 78
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_irg.tdf
-    Info (12023): Found entity 1: add_sub_irg File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/add_sub_irg.tdf Line: 23
-Info (12131): Elaborated megafunction instantiation "freqSwitch:inst7|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add", which is child of megafunction instantiation "freqSwitch:inst7|lpm_mult:Mult0" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 138
-Info (12131): Elaborated megafunction instantiation "freqSwitch:inst7|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]", which is child of megafunction instantiation "freqSwitch:inst7|lpm_mult:Mult0" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 78
+    Info (12023): Found entity 1: add_sub_irg File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/add_sub_irg.tdf Line: 23
+Info (12131): Elaborated megafunction instantiation "phase_accum:inst6|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add", which is child of megafunction instantiation "phase_accum:inst6|lpm_mult:Mult0" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 138
+Info (12131): Elaborated megafunction instantiation "phase_accum:inst6|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]", which is child of megafunction instantiation "phase_accum:inst6|lpm_mult:Mult0" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 78
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_drg.tdf
-    Info (12023): Found entity 1: add_sub_drg File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/add_sub_drg.tdf Line: 23
-Info (12131): Elaborated megafunction instantiation "freqSwitch:inst7|lpm_mult:Mult0|altshift:external_latency_ffs", which is child of megafunction instantiation "freqSwitch:inst7|lpm_mult:Mult0" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_mult.tdf Line: 352
+    Info (12023): Found entity 1: add_sub_drg File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/add_sub_drg.tdf Line: 23
+Info (12131): Elaborated megafunction instantiation "phase_accum:inst6|lpm_mult:Mult0|altshift:external_latency_ffs", which is child of megafunction instantiation "phase_accum:inst6|lpm_mult:Mult0" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_mult.tdf Line: 352
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX0[6]" is stuck at VCC
     Warning (13410): Pin "HEX0[5]" is stuck at GND
@@ -1930,33 +1730,28 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX1[1]" is stuck at GND
     Warning (13410): Pin "HEX1[0]" is stuck at GND
     Warning (13410): Pin "HEX2[7]" is stuck at GND
+    Warning (13410): Pin "HEX4[1]" is stuck at GND
     Warning (13410): Pin "HEX5[6]" is stuck at VCC
+    Warning (13410): Pin "HEX5[5]" is stuck at GND
+    Warning (13410): Pin "HEX5[4]" is stuck at GND
+    Warning (13410): Pin "HEX5[3]" is stuck at GND
     Warning (13410): Pin "HEX5[2]" is stuck at GND
     Warning (13410): Pin "HEX5[1]" is stuck at GND
+    Warning (13410): Pin "HEX5[0]" is stuck at GND
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
-Info (17016): Found the following redundant logic cells in design
-    Info (17048): Logic cell "freqSwitch:inst7|lpm_divide:Div1|lpm_divide_ibo:auto_generated|abs_divider_nbg:divider|alt_u_div_2ie:divider|add_sub_28_result_int[1]~16" File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/alt_u_div_2ie.tdf Line: 132
-    Info (17048): Logic cell "freqSwitch:inst7|lpm_divide:Mod2|lpm_divide_i3o:auto_generated|abs_divider_kbg:divider|alt_u_div_she:divider|add_sub_31_result_int[0]~0" File: C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/db/alt_u_div_she.tdf Line: 152
-Info (144001): Generated suppressed messages file C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/output_files/dds_fsk.map.smsg
 Info (35024): Successfully connected in-system debug instance "auto_signaltap_0" to all 53 required data inputs, trigger inputs, acquisition clocks, and dynamic pins
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1384 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1041 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 17 input pins
     Info (21059): Implemented 57 output pins
-    Info (21061): Implemented 1278 logic cells
+    Info (21061): Implemented 935 logic cells
     Info (21064): Implemented 30 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 26 warnings
-    Info: Peak virtual memory: 4930 megabytes
-    Info: Processing ended: Thu Nov 17 10:23:38 2022
-    Info: Elapsed time: 00:00:27
-    Info: Total CPU time (on all processors): 00:00:52
-
-
-+------------------------------------------+
-; Analysis & Synthesis Suppressed Messages ;
-+------------------------------------------+
-The suppressed messages can be found in C:/Users/acaci/Fall 2022/SoC/ProjectsFolder/DDS_2/output_files/dds_fsk.map.smsg.
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 31 warnings
+    Info: Peak virtual memory: 4898 megabytes
+    Info: Processing ended: Wed Dec  7 22:00:41 2022
+    Info: Elapsed time: 00:00:25
+    Info: Total CPU time (on all processors): 00:00:48
 
 
