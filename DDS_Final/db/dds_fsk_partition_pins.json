@@ -4,47 +4,99 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "GPIO_1",
+					"name" : "GPIO_2",
 					"strict" : false
 				},
 				{
-					"name" : "GPIO_[13]",
+					"name" : "GPIO_13",
 					"strict" : false
 				},
 				{
-					"name" : "GPIO_[12]",
+					"name" : "GPIO_12",
 					"strict" : false
 				},
 				{
-					"name" : "GPIO_[11]",
+					"name" : "GPIO_11",
 					"strict" : false
 				},
 				{
-					"name" : "GPIO_[10]",
+					"name" : "GPIO_10",
 					"strict" : false
 				},
 				{
-					"name" : "GPIO_[9]",
+					"name" : "GPIO_9",
 					"strict" : false
 				},
 				{
-					"name" : "GPIO_[8]",
+					"name" : "GPIO_8",
 					"strict" : false
 				},
 				{
-					"name" : "GPIO_[7]",
+					"name" : "GPIO_7",
 					"strict" : false
 				},
 				{
-					"name" : "GPIO_[6]",
+					"name" : "GPIO_6",
 					"strict" : false
 				},
 				{
-					"name" : "GPIO_[5]",
+					"name" : "GPIO_5",
 					"strict" : false
 				},
 				{
-					"name" : "GPIO_[4]",
+					"name" : "GPIO_4",
+					"strict" : false
+				},
+				{
+					"name" : "HEX0[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX0[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX0[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX0[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX2[7]",
 					"strict" : false
 				},
 				{
@@ -76,6 +128,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "HEX3[7]",
+					"strict" : false
+				},
+				{
 					"name" : "HEX3[6]",
 					"strict" : false
 				},
@@ -101,6 +157,10 @@
 				},
 				{
 					"name" : "HEX3[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX4[7]",
 					"strict" : false
 				},
 				{
@@ -132,27 +192,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "HEX5[5]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX5[4]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX5[3]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX5[0]",
-					"strict" : false
-				},
-				{
 					"name" : "LEDR[0]",
 					"strict" : false
 				},
 				{
-					"name" : "GPIO_3",
+					"name" : "GPIO_0",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_1",
 					"strict" : false
 				},
 				{
@@ -160,15 +208,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "CLOCK_50",
-					"strict" : false
-				},
-				{
 					"name" : "KEY[0]",
-					"strict" : false
-				},
-				{
-					"name" : "SW[8]",
 					"strict" : false
 				},
 				{
@@ -176,15 +216,19 @@
 					"strict" : false
 				},
 				{
+					"name" : "SW[8]",
+					"strict" : false
+				},
+				{
 					"name" : "SW[7]",
 					"strict" : false
 				},
 				{
-					"name" : "SW[5]",
+					"name" : "SW[6]",
 					"strict" : false
 				},
 				{
-					"name" : "SW[6]",
+					"name" : "SW[5]",
 					"strict" : false
 				},
 				{
@@ -196,11 +240,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "SW[1]",
+					"name" : "SW[2]",
 					"strict" : false
 				},
 				{
-					"name" : "SW[2]",
+					"name" : "SW[1]",
 					"strict" : false
 				},
 				{
