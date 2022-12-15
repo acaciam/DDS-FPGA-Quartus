@@ -1,17 +1,17 @@
-Fitter Status : Successful - Thu Dec  8 22:39:03 2022
+Fitter Status : Successful - Wed Dec 14 21:59:15 2022
 Quartus Prime Version : 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 Revision Name : dds_fsk
 Top-level Entity Name : dds_fsk
 Family : MAX 10
 Device : 10M50DAF484C7G
 Timing Models : Final
-Total logic elements : 1,172 / 49,760 ( 2 % )
-    Total combinational functions : 924 / 49,760 ( 2 % )
-    Dedicated logic registers : 620 / 49,760 ( 1 % )
-Total registers : 620
+Total logic elements : 1,158 / 49,760 ( 2 % )
+    Total combinational functions : 914 / 49,760 ( 2 % )
+    Dedicated logic registers : 621 / 49,760 ( 1 % )
+Total registers : 621
 Total pins : 76 / 360 ( 21 % )
 Total virtual pins : 0
-Total memory bits : 40,960 / 1,677,312 ( 2 % )
+Total memory bits : 20,480 / 1,677,312 ( 1 % )
 Embedded Multiplier 9-bit elements : 0 / 288 ( 0 % )
 Total PLLs : 1 / 4 ( 25 % )
 UFM blocks : 0 / 1 ( 0 % )

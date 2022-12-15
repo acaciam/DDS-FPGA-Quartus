@@ -1,5 +1,5 @@
 Analysis & Synthesis report for dds_fsk
-Thu Dec  8 22:38:51 2022
+Wed Dec 14 21:59:03 2022
 Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 
 
@@ -20,31 +20,33 @@ Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
  12. General Register Statistics
  13. Inverted Register Statistics
  14. Multiplexer Restructuring Statistics (Restructuring Performed)
- 15. Source assignments for triLUT:inst2|altsyncram:altsyncram_component|altsyncram_mn81:auto_generated
- 16. Source assignments for sinLUT:inst1|altsyncram:altsyncram_component|altsyncram_hn81:auto_generated
+ 15. Source assignments for sinLUT:inst1|altsyncram:altsyncram_component|altsyncram_uk81:auto_generated
+ 16. Source assignments for triLUT:inst2|altsyncram:altsyncram_component|altsyncram_3l81:auto_generated
  17. Source assignments for sld_signaltap:auto_signaltap_0
  18. Parameter Settings for User Entity Instance: pll:inst|altpll:altpll_component
  19. Parameter Settings for User Entity Instance: mux_LUT:inst13|lpm_mux:LPM_MUX_component
- 20. Parameter Settings for User Entity Instance: triLUT:inst2|altsyncram:altsyncram_component
- 21. Parameter Settings for User Entity Instance: sinLUT:inst1|altsyncram:altsyncram_component
- 22. Parameter Settings for Inferred Entity Instance: sld_signaltap:auto_signaltap_0
- 23. Parameter Settings for Inferred Entity Instance: decOutput:inst4|lpm_divide:Mod0
- 24. Parameter Settings for Inferred Entity Instance: decOutput:inst4|lpm_divide:Div0
- 25. Parameter Settings for Inferred Entity Instance: decOutput:inst4|lpm_divide:Mod1
- 26. Parameter Settings for Inferred Entity Instance: decOutput:inst4|lpm_divide:Div1
- 27. Parameter Settings for Inferred Entity Instance: decOutput:inst4|lpm_divide:Mod2
- 28. Parameter Settings for Inferred Entity Instance: decOutput:inst4|lpm_divide:Div2
- 29. Parameter Settings for Inferred Entity Instance: decOutput:inst4|lpm_divide:Mod3
- 30. Parameter Settings for Inferred Entity Instance: phase_accum:inst6|lpm_mult:Mult0
- 31. altpll Parameter Settings by Entity Instance
- 32. altsyncram Parameter Settings by Entity Instance
- 33. lpm_mult Parameter Settings by Entity Instance
- 34. Signal Tap Logic Analyzer Settings
- 35. Post-Synthesis Netlist Statistics for Top Partition
- 36. Elapsed Time Per Partition
- 37. Connections to In-System Debugging Instance "auto_signaltap_0"
- 38. Analysis & Synthesis Messages
- 39. Analysis & Synthesis Suppressed Messages
+ 20. Parameter Settings for User Entity Instance: const2:inst10|lpm_constant:LPM_CONSTANT_component
+ 21. Parameter Settings for User Entity Instance: const1:inst9|lpm_constant:LPM_CONSTANT_component
+ 22. Parameter Settings for User Entity Instance: sinLUT:inst1|altsyncram:altsyncram_component
+ 23. Parameter Settings for User Entity Instance: triLUT:inst2|altsyncram:altsyncram_component
+ 24. Parameter Settings for Inferred Entity Instance: sld_signaltap:auto_signaltap_0
+ 25. Parameter Settings for Inferred Entity Instance: decOutput:inst4|lpm_divide:Mod0
+ 26. Parameter Settings for Inferred Entity Instance: decOutput:inst4|lpm_divide:Div0
+ 27. Parameter Settings for Inferred Entity Instance: decOutput:inst4|lpm_divide:Mod1
+ 28. Parameter Settings for Inferred Entity Instance: decOutput:inst4|lpm_divide:Div1
+ 29. Parameter Settings for Inferred Entity Instance: decOutput:inst4|lpm_divide:Mod2
+ 30. Parameter Settings for Inferred Entity Instance: decOutput:inst4|lpm_divide:Div2
+ 31. Parameter Settings for Inferred Entity Instance: decOutput:inst4|lpm_divide:Mod3
+ 32. Parameter Settings for Inferred Entity Instance: phase_accum:inst6|lpm_mult:Mult0
+ 33. altpll Parameter Settings by Entity Instance
+ 34. altsyncram Parameter Settings by Entity Instance
+ 35. lpm_mult Parameter Settings by Entity Instance
+ 36. Signal Tap Logic Analyzer Settings
+ 37. Post-Synthesis Netlist Statistics for Top Partition
+ 38. Elapsed Time Per Partition
+ 39. Connections to In-System Debugging Instance "auto_signaltap_0"
+ 40. Analysis & Synthesis Messages
+ 41. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -71,18 +73,18 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Dec  8 22:38:51 2022       ;
+; Analysis & Synthesis Status        ; Successful - Wed Dec 14 21:59:03 2022       ;
 ; Quartus Prime Version              ; 21.1.1 Build 850 06/23/2022 SJ Lite Edition ;
 ; Revision Name                      ; dds_fsk                                     ;
 ; Top-level Entity Name              ; dds_fsk                                     ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 1,176                                       ;
-;     Total combinational functions  ; 920                                         ;
-;     Dedicated logic registers      ; 620                                         ;
-; Total registers                    ; 620                                         ;
+; Total logic elements               ; 1,157                                       ;
+;     Total combinational functions  ; 910                                         ;
+;     Dedicated logic registers      ; 621                                         ;
+; Total registers                    ; 621                                         ;
 ; Total pins                         ; 76                                          ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 40,960                                      ;
+; Total memory bits                  ; 20,480                                      ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
 ; Total PLLs                         ; 1                                           ;
 ; UFM blocks                         ; 0                                           ;
@@ -202,11 +204,15 @@ https://fpgasoftware.intel.com/eula.
 ; pll.v                                                              ; yes             ; User Wizard-Generated File                   ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/pll.v                                                              ;             ;
 ; dds_fsk.bdf                                                        ; yes             ; User Block Diagram/Schematic File            ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/dds_fsk.bdf                                                        ;             ;
 ; mux_LUT.v                                                          ; yes             ; User Wizard-Generated File                   ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/mux_LUT.v                                                          ;             ;
-; sinLUT.mif                                                         ; yes             ; User Memory Initialization File              ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/sinLUT.mif                                                         ;             ;
 ; sinLUT.v                                                           ; yes             ; User Wizard-Generated File                   ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/sinLUT.v                                                           ;             ;
 ; triLUT.mif                                                         ; yes             ; User Memory Initialization File              ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/triLUT.mif                                                         ;             ;
 ; triLUT.v                                                           ; yes             ; User Wizard-Generated File                   ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/triLUT.v                                                           ;             ;
 ; decOutput.v                                                        ; yes             ; User Verilog HDL File                        ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/decOutput.v                                                        ;             ;
+; changeFout.v                                                       ; yes             ; User Verilog HDL File                        ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/changeFout.v                                                       ;             ;
+; sinLUT.mif                                                         ; yes             ; User Memory Initialization File              ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/sinLUT.mif                                                         ;             ;
+; updateOut.v                                                        ; yes             ; User Verilog HDL File                        ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/updateOut.v                                                        ;             ;
+; const1.v                                                           ; yes             ; User Wizard-Generated File                   ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/const1.v                                                           ;             ;
+; const2.v                                                           ; yes             ; User Wizard-Generated File                   ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/const2.v                                                           ;             ;
 ; altpll.tdf                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altpll.tdf                                                          ;             ;
 ; aglobal211.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/aglobal211.inc                                                      ;             ;
 ; stratix_pll.inc                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/stratix_pll.inc                                                     ;             ;
@@ -218,6 +224,7 @@ https://fpgasoftware.intel.com/eula.
 ; bypassff.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/bypassff.inc                                                        ;             ;
 ; altshift.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altshift.inc                                                        ;             ;
 ; db/mux_f7c.tdf                                                     ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/mux_f7c.tdf                                                     ;             ;
+; lpm_constant.tdf                                                   ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_constant.tdf                                                    ;             ;
 ; altsyncram.tdf                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altsyncram.tdf                                                      ;             ;
 ; stratix_ram_block.inc                                              ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                               ;             ;
 ; lpm_mux.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_mux.inc                                                         ;             ;
@@ -226,8 +233,8 @@ https://fpgasoftware.intel.com/eula.
 ; altrom.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altrom.inc                                                          ;             ;
 ; altram.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altram.inc                                                          ;             ;
 ; altdpram.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altdpram.inc                                                        ;             ;
-; db/altsyncram_mn81.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/altsyncram_mn81.tdf                                             ;             ;
-; db/altsyncram_hn81.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/altsyncram_hn81.tdf                                             ;             ;
+; db/altsyncram_uk81.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/altsyncram_uk81.tdf                                             ;             ;
+; db/altsyncram_3l81.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/altsyncram_3l81.tdf                                             ;             ;
 ; sld_signaltap.vhd                                                  ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/sld_signaltap.vhd                                                   ;             ;
 ; sld_signaltap_impl.vhd                                             ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/sld_signaltap_impl.vhd                                              ;             ;
 ; sld_ela_control.vhd                                                ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/sld_ela_control.vhd                                                 ;             ;
@@ -307,7 +314,8 @@ https://fpgasoftware.intel.com/eula.
 ; altshift.tdf                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altshift.tdf                                                        ;             ;
 ; freqSwitch.v                                                       ; yes             ; User Verilog HDL File                        ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/freqSwitch.v                                                       ;             ;
 ; db/mux_d7c.tdf                                                     ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/mux_d7c.tdf                                                     ;             ;
-; lpm_constant.tdf                                                   ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_constant.tdf                                                    ;             ;
+; db/altsyncram_mn81.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/altsyncram_mn81.tdf                                             ;             ;
+; db/altsyncram_hn81.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/altsyncram_hn81.tdf                                             ;             ;
 ; db/lpm_divide_i3o.tdf                                              ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/lpm_divide_i3o.tdf                                              ;             ;
 ; db/abs_divider_kbg.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/abs_divider_kbg.tdf                                             ;             ;
 ; db/alt_u_div_she.tdf                                               ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/alt_u_div_she.tdf                                               ;             ;
@@ -330,24 +338,24 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------------------------+
 ; Resource                                    ; Usage                    ;
 +---------------------------------------------+--------------------------+
-; Estimated Total logic elements              ; 1,176                    ;
+; Estimated Total logic elements              ; 1,157                    ;
 ;                                             ;                          ;
-; Total combinational functions               ; 920                      ;
+; Total combinational functions               ; 910                      ;
 ; Logic element usage by number of LUT inputs ;                          ;
-;     -- 4 input functions                    ; 312                      ;
+;     -- 4 input functions                    ; 302                      ;
 ;     -- 3 input functions                    ; 277                      ;
 ;     -- <=2 input functions                  ; 331                      ;
 ;                                             ;                          ;
 ; Logic elements by mode                      ;                          ;
-;     -- normal mode                          ; 695                      ;
+;     -- normal mode                          ; 685                      ;
 ;     -- arithmetic mode                      ; 225                      ;
 ;                                             ;                          ;
-; Total registers                             ; 620                      ;
-;     -- Dedicated logic registers            ; 620                      ;
+; Total registers                             ; 621                      ;
+;     -- Dedicated logic registers            ; 621                      ;
 ;     -- I/O registers                        ; 0                        ;
 ;                                             ;                          ;
 ; I/O pins                                    ; 76                       ;
-; Total memory bits                           ; 40960                    ;
+; Total memory bits                           ; 20480                    ;
 ;                                             ;                          ;
 ; Embedded Multiplier 9-bit elements          ; 0                        ;
 ;                                             ;                          ;
@@ -356,8 +364,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                          ;
 ; Maximum fan-out node                        ; altera_internal_jtag~TDO ;
 ; Maximum fan-out                             ; 368                      ;
-; Total fan-out                               ; 5288                     ;
-; Average fan-out                             ; 3.05                     ;
+; Total fan-out                               ; 5032                     ;
+; Average fan-out                             ; 2.95                     ;
 +---------------------------------------------+--------------------------+
 
 
@@ -366,7 +374,8 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                 ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |dds_fsk                                                                                                                                ; 920 (2)             ; 620 (0)                   ; 40960       ; 0          ; 0            ; 0       ; 0         ; 76   ; 0            ; 0          ; |dds_fsk                                                                                                                                                                                                                                                                                                                                            ; dds_fsk                           ; work         ;
+; |dds_fsk                                                                                                                                ; 910 (1)             ; 621 (0)                   ; 20480       ; 0          ; 0            ; 0       ; 0         ; 76   ; 0            ; 0          ; |dds_fsk                                                                                                                                                                                                                                                                                                                                            ; dds_fsk                           ; work         ;
+;    |changeFout:inst5|                                                                                                                   ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|changeFout:inst5                                                                                                                                                                                                                                                                                                                           ; changeFout                        ; work         ;
 ;    |decOutput:inst4|                                                                                                                    ; 261 (33)            ; 36 (36)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|decOutput:inst4                                                                                                                                                                                                                                                                                                                            ; decOutput                         ; work         ;
 ;       |lpm_divide:Div0|                                                                                                                 ; 83 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|decOutput:inst4|lpm_divide:Div0                                                                                                                                                                                                                                                                                                            ; lpm_divide                        ; work         ;
 ;          |lpm_divide_otl:auto_generated|                                                                                                ; 83 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|decOutput:inst4|lpm_divide:Div0|lpm_divide_otl:auto_generated                                                                                                                                                                                                                                                                              ; lpm_divide_otl                    ; work         ;
@@ -384,9 +393,9 @@ https://fpgasoftware.intel.com/eula.
 ;          |lpm_divide_rll:auto_generated|                                                                                                ; 49 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|decOutput:inst4|lpm_divide:Mod1|lpm_divide_rll:auto_generated                                                                                                                                                                                                                                                                              ; lpm_divide_rll                    ; work         ;
 ;             |sign_div_unsign_qlh:divider|                                                                                               ; 49 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|decOutput:inst4|lpm_divide:Mod1|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider                                                                                                                                                                                                                                                  ; sign_div_unsign_qlh               ; work         ;
 ;                |alt_u_div_uhe:divider|                                                                                                  ; 49 (49)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|decOutput:inst4|lpm_divide:Mod1|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider                                                                                                                                                                                                                            ; alt_u_div_uhe                     ; work         ;
-;    |mux_LUT:inst13|                                                                                                                     ; 20 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|mux_LUT:inst13                                                                                                                                                                                                                                                                                                                             ; mux_LUT                           ; work         ;
-;       |lpm_mux:LPM_MUX_component|                                                                                                       ; 20 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|mux_LUT:inst13|lpm_mux:LPM_MUX_component                                                                                                                                                                                                                                                                                                   ; lpm_mux                           ; work         ;
-;          |mux_f7c:auto_generated|                                                                                                       ; 20 (20)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|mux_LUT:inst13|lpm_mux:LPM_MUX_component|mux_f7c:auto_generated                                                                                                                                                                                                                                                                            ; mux_f7c                           ; work         ;
+;    |mux_LUT:inst13|                                                                                                                     ; 10 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|mux_LUT:inst13                                                                                                                                                                                                                                                                                                                             ; mux_LUT                           ; work         ;
+;       |lpm_mux:LPM_MUX_component|                                                                                                       ; 10 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|mux_LUT:inst13|lpm_mux:LPM_MUX_component                                                                                                                                                                                                                                                                                                   ; lpm_mux                           ; work         ;
+;          |mux_f7c:auto_generated|                                                                                                       ; 10 (10)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|mux_LUT:inst13|lpm_mux:LPM_MUX_component|mux_f7c:auto_generated                                                                                                                                                                                                                                                                            ; mux_f7c                           ; work         ;
 ;    |phase_accum:inst6|                                                                                                                  ; 136 (67)            ; 26 (26)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|phase_accum:inst6                                                                                                                                                                                                                                                                                                                          ; phase_accum                       ; work         ;
 ;       |lpm_mult:Mult0|                                                                                                                  ; 69 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|phase_accum:inst6|lpm_mult:Mult0                                                                                                                                                                                                                                                                                                           ; lpm_mult                          ; work         ;
 ;          |multcore:mult_core|                                                                                                           ; 69 (37)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|phase_accum:inst6|lpm_mult:Mult0|multcore:mult_core                                                                                                                                                                                                                                                                                        ; multcore                          ; work         ;
@@ -399,9 +408,6 @@ https://fpgasoftware.intel.com/eula.
 ;    |pll:inst|                                                                                                                           ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|pll:inst                                                                                                                                                                                                                                                                                                                                   ; pll                               ; work         ;
 ;       |altpll:altpll_component|                                                                                                         ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|pll:inst|altpll:altpll_component                                                                                                                                                                                                                                                                                                           ; altpll                            ; work         ;
 ;          |pll_altpll:auto_generated|                                                                                                    ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|pll:inst|altpll:altpll_component|pll_altpll:auto_generated                                                                                                                                                                                                                                                                                 ; pll_altpll                        ; work         ;
-;    |sinLUT:inst1|                                                                                                                       ; 0 (0)               ; 0 (0)                     ; 10240       ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|sinLUT:inst1                                                                                                                                                                                                                                                                                                                               ; sinLUT                            ; work         ;
-;       |altsyncram:altsyncram_component|                                                                                                 ; 0 (0)               ; 0 (0)                     ; 10240       ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|sinLUT:inst1|altsyncram:altsyncram_component                                                                                                                                                                                                                                                                                               ; altsyncram                        ; work         ;
-;          |altsyncram_hn81:auto_generated|                                                                                               ; 0 (0)               ; 0 (0)                     ; 10240       ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|sinLUT:inst1|altsyncram:altsyncram_component|altsyncram_hn81:auto_generated                                                                                                                                                                                                                                                                ; altsyncram_hn81                   ; work         ;
 ;    |sld_hub:auto_hub|                                                                                                                   ; 123 (1)             ; 90 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                           ; sld_hub                           ; altera_sld   ;
 ;       |alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric| ; 122 (0)             ; 90 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric                                                                                                                                                                                           ; alt_sld_fab_with_jtag_input       ; altera_sld   ;
 ;          |alt_sld_fab:instrumentation_fabric|                                                                                           ; 122 (0)             ; 90 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric                                                                                                                                                        ; alt_sld_fab                       ; alt_sld_fab  ;
@@ -454,22 +460,17 @@ https://fpgasoftware.intel.com/eula.
 ;                |lpm_shiftreg:ram_data_shift_out|                                                                                        ; 10 (10)             ; 10 (10)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_shiftreg:ram_data_shift_out                                                                                                               ; lpm_shiftreg                      ; work         ;
 ;                |lpm_shiftreg:status_data_shift_out|                                                                                     ; 23 (23)             ; 23 (23)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_shiftreg:status_data_shift_out                                                                                                            ; lpm_shiftreg                      ; work         ;
 ;             |sld_rom_sr:crc_rom_sr|                                                                                                     ; 30 (30)             ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_rom_sr:crc_rom_sr                                                                                                                                                                                                          ; sld_rom_sr                        ; work         ;
-;    |triLUT:inst2|                                                                                                                       ; 0 (0)               ; 0 (0)                     ; 10240       ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|triLUT:inst2                                                                                                                                                                                                                                                                                                                               ; triLUT                            ; work         ;
-;       |altsyncram:altsyncram_component|                                                                                                 ; 0 (0)               ; 0 (0)                     ; 10240       ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|triLUT:inst2|altsyncram:altsyncram_component                                                                                                                                                                                                                                                                                               ; altsyncram                        ; work         ;
-;          |altsyncram_mn81:auto_generated|                                                                                               ; 0 (0)               ; 0 (0)                     ; 10240       ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|triLUT:inst2|altsyncram:altsyncram_component|altsyncram_mn81:auto_generated                                                                                                                                                                                                                                                                ; altsyncram_mn81                   ; work         ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                                                                                                                                 ;
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------------+
-; Name                                                                                                                                                                                                  ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF        ;
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------------+
-; sinLUT:inst1|altsyncram:altsyncram_component|altsyncram_hn81:auto_generated|ALTSYNCRAM                                                                                                                ; AUTO ; ROM              ; 1024         ; 10           ; --           ; --           ; 10240 ; sinLUT.mif ;
-; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|altsyncram_al14:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 2048         ; 10           ; 2048         ; 10           ; 20480 ; None       ;
-; triLUT:inst2|altsyncram:altsyncram_component|altsyncram_mn81:auto_generated|ALTSYNCRAM                                                                                                                ; AUTO ; ROM              ; 1024         ; 10           ; --           ; --           ; 10240 ; triLUT.mif ;
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                                                                                           ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
+; Name                                                                                                                                                                                                  ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF  ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|altsyncram_al14:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 2048         ; 10           ; 2048         ; 10           ; 20480 ; None ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -485,6 +486,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Altera ; ALTPLL       ; 21.1    ; N/A          ; N/A          ; |dds_fsk|pll:inst                                                                                                                                                                                                                                                            ; pll.v           ;
 ; Altera ; ROM: 1-PORT  ; 21.1    ; N/A          ; N/A          ; |dds_fsk|sinLUT:inst1                                                                                                                                                                                                                                                        ; sinLUT.v        ;
 ; Altera ; ROM: 1-PORT  ; 21.1    ; N/A          ; N/A          ; |dds_fsk|triLUT:inst2                                                                                                                                                                                                                                                        ; triLUT.v        ;
+; Altera ; LPM_CONSTANT ; 21.1    ; N/A          ; N/A          ; |dds_fsk|const1:inst9                                                                                                                                                                                                                                                        ; const1.v        ;
+; Altera ; LPM_CONSTANT ; 21.1    ; N/A          ; N/A          ; |dds_fsk|const2:inst10                                                                                                                                                                                                                                                       ; const2.v        ;
 ; Altera ; LPM_MUX      ; 21.1    ; N/A          ; N/A          ; |dds_fsk|mux_LUT:inst13                                                                                                                                                                                                                                                      ; mux_LUT.v       ;
 +--------+--------------+---------+--------------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
 
@@ -538,8 +541,9 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Register name                            ; Reason for Removal                     ;
 +------------------------------------------+----------------------------------------+
 ; decOutput:inst4|lights[6,7,14,15,40..47] ; Stuck at VCC due to stuck port data_in ;
+; changeFout:inst5|fout[0..6]              ; Lost fanout                            ;
 ; phase_accum:inst6|fout[0,1]              ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 14   ;                                        ;
+; Total Number of Removed Registers = 21   ;                                        ;
 +------------------------------------------+----------------------------------------+
 
 
@@ -548,7 +552,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 620   ;
+; Total registers                              ; 621   ;
 ; Number of registers using Synchronous Clear  ; 74    ;
 ; Number of registers using Synchronous Load   ; 91    ;
 ; Number of registers using Asynchronous Clear ; 204   ;
@@ -581,21 +585,20 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                        ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------+
-; 3:1                ; 26 bits   ; 52 LEs        ; 26 LEs               ; 26 LEs                 ; Yes        ; |dds_fsk|phase_accum:inst6|fout[21]                                                     ;
-; 17:1               ; 7 bits    ; 77 LEs        ; 49 LEs               ; 28 LEs                 ; Yes        ; |dds_fsk|decOutput:inst4|lights[16]                                                     ;
-; 17:1               ; 7 bits    ; 77 LEs        ; 49 LEs               ; 28 LEs                 ; Yes        ; |dds_fsk|decOutput:inst4|lights[30]                                                     ;
-; 27:1               ; 7 bits    ; 126 LEs       ; 98 LEs               ; 28 LEs                 ; Yes        ; |dds_fsk|decOutput:inst4|lights[32]                                                     ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |dds_fsk|mux_LUT:inst13|lpm_mux:LPM_MUX_component|mux_f7c:auto_generated|result_node[0] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
+; 3:1                ; 26 bits   ; 52 LEs        ; 26 LEs               ; 26 LEs                 ; Yes        ; |dds_fsk|phase_accum:inst6|fout[22] ;
+; 17:1               ; 7 bits    ; 77 LEs        ; 49 LEs               ; 28 LEs                 ; Yes        ; |dds_fsk|decOutput:inst4|lights[16] ;
+; 17:1               ; 7 bits    ; 77 LEs        ; 49 LEs               ; 28 LEs                 ; Yes        ; |dds_fsk|decOutput:inst4|lights[24] ;
+; 27:1               ; 7 bits    ; 126 LEs       ; 98 LEs               ; 28 LEs                 ; Yes        ; |dds_fsk|decOutput:inst4|lights[36] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------+
-; Source assignments for triLUT:inst2|altsyncram:altsyncram_component|altsyncram_mn81:auto_generated ;
+; Source assignments for sinLUT:inst1|altsyncram:altsyncram_component|altsyncram_uk81:auto_generated ;
 +---------------------------------+--------------------+------+--------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                   ;
 +---------------------------------+--------------------+------+--------------------------------------+
@@ -604,7 +607,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 
 
 +----------------------------------------------------------------------------------------------------+
-; Source assignments for sinLUT:inst1|altsyncram:altsyncram_component|altsyncram_hn81:auto_generated ;
+; Source assignments for triLUT:inst2|altsyncram:altsyncram_component|altsyncram_3l81:auto_generated ;
 +---------------------------------+--------------------+------+--------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                   ;
 +---------------------------------+--------------------+------+--------------------------------------+
@@ -1014,64 +1017,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: triLUT:inst2|altsyncram:altsyncram_component ;
-+------------------------------------+----------------------+-------------------------------+
-; Parameter Name                     ; Value                ; Type                          ;
-+------------------------------------+----------------------+-------------------------------+
-; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                       ;
-; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                    ;
-; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                  ;
-; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                  ;
-; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                ;
-; WIDTH_BYTEENA                      ; 1                    ; Untyped                       ;
-; OPERATION_MODE                     ; ROM                  ; Untyped                       ;
-; WIDTH_A                            ; 10                   ; Signed Integer                ;
-; WIDTHAD_A                          ; 10                   ; Signed Integer                ;
-; NUMWORDS_A                         ; 1024                 ; Signed Integer                ;
-; OUTDATA_REG_A                      ; CLOCK0               ; Untyped                       ;
-; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                       ;
-; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                       ;
-; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                       ;
-; INDATA_ACLR_A                      ; NONE                 ; Untyped                       ;
-; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                       ;
-; WIDTH_B                            ; 1                    ; Untyped                       ;
-; WIDTHAD_B                          ; 1                    ; Untyped                       ;
-; NUMWORDS_B                         ; 1                    ; Untyped                       ;
-; INDATA_REG_B                       ; CLOCK1               ; Untyped                       ;
-; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                       ;
-; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                       ;
-; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                       ;
-; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                       ;
-; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                       ;
-; INDATA_ACLR_B                      ; NONE                 ; Untyped                       ;
-; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                       ;
-; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                       ;
-; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                       ;
-; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                       ;
-; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                       ;
-; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                ;
-; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                       ;
-; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                       ;
-; BYTE_SIZE                          ; 8                    ; Untyped                       ;
-; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                       ;
-; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                       ;
-; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                       ;
-; INIT_FILE                          ; triLUT.mif           ; Untyped                       ;
-; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                       ;
-; MAXIMUM_DEPTH                      ; 0                    ; Untyped                       ;
-; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                       ;
-; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                       ;
-; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                       ;
-; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                       ;
-; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                       ;
-; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                       ;
-; ENABLE_ECC                         ; FALSE                ; Untyped                       ;
-; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                       ;
-; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                       ;
-; DEVICE_FAMILY                      ; MAX 10               ; Untyped                       ;
-; CBXI_PARAMETER                     ; altsyncram_mn81      ; Untyped                       ;
-+------------------------------------+----------------------+-------------------------------+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: const2:inst10|lpm_constant:LPM_CONSTANT_component ;
++--------------------+------------------+--------------------------------------------------------+
+; Parameter Name     ; Value            ; Type                                                   ;
++--------------------+------------------+--------------------------------------------------------+
+; LPM_WIDTH          ; 10               ; Signed Integer                                         ;
+; LPM_CVALUE         ; 1023             ; Signed Integer                                         ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                                ;
+; CBXI_PARAMETER     ; lpm_constant_2m6 ; Untyped                                                ;
++--------------------+------------------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: const1:inst9|lpm_constant:LPM_CONSTANT_component ;
++--------------------+------------------+-------------------------------------------------------+
+; Parameter Name     ; Value            ; Type                                                  ;
++--------------------+------------------+-------------------------------------------------------+
+; LPM_WIDTH          ; 10               ; Signed Integer                                        ;
+; LPM_CVALUE         ; 0                ; Signed Integer                                        ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                               ;
+; CBXI_PARAMETER     ; lpm_constant_ji6 ; Untyped                                               ;
++--------------------+------------------+-------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -1088,8 +1056,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; WIDTH_BYTEENA                      ; 1                    ; Untyped                       ;
 ; OPERATION_MODE                     ; ROM                  ; Untyped                       ;
 ; WIDTH_A                            ; 10                   ; Signed Integer                ;
-; WIDTHAD_A                          ; 10                   ; Signed Integer                ;
-; NUMWORDS_A                         ; 1024                 ; Signed Integer                ;
+; WIDTHAD_A                          ; 8                    ; Signed Integer                ;
+; NUMWORDS_A                         ; 256                  ; Signed Integer                ;
 ; OUTDATA_REG_A                      ; CLOCK0               ; Untyped                       ;
 ; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                       ;
 ; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                       ;
@@ -1131,7 +1099,68 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                       ;
 ; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                       ;
 ; DEVICE_FAMILY                      ; MAX 10               ; Untyped                       ;
-; CBXI_PARAMETER                     ; altsyncram_hn81      ; Untyped                       ;
+; CBXI_PARAMETER                     ; altsyncram_uk81      ; Untyped                       ;
++------------------------------------+----------------------+-------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: triLUT:inst2|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+-------------------------------+
+; Parameter Name                     ; Value                ; Type                          ;
++------------------------------------+----------------------+-------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                       ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                    ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                  ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                  ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                       ;
+; OPERATION_MODE                     ; ROM                  ; Untyped                       ;
+; WIDTH_A                            ; 10                   ; Signed Integer                ;
+; WIDTHAD_A                          ; 8                    ; Signed Integer                ;
+; NUMWORDS_A                         ; 256                  ; Signed Integer                ;
+; OUTDATA_REG_A                      ; CLOCK0               ; Untyped                       ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                       ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                       ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                       ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                       ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                       ;
+; WIDTH_B                            ; 1                    ; Untyped                       ;
+; WIDTHAD_B                          ; 1                    ; Untyped                       ;
+; NUMWORDS_B                         ; 1                    ; Untyped                       ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                       ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                       ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                       ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                       ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                       ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                       ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                       ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                       ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                       ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                       ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                       ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                       ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                       ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                       ;
+; BYTE_SIZE                          ; 8                    ; Untyped                       ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                       ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                       ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                       ;
+; INIT_FILE                          ; triLUT.mif           ; Untyped                       ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                       ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                       ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                       ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                       ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                       ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                       ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                       ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                       ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                       ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                       ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                       ;
+; DEVICE_FAMILY                      ; MAX 10               ; Untyped                       ;
+; CBXI_PARAMETER                     ; altsyncram_3l81      ; Untyped                       ;
 +------------------------------------+----------------------+-------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1421,10 +1450,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Name                                      ; Value                                        ;
 +-------------------------------------------+----------------------------------------------+
 ; Number of entity instances                ; 2                                            ;
-; Entity Instance                           ; triLUT:inst2|altsyncram:altsyncram_component ;
+; Entity Instance                           ; sinLUT:inst1|altsyncram:altsyncram_component ;
 ;     -- OPERATION_MODE                     ; ROM                                          ;
 ;     -- WIDTH_A                            ; 10                                           ;
-;     -- NUMWORDS_A                         ; 1024                                         ;
+;     -- NUMWORDS_A                         ; 256                                          ;
 ;     -- OUTDATA_REG_A                      ; CLOCK0                                       ;
 ;     -- WIDTH_B                            ; 1                                            ;
 ;     -- NUMWORDS_B                         ; 1                                            ;
@@ -1432,10 +1461,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- OUTDATA_REG_B                      ; UNREGISTERED                                 ;
 ;     -- RAM_BLOCK_TYPE                     ; AUTO                                         ;
 ;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                    ;
-; Entity Instance                           ; sinLUT:inst1|altsyncram:altsyncram_component ;
+; Entity Instance                           ; triLUT:inst2|altsyncram:altsyncram_component ;
 ;     -- OPERATION_MODE                     ; ROM                                          ;
 ;     -- WIDTH_A                            ; 10                                           ;
-;     -- NUMWORDS_A                         ; 1024                                         ;
+;     -- NUMWORDS_A                         ; 256                                          ;
 ;     -- OUTDATA_REG_A                      ; CLOCK0                                       ;
 ;     -- WIDTH_B                            ; 1                                            ;
 ;     -- NUMWORDS_B                         ; 1                                            ;
@@ -1481,27 +1510,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 77                          ;
-; cycloneiii_ff         ; 62                          ;
+; cycloneiii_ff         ; 63                          ;
 ;     ENA SLD           ; 14                          ;
 ;     SCLR              ; 26                          ;
 ;     SLD               ; 10                          ;
-;     plain             ; 12                          ;
-; cycloneiii_lcell_comb ; 419                         ;
+;     plain             ; 13                          ;
+; cycloneiii_lcell_comb ; 410                         ;
 ;     arith             ; 135                         ;
 ;         1 data inputs ; 4                           ;
 ;         2 data inputs ; 22                          ;
 ;         3 data inputs ; 109                         ;
-;     normal            ; 284                         ;
+;     normal            ; 275                         ;
 ;         0 data inputs ; 21                          ;
 ;         1 data inputs ; 16                          ;
-;         2 data inputs ; 104                         ;
+;         2 data inputs ; 105                         ;
 ;         3 data inputs ; 18                          ;
-;         4 data inputs ; 125                         ;
+;         4 data inputs ; 115                         ;
 ; cycloneiii_pll        ; 1                           ;
-; cycloneiii_ram_block  ; 20                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 18.80                       ;
-; Average LUT depth     ; 9.72                        ;
+; Average LUT depth     ; 10.05                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1514,65 +1542,65 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Connections to In-System Debugging Instance "auto_signaltap_0"                                                                                                                                                                                                                                                                                       ;
-+----------------------+---------------+-----------+--------------------------------+-------------------+-----------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Name                 ; Type          ; Status    ; Partition Name                 ; Netlist Type Used ; Actual Connection                                                           ; Details                                                                                                                                                        ;
-+----------------------+---------------+-----------+--------------------------------+-------------------+-----------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; GPIO_[10]            ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                                                         ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; GPIO_[10]            ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                                                         ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; GPIO_[11]            ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                                                         ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; GPIO_[11]            ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                                                         ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; GPIO_[12]            ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                                                         ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; GPIO_[12]            ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                                                         ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; GPIO_[13]            ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                                                         ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; GPIO_[13]            ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                                                         ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; GPIO_[4]             ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                                                         ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; GPIO_[4]             ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                                                         ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; GPIO_[5]             ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                                                         ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; GPIO_[5]             ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                                                         ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; GPIO_[6]             ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                                                         ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; GPIO_[6]             ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                                                         ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; GPIO_[7]             ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                                                         ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; GPIO_[7]             ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                                                         ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; GPIO_[8]             ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                                                         ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; GPIO_[8]             ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                                                         ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; GPIO_[9]             ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                                                         ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; GPIO_[9]             ; pre-synthesis ; missing   ; Top                            ; post-synthesis    ; GND                                                                         ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
-; clk10                ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; pll:inst|altpll:altpll_component|pll_altpll:auto_generated|wire_pll1_clk[0] ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                         ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                         ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                         ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                         ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                         ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                         ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                         ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                         ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                         ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                         ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                         ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                         ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                         ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                         ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                         ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                         ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                         ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                         ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                         ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                         ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                         ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                         ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                         ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                         ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                         ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                         ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                         ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                         ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                         ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                         ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                         ; N/A                                                                                                                                                            ;
-; auto_signaltap_0|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                         ; N/A                                                                                                                                                            ;
-+----------------------+---------------+-----------+--------------------------------+-------------------+-----------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Connections to In-System Debugging Instance "auto_signaltap_0"                                                                                                                                     ;
++----------------------+---------------+-----------+--------------------------------+-------------------+----------------------------------------------------------------------------------+---------+
+; Name                 ; Type          ; Status    ; Partition Name                 ; Netlist Type Used ; Actual Connection                                                                ; Details ;
++----------------------+---------------+-----------+--------------------------------+-------------------+----------------------------------------------------------------------------------+---------+
+; GPIO_[10]            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mux_LUT:inst13|lpm_mux:LPM_MUX_component|mux_f7c:auto_generated|result_node[6]~3 ; N/A     ;
+; GPIO_[10]            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mux_LUT:inst13|lpm_mux:LPM_MUX_component|mux_f7c:auto_generated|result_node[6]~3 ; N/A     ;
+; GPIO_[11]            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mux_LUT:inst13|lpm_mux:LPM_MUX_component|mux_f7c:auto_generated|result_node[7]~2 ; N/A     ;
+; GPIO_[11]            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mux_LUT:inst13|lpm_mux:LPM_MUX_component|mux_f7c:auto_generated|result_node[7]~2 ; N/A     ;
+; GPIO_[12]            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mux_LUT:inst13|lpm_mux:LPM_MUX_component|mux_f7c:auto_generated|result_node[8]~1 ; N/A     ;
+; GPIO_[12]            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mux_LUT:inst13|lpm_mux:LPM_MUX_component|mux_f7c:auto_generated|result_node[8]~1 ; N/A     ;
+; GPIO_[13]            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mux_LUT:inst13|lpm_mux:LPM_MUX_component|mux_f7c:auto_generated|result_node[9]~0 ; N/A     ;
+; GPIO_[13]            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mux_LUT:inst13|lpm_mux:LPM_MUX_component|mux_f7c:auto_generated|result_node[9]~0 ; N/A     ;
+; GPIO_[4]             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mux_LUT:inst13|lpm_mux:LPM_MUX_component|mux_f7c:auto_generated|result_node[0]~9 ; N/A     ;
+; GPIO_[4]             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mux_LUT:inst13|lpm_mux:LPM_MUX_component|mux_f7c:auto_generated|result_node[0]~9 ; N/A     ;
+; GPIO_[5]             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mux_LUT:inst13|lpm_mux:LPM_MUX_component|mux_f7c:auto_generated|result_node[1]~8 ; N/A     ;
+; GPIO_[5]             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mux_LUT:inst13|lpm_mux:LPM_MUX_component|mux_f7c:auto_generated|result_node[1]~8 ; N/A     ;
+; GPIO_[6]             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mux_LUT:inst13|lpm_mux:LPM_MUX_component|mux_f7c:auto_generated|result_node[2]~7 ; N/A     ;
+; GPIO_[6]             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mux_LUT:inst13|lpm_mux:LPM_MUX_component|mux_f7c:auto_generated|result_node[2]~7 ; N/A     ;
+; GPIO_[7]             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mux_LUT:inst13|lpm_mux:LPM_MUX_component|mux_f7c:auto_generated|result_node[3]~6 ; N/A     ;
+; GPIO_[7]             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mux_LUT:inst13|lpm_mux:LPM_MUX_component|mux_f7c:auto_generated|result_node[3]~6 ; N/A     ;
+; GPIO_[8]             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mux_LUT:inst13|lpm_mux:LPM_MUX_component|mux_f7c:auto_generated|result_node[4]~5 ; N/A     ;
+; GPIO_[8]             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mux_LUT:inst13|lpm_mux:LPM_MUX_component|mux_f7c:auto_generated|result_node[4]~5 ; N/A     ;
+; GPIO_[9]             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mux_LUT:inst13|lpm_mux:LPM_MUX_component|mux_f7c:auto_generated|result_node[5]~4 ; N/A     ;
+; GPIO_[9]             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; mux_LUT:inst13|lpm_mux:LPM_MUX_component|mux_f7c:auto_generated|result_node[5]~4 ; N/A     ;
+; clk10                ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; pll:inst|altpll:altpll_component|pll_altpll:auto_generated|wire_pll1_clk[0]      ; N/A     ;
+; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                              ; N/A     ;
+; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                              ; N/A     ;
+; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                              ; N/A     ;
+; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                              ; N/A     ;
+; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                              ; N/A     ;
+; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                              ; N/A     ;
+; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                              ; N/A     ;
+; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                              ; N/A     ;
+; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                              ; N/A     ;
+; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                              ; N/A     ;
+; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                              ; N/A     ;
+; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                              ; N/A     ;
+; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                              ; N/A     ;
+; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                              ; N/A     ;
+; auto_signaltap_0|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                              ; N/A     ;
+; auto_signaltap_0|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                              ; N/A     ;
+; auto_signaltap_0|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                              ; N/A     ;
+; auto_signaltap_0|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                              ; N/A     ;
+; auto_signaltap_0|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                              ; N/A     ;
+; auto_signaltap_0|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                              ; N/A     ;
+; auto_signaltap_0|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                              ; N/A     ;
+; auto_signaltap_0|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                              ; N/A     ;
+; auto_signaltap_0|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                              ; N/A     ;
+; auto_signaltap_0|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                              ; N/A     ;
+; auto_signaltap_0|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                              ; N/A     ;
+; auto_signaltap_0|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                              ; N/A     ;
+; auto_signaltap_0|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                              ; N/A     ;
+; auto_signaltap_0|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                              ; N/A     ;
+; auto_signaltap_0|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                              ; N/A     ;
+; auto_signaltap_0|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                              ; N/A     ;
+; auto_signaltap_0|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                              ; N/A     ;
+; auto_signaltap_0|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                              ; N/A     ;
++----------------------+---------------+-----------+--------------------------------+-------------------+----------------------------------------------------------------------------------+---------+
 
 
 +-------------------------------+
@@ -1581,7 +1609,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
-    Info: Processing started: Thu Dec  8 22:38:25 2022
+    Info: Processing started: Wed Dec 14 21:58:37 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off dds_fsk_sinTri -c dds_fsk
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -1612,61 +1640,27 @@ Info (12021): Found 1 design units, including 1 entities, in source file deczero
 Info (12021): Found 1 design units, including 1 entities, in source file point.v
     Info (12023): Found entity 1: point File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/point.v Line: 40
 Warning (12019): Can't analyze file -- file dds_final.bdf is missing
+Info (12021): Found 1 design units, including 1 entities, in source file changefout.v
+    Info (12023): Found entity 1: changeFout File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/changeFout.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file updateout.v
+    Info (12023): Found entity 1: updateOut File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/updateOut.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file const1.v
+    Info (12023): Found entity 1: const1 File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/const1.v Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file const2.v
+    Info (12023): Found entity 1: const2 File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/const2.v Line: 40
 Info (12127): Elaborating entity "dds_fsk" for the top level hierarchy
-Warning (275086): Found inconsistent I/O type for element "GPIO_"
-Warning (275080): Converted elements in bus name "GPIO_" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "GPIO_[1..0]" to "GPIO_1..0"
-    Warning (275081): Converted element name(s) from "GPIO_[13..4]" to "GPIO_13..4"
-Info (12128): Elaborating entity "phase_accum" for hierarchy "phase_accum:inst6"
-Warning (10230): Verilog HDL assignment warning at phase_accum.v(7): truncated value with size 64 to match size of target (32) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 7
-Warning (10230): Verilog HDL assignment warning at phase_accum.v(18): truncated value with size 32 to match size of target (16) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 18
-Warning (10230): Verilog HDL assignment warning at phase_accum.v(19): truncated value with size 32 to match size of target (28) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 19
-Warning (10240): Verilog HDL Always Construct warning at phase_accum.v(12): inferring latch(es) for variable "decVal", which holds its previous value in one or more paths through the always construct File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 12
-Warning (10240): Verilog HDL Always Construct warning at phase_accum.v(12): inferring latch(es) for variable "tuner", which holds its previous value in one or more paths through the always construct File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 12
-Info (10041): Inferred latch for "tuner[0]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "tuner[1]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "tuner[2]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "tuner[3]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "tuner[4]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "tuner[5]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "tuner[6]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "tuner[7]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "tuner[8]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "tuner[9]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "tuner[10]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "tuner[11]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "tuner[12]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "tuner[13]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "tuner[14]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "tuner[15]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "tuner[16]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "tuner[17]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "tuner[18]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "tuner[19]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "tuner[20]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "tuner[21]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "tuner[22]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "tuner[23]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "tuner[24]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "tuner[25]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "tuner[26]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "tuner[27]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "decVal[0]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "decVal[1]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "decVal[2]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "decVal[3]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "decVal[4]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "decVal[5]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "decVal[6]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "decVal[7]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "decVal[8]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "decVal[9]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "decVal[10]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "decVal[11]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "decVal[12]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "decVal[13]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "decVal[14]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "decVal[15]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
+Warning (275080): Converted elements in bus name "fout" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "fout[27]" to "fout27"
+    Warning (275081): Converted element name(s) from "fout[27]" to "fout27"
+Warning (275080): Converted elements in bus name "fout2" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "fout2[7..0]" to "fout27..0"
+    Warning (275081): Converted element name(s) from "fout2[7..0]" to "fout27..0"
+    Warning (275081): Converted element name(s) from "fout2[7..0]" to "fout27..0"
+Info (12128): Elaborating entity "changeFout" for hierarchy "changeFout:inst5"
+Warning (10230): Verilog HDL assignment warning at changeFout.v(8): truncated value with size 10 to match size of target (8) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/changeFout.v Line: 8
+Warning (10230): Verilog HDL assignment warning at changeFout.v(9): truncated value with size 32 to match size of target (8) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/changeFout.v Line: 9
+Warning (10230): Verilog HDL assignment warning at changeFout.v(10): truncated value with size 32 to match size of target (8) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/changeFout.v Line: 10
+Warning (10230): Verilog HDL assignment warning at changeFout.v(11): truncated value with size 32 to match size of target (8) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/changeFout.v Line: 11
 Info (12128): Elaborating entity "pll" for hierarchy "pll:inst"
 Info (12128): Elaborating entity "altpll" for hierarchy "pll:inst|altpll:altpll_component" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/pll.v Line: 100
 Info (12130): Elaborated megafunction instantiation "pll:inst|altpll:altpll_component" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/pll.v Line: 100
@@ -1728,6 +1722,56 @@ Info (12133): Instantiated megafunction "pll:inst|altpll:altpll_component" with 
 Info (12021): Found 1 design units, including 1 entities, in source file db/pll_altpll.v
     Info (12023): Found entity 1: pll_altpll File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/pll_altpll.v Line: 30
 Info (12128): Elaborating entity "pll_altpll" for hierarchy "pll:inst|altpll:altpll_component|pll_altpll:auto_generated" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altpll.tdf Line: 898
+Info (12128): Elaborating entity "phase_accum" for hierarchy "phase_accum:inst6"
+Warning (10230): Verilog HDL assignment warning at phase_accum.v(7): truncated value with size 64 to match size of target (32) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 7
+Warning (10230): Verilog HDL assignment warning at phase_accum.v(18): truncated value with size 32 to match size of target (16) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 18
+Warning (10230): Verilog HDL assignment warning at phase_accum.v(19): truncated value with size 32 to match size of target (28) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 19
+Warning (10240): Verilog HDL Always Construct warning at phase_accum.v(12): inferring latch(es) for variable "decVal", which holds its previous value in one or more paths through the always construct File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 12
+Warning (10240): Verilog HDL Always Construct warning at phase_accum.v(12): inferring latch(es) for variable "tuner", which holds its previous value in one or more paths through the always construct File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 12
+Info (10041): Inferred latch for "tuner[0]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
+Info (10041): Inferred latch for "tuner[1]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
+Info (10041): Inferred latch for "tuner[2]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
+Info (10041): Inferred latch for "tuner[3]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
+Info (10041): Inferred latch for "tuner[4]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
+Info (10041): Inferred latch for "tuner[5]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
+Info (10041): Inferred latch for "tuner[6]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
+Info (10041): Inferred latch for "tuner[7]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
+Info (10041): Inferred latch for "tuner[8]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
+Info (10041): Inferred latch for "tuner[9]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
+Info (10041): Inferred latch for "tuner[10]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
+Info (10041): Inferred latch for "tuner[11]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
+Info (10041): Inferred latch for "tuner[12]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
+Info (10041): Inferred latch for "tuner[13]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
+Info (10041): Inferred latch for "tuner[14]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
+Info (10041): Inferred latch for "tuner[15]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
+Info (10041): Inferred latch for "tuner[16]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
+Info (10041): Inferred latch for "tuner[17]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
+Info (10041): Inferred latch for "tuner[18]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
+Info (10041): Inferred latch for "tuner[19]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
+Info (10041): Inferred latch for "tuner[20]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
+Info (10041): Inferred latch for "tuner[21]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
+Info (10041): Inferred latch for "tuner[22]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
+Info (10041): Inferred latch for "tuner[23]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
+Info (10041): Inferred latch for "tuner[24]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
+Info (10041): Inferred latch for "tuner[25]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
+Info (10041): Inferred latch for "tuner[26]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
+Info (10041): Inferred latch for "tuner[27]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
+Info (10041): Inferred latch for "decVal[0]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
+Info (10041): Inferred latch for "decVal[1]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
+Info (10041): Inferred latch for "decVal[2]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
+Info (10041): Inferred latch for "decVal[3]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
+Info (10041): Inferred latch for "decVal[4]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
+Info (10041): Inferred latch for "decVal[5]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
+Info (10041): Inferred latch for "decVal[6]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
+Info (10041): Inferred latch for "decVal[7]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
+Info (10041): Inferred latch for "decVal[8]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
+Info (10041): Inferred latch for "decVal[9]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
+Info (10041): Inferred latch for "decVal[10]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
+Info (10041): Inferred latch for "decVal[11]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
+Info (10041): Inferred latch for "decVal[12]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
+Info (10041): Inferred latch for "decVal[13]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
+Info (10041): Inferred latch for "decVal[14]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
+Info (10041): Inferred latch for "decVal[15]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
 Info (12128): Elaborating entity "mux_LUT" for hierarchy "mux_LUT:inst13"
 Info (12128): Elaborating entity "lpm_mux" for hierarchy "mux_LUT:inst13|lpm_mux:LPM_MUX_component" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/mux_LUT.v Line: 70
 Info (12130): Elaborated megafunction instantiation "mux_LUT:inst13|lpm_mux:LPM_MUX_component" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/mux_LUT.v Line: 70
@@ -1739,27 +1783,23 @@ Info (12133): Instantiated megafunction "mux_LUT:inst13|lpm_mux:LPM_MUX_componen
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_f7c.tdf
     Info (12023): Found entity 1: mux_f7c File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/mux_f7c.tdf Line: 23
 Info (12128): Elaborating entity "mux_f7c" for hierarchy "mux_LUT:inst13|lpm_mux:LPM_MUX_component|mux_f7c:auto_generated" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_mux.tdf Line: 87
-Info (12128): Elaborating entity "triLUT" for hierarchy "triLUT:inst2"
-Info (12128): Elaborating entity "altsyncram" for hierarchy "triLUT:inst2|altsyncram:altsyncram_component" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/triLUT.v Line: 82
-Info (12130): Elaborated megafunction instantiation "triLUT:inst2|altsyncram:altsyncram_component" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/triLUT.v Line: 82
-Info (12133): Instantiated megafunction "triLUT:inst2|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/triLUT.v Line: 82
-    Info (12134): Parameter "address_aclr_a" = "NONE"
-    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
-    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
-    Info (12134): Parameter "init_file" = "triLUT.mif"
-    Info (12134): Parameter "intended_device_family" = "MAX 10"
+Info (12128): Elaborating entity "const2" for hierarchy "const2:inst10"
+Info (12128): Elaborating entity "lpm_constant" for hierarchy "const2:inst10|lpm_constant:LPM_CONSTANT_component" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/const2.v Line: 49
+Info (12130): Elaborated megafunction instantiation "const2:inst10|lpm_constant:LPM_CONSTANT_component" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/const2.v Line: 49
+Info (12133): Instantiated megafunction "const2:inst10|lpm_constant:LPM_CONSTANT_component" with the following parameter: File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/const2.v Line: 49
+    Info (12134): Parameter "lpm_cvalue" = "1023"
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
-    Info (12134): Parameter "lpm_type" = "altsyncram"
-    Info (12134): Parameter "numwords_a" = "1024"
-    Info (12134): Parameter "operation_mode" = "ROM"
-    Info (12134): Parameter "outdata_aclr_a" = "NONE"
-    Info (12134): Parameter "outdata_reg_a" = "CLOCK0"
-    Info (12134): Parameter "widthad_a" = "10"
-    Info (12134): Parameter "width_a" = "10"
-    Info (12134): Parameter "width_byteena_a" = "1"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_mn81.tdf
-    Info (12023): Found entity 1: altsyncram_mn81 File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/altsyncram_mn81.tdf Line: 28
-Info (12128): Elaborating entity "altsyncram_mn81" for hierarchy "triLUT:inst2|altsyncram:altsyncram_component|altsyncram_mn81:auto_generated" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+    Info (12134): Parameter "lpm_type" = "LPM_CONSTANT"
+    Info (12134): Parameter "lpm_width" = "10"
+Info (12128): Elaborating entity "const1" for hierarchy "const1:inst9"
+Info (12128): Elaborating entity "lpm_constant" for hierarchy "const1:inst9|lpm_constant:LPM_CONSTANT_component" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/const1.v Line: 49
+Info (12130): Elaborated megafunction instantiation "const1:inst9|lpm_constant:LPM_CONSTANT_component" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/const1.v Line: 49
+Info (12133): Instantiated megafunction "const1:inst9|lpm_constant:LPM_CONSTANT_component" with the following parameter: File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/const1.v Line: 49
+    Info (12134): Parameter "lpm_cvalue" = "0"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "LPM_CONSTANT"
+    Info (12134): Parameter "lpm_width" = "10"
+Info (12128): Elaborating entity "decOutput" for hierarchy "decOutput:inst4"
 Info (12128): Elaborating entity "sinLUT" for hierarchy "sinLUT:inst1"
 Info (12128): Elaborating entity "altsyncram" for hierarchy "sinLUT:inst1|altsyncram:altsyncram_component" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/sinLUT.v Line: 82
 Info (12130): Elaborated megafunction instantiation "sinLUT:inst1|altsyncram:altsyncram_component" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/sinLUT.v Line: 82
@@ -1771,17 +1811,39 @@ Info (12133): Instantiated megafunction "sinLUT:inst1|altsyncram:altsyncram_comp
     Info (12134): Parameter "intended_device_family" = "MAX 10"
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
     Info (12134): Parameter "lpm_type" = "altsyncram"
-    Info (12134): Parameter "numwords_a" = "1024"
+    Info (12134): Parameter "numwords_a" = "256"
     Info (12134): Parameter "operation_mode" = "ROM"
     Info (12134): Parameter "outdata_aclr_a" = "NONE"
     Info (12134): Parameter "outdata_reg_a" = "CLOCK0"
-    Info (12134): Parameter "widthad_a" = "10"
+    Info (12134): Parameter "widthad_a" = "8"
     Info (12134): Parameter "width_a" = "10"
     Info (12134): Parameter "width_byteena_a" = "1"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_hn81.tdf
-    Info (12023): Found entity 1: altsyncram_hn81 File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/altsyncram_hn81.tdf Line: 28
-Info (12128): Elaborating entity "altsyncram_hn81" for hierarchy "sinLUT:inst1|altsyncram:altsyncram_component|altsyncram_hn81:auto_generated" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
-Info (12128): Elaborating entity "decOutput" for hierarchy "decOutput:inst4"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_uk81.tdf
+    Info (12023): Found entity 1: altsyncram_uk81 File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/altsyncram_uk81.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_uk81" for hierarchy "sinLUT:inst1|altsyncram:altsyncram_component|altsyncram_uk81:auto_generated" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12128): Elaborating entity "triLUT" for hierarchy "triLUT:inst2"
+Info (12128): Elaborating entity "altsyncram" for hierarchy "triLUT:inst2|altsyncram:altsyncram_component" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/triLUT.v Line: 82
+Info (12130): Elaborated megafunction instantiation "triLUT:inst2|altsyncram:altsyncram_component" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/triLUT.v Line: 82
+Info (12133): Instantiated megafunction "triLUT:inst2|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/triLUT.v Line: 82
+    Info (12134): Parameter "address_aclr_a" = "NONE"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "triLUT.mif"
+    Info (12134): Parameter "intended_device_family" = "MAX 10"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "256"
+    Info (12134): Parameter "operation_mode" = "ROM"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "CLOCK0"
+    Info (12134): Parameter "widthad_a" = "8"
+    Info (12134): Parameter "width_a" = "10"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_3l81.tdf
+    Info (12023): Found entity 1: altsyncram_3l81 File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/altsyncram_3l81.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_3l81" for hierarchy "triLUT:inst2|altsyncram:altsyncram_component|altsyncram_3l81:auto_generated" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12128): Elaborating entity "updateOut" for hierarchy "updateOut:inst7"
+Warning (10230): Verilog HDL assignment warning at updateOut.v(9): truncated value with size 32 to match size of target (10) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/updateOut.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_al14.tdf
     Info (12023): Found entity 1: altsyncram_al14 File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/altsyncram_al14.tdf Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_h7c.tdf
@@ -1804,7 +1866,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
     Info (12023): Found entity 1: cmpr_drb File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/cmpr_drb.tdf Line: 23
 Info (12033): Analysis and Synthesis generated Signal Tap or debug node instance "auto_signaltap_0"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2022.12.08.22:38:41 Progress: Loading sld7592f0f3/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2022.12.14.21:58:53 Progress: Loading sld7592f0f3/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -1827,6 +1889,28 @@ Info (12021): Found 2 design units, including 1 entities, in source file db/ip/s
     Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_splitter.sv
     Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following RAM node(s):
+        Warning (14320): Synthesized away node "triLUT:inst2|altsyncram:altsyncram_component|altsyncram_3l81:auto_generated|q_a[0]" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/altsyncram_3l81.tdf Line: 35
+        Warning (14320): Synthesized away node "triLUT:inst2|altsyncram:altsyncram_component|altsyncram_3l81:auto_generated|q_a[1]" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/altsyncram_3l81.tdf Line: 57
+        Warning (14320): Synthesized away node "triLUT:inst2|altsyncram:altsyncram_component|altsyncram_3l81:auto_generated|q_a[2]" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/altsyncram_3l81.tdf Line: 79
+        Warning (14320): Synthesized away node "triLUT:inst2|altsyncram:altsyncram_component|altsyncram_3l81:auto_generated|q_a[3]" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/altsyncram_3l81.tdf Line: 101
+        Warning (14320): Synthesized away node "triLUT:inst2|altsyncram:altsyncram_component|altsyncram_3l81:auto_generated|q_a[4]" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/altsyncram_3l81.tdf Line: 123
+        Warning (14320): Synthesized away node "triLUT:inst2|altsyncram:altsyncram_component|altsyncram_3l81:auto_generated|q_a[5]" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/altsyncram_3l81.tdf Line: 145
+        Warning (14320): Synthesized away node "triLUT:inst2|altsyncram:altsyncram_component|altsyncram_3l81:auto_generated|q_a[6]" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/altsyncram_3l81.tdf Line: 167
+        Warning (14320): Synthesized away node "triLUT:inst2|altsyncram:altsyncram_component|altsyncram_3l81:auto_generated|q_a[7]" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/altsyncram_3l81.tdf Line: 189
+        Warning (14320): Synthesized away node "triLUT:inst2|altsyncram:altsyncram_component|altsyncram_3l81:auto_generated|q_a[8]" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/altsyncram_3l81.tdf Line: 211
+        Warning (14320): Synthesized away node "triLUT:inst2|altsyncram:altsyncram_component|altsyncram_3l81:auto_generated|q_a[9]" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/altsyncram_3l81.tdf Line: 233
+        Warning (14320): Synthesized away node "sinLUT:inst1|altsyncram:altsyncram_component|altsyncram_uk81:auto_generated|q_a[0]" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/altsyncram_uk81.tdf Line: 35
+        Warning (14320): Synthesized away node "sinLUT:inst1|altsyncram:altsyncram_component|altsyncram_uk81:auto_generated|q_a[1]" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/altsyncram_uk81.tdf Line: 57
+        Warning (14320): Synthesized away node "sinLUT:inst1|altsyncram:altsyncram_component|altsyncram_uk81:auto_generated|q_a[2]" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/altsyncram_uk81.tdf Line: 79
+        Warning (14320): Synthesized away node "sinLUT:inst1|altsyncram:altsyncram_component|altsyncram_uk81:auto_generated|q_a[3]" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/altsyncram_uk81.tdf Line: 101
+        Warning (14320): Synthesized away node "sinLUT:inst1|altsyncram:altsyncram_component|altsyncram_uk81:auto_generated|q_a[4]" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/altsyncram_uk81.tdf Line: 123
+        Warning (14320): Synthesized away node "sinLUT:inst1|altsyncram:altsyncram_component|altsyncram_uk81:auto_generated|q_a[5]" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/altsyncram_uk81.tdf Line: 145
+        Warning (14320): Synthesized away node "sinLUT:inst1|altsyncram:altsyncram_component|altsyncram_uk81:auto_generated|q_a[6]" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/altsyncram_uk81.tdf Line: 167
+        Warning (14320): Synthesized away node "sinLUT:inst1|altsyncram:altsyncram_component|altsyncram_uk81:auto_generated|q_a[7]" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/altsyncram_uk81.tdf Line: 189
+        Warning (14320): Synthesized away node "sinLUT:inst1|altsyncram:altsyncram_component|altsyncram_uk81:auto_generated|q_a[8]" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/altsyncram_uk81.tdf Line: 211
+        Warning (14320): Synthesized away node "sinLUT:inst1|altsyncram:altsyncram_component|altsyncram_uk81:auto_generated|q_a[9]" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/altsyncram_uk81.tdf Line: 233
 Info (278001): Inferred 8 megafunctions from design logic
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "decOutput:inst4|Mod0" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/decOutput.v Line: 18
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "decOutput:inst4|Div0" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/decOutput.v Line: 31
@@ -1925,6 +2009,7 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX5[1]" is stuck at VCC
     Warning (13410): Pin "HEX5[0]" is stuck at VCC
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
+Info (17049): 7 registers lost all their fanouts during netlist optimizations.
 Info (17016): Found the following redundant logic cells in design
     Info (17048): Logic cell "decOutput:inst4|lpm_divide:Mod1|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_15_result_int[0]~10" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/alt_u_div_uhe.tdf Line: 62
 Warning (20013): Ignored 24 assignments for entity "DE10_LITE_Default" -- entity does not exist in design
@@ -1953,19 +2038,19 @@ Warning (20013): Ignored 24 assignments for entity "DE10_LITE_Default" -- entity
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_EXTRACT_HARD_BLOCK_NODES ON -entity DE10_LITE_Default -section_id Top was ignored
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity DE10_LITE_Default -section_id Top was ignored
 Info (144001): Generated suppressed messages file C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/output_files/dds_fsk.map.smsg
-Critical Warning (35025): Partially connected in-system debug instance "auto_signaltap_0" to 33 of its 53 required data inputs, trigger inputs, acquisition clocks, and dynamic pins.  There were 0 illegal, 0 inaccessible, and 20 missing sources or connections.
+Info (35024): Successfully connected in-system debug instance "auto_signaltap_0" to all 53 required data inputs, trigger inputs, acquisition clocks, and dynamic pins
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1308 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1278 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 18 input pins
     Info (21059): Implemented 62 output pins
-    Info (21061): Implemented 1196 logic cells
-    Info (21064): Implemented 30 RAM segments
+    Info (21061): Implemented 1186 logic cells
+    Info (21064): Implemented 10 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 50 warnings
-    Info: Peak virtual memory: 4910 megabytes
-    Info: Processing ended: Thu Dec  8 22:38:51 2022
-    Info: Elapsed time: 00:00:26
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 79 warnings
+    Info: Peak virtual memory: 4914 megabytes
+    Info: Processing ended: Wed Dec 14 21:59:04 2022
+    Info: Elapsed time: 00:00:27
     Info: Total CPU time (on all processors): 00:00:50
 
 

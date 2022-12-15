@@ -8,43 +8,43 @@
 					"strict" : false
 				},
 				{
-					"name" : "GPIO_13",
+					"name" : "GPIO_[13]",
 					"strict" : false
 				},
 				{
-					"name" : "GPIO_12",
+					"name" : "GPIO_[12]",
 					"strict" : false
 				},
 				{
-					"name" : "GPIO_11",
+					"name" : "GPIO_[11]",
 					"strict" : false
 				},
 				{
-					"name" : "GPIO_10",
+					"name" : "GPIO_[10]",
 					"strict" : false
 				},
 				{
-					"name" : "GPIO_9",
+					"name" : "GPIO_[9]",
 					"strict" : false
 				},
 				{
-					"name" : "GPIO_8",
+					"name" : "GPIO_[8]",
 					"strict" : false
 				},
 				{
-					"name" : "GPIO_7",
+					"name" : "GPIO_[7]",
 					"strict" : false
 				},
 				{
-					"name" : "GPIO_6",
+					"name" : "GPIO_[6]",
 					"strict" : false
 				},
 				{
-					"name" : "GPIO_5",
+					"name" : "GPIO_[5]",
 					"strict" : false
 				},
 				{
-					"name" : "GPIO_4",
+					"name" : "GPIO_[4]",
 					"strict" : false
 				},
 				{
