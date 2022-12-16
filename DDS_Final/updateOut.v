@@ -1,12 +1,12 @@
-module updateOut(lut, clk, out);
-	input[9:0] lut;
+module updateOut(lut, f1, clk, out);
+	input[9:0] f1, lut;
 	input clk;
 	output reg[9:0] out;
 	
 	always@(posedge clk)
 	begin
-		if(lut >= 0 && lut < 512) out = lut;
-		else if (lut >= 512 && lut < 1024) out = 512 - lut;
+		if(f1 >= 0 && f1 < 512) out = lut;
+		else if (f1 >= 512 && f1 < 1024) out = 1023 - lut;
 	end
 	
 endmodule

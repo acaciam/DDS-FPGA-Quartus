@@ -1,15 +1,15 @@
-Analysis & Synthesis Status : Successful - Wed Dec 14 21:59:03 2022
+Analysis & Synthesis Status : Successful - Thu Dec 15 23:08:28 2022
 Quartus Prime Version : 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 Revision Name : dds_fsk
 Top-level Entity Name : dds_fsk
 Family : MAX 10
-Total logic elements : 1,157
-    Total combinational functions : 910
-    Dedicated logic registers : 621
-Total registers : 621
+Total logic elements : 1,574
+    Total combinational functions : 1,047
+    Dedicated logic registers : 986
+Total registers : 986
 Total pins : 76
 Total virtual pins : 0
-Total memory bits : 20,480
+Total memory bits : 82,944
 Embedded Multiplier 9-bit elements : 0
 Total PLLs : 1
 UFM blocks : 0
