@@ -55,16 +55,16 @@ module decOutput(dec, clr, clk, lights);
 			endcase
 			//output 1000's place
 			case((dec/1000) % 10)
-					4'h0 : lights[39:32] = 8'b11000000;
-					4'h1 : lights[39:32] = 8'b11111001;
-					4'h2 : lights[39:32] = 8'b10100100;
-					4'h3 : lights[39:32] = 8'b10110000;		
-					4'h4 : lights[39:32] = 8'b10011001;
-					4'h5 : lights[39:32] = 8'b10010010;			
-					4'h6 : lights[39:32] = 8'b10000010;
-					4'h7 : lights[39:32] = 8'b11111000;			
-					4'h8 : lights[39:32] = 8'b10000000;
-					4'h9 : lights[39:32] = 8'b10011000;	
+					4'h0 : lights[47:40] = 8'b11000000;
+					4'h1 : lights[47:40] = 8'b11111001;
+					4'h2 : lights[47:40] = 8'b10100100;
+					4'h3 : lights[47:40] = 8'b10110000;		
+					4'h4 : lights[47:40] = 8'b10011001;
+					4'h5 : lights[47:40] = 8'b10010010;			
+					4'h6 : lights[47:40] = 8'b10000010;
+					4'h7 : lights[47:40] = 8'b11111000;			
+					4'h8 : lights[47:40] = 8'b10000000;
+					4'h9 : lights[47:40] = 8'b10011000;	
 			endcase
 		end
 		end
