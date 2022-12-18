@@ -1,5 +1,5 @@
 Flow report for dds_fsk
-Sat Dec 17 23:47:59 2022
+Sun Dec 18 15:12:57 2022
 Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 
 
@@ -41,17 +41,17 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Sat Dec 17 23:47:55 2022       ;
+; Flow Status                        ; Successful - Sun Dec 18 15:12:54 2022       ;
 ; Quartus Prime Version              ; 21.1.1 Build 850 06/23/2022 SJ Lite Edition ;
 ; Revision Name                      ; dds_fsk                                     ;
 ; Top-level Entity Name              ; dds_fsk                                     ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 1,255 / 49,760 ( 3 % )                      ;
-;     Total combinational functions  ; 1,019 / 49,760 ( 2 % )                      ;
-;     Dedicated logic registers      ; 704 / 49,760 ( 1 % )                        ;
-; Total registers                    ; 704                                         ;
+; Total logic elements               ; 1,293 / 49,760 ( 3 % )                      ;
+;     Total combinational functions  ; 1,022 / 49,760 ( 2 % )                      ;
+;     Dedicated logic registers      ; 742 / 49,760 ( 1 % )                        ;
+; Total registers                    ; 742                                         ;
 ; Total pins                         ; 76 / 360 ( 21 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 46,080 / 1,677,312 ( 3 % )                  ;
@@ -67,7 +67,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/17/2022 23:47:16 ;
+; Start date & time ; 12/18/2022 15:12:26 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; dds_fsk             ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+-----------------------------------------------------------------------------+---------------+-------------------+------------------+
 ; Assignment Name                     ; Value                                                                       ; Default Value ; Entity Name       ; Section Id       ;
 +-------------------------------------+-----------------------------------------------------------------------------+---------------+-------------------+------------------+
-; COMPILER_SIGNATURE_ID               ; 1096877262115.167133883508432                                               ; --            ; --                ; --               ;
+; COMPILER_SIGNATURE_ID               ; 84084434434008.167139434624464                                              ; --            ; --                ; --               ;
 ; ENABLE_SIGNALTAP                    ; On                                                                          ; --            ; --                ; --               ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                                          ; --            ; --                ; --               ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                                                           ; --            ; --                ; --               ;
@@ -136,7 +136,6 @@ https://fpgasoftware.intel.com/eula.
 ; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_TRIGGER_LEVEL=1                                                         ; --            ; --                ; auto_signaltap_0 ;
 ; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_TRIGGER_IN_ENABLED=0                                                    ; --            ; --                ; auto_signaltap_0 ;
 ; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_TRIGGER_PIPELINE=0                                                      ; --            ; --                ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_RAM_PIPELINE=0                                                          ; --            ; --                ; auto_signaltap_0 ;
 ; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_COUNTER_PIPELINE=0                                                      ; --            ; --                ; auto_signaltap_0 ;
 ; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_ADVANCED_TRIGGER_ENTITY=basic,1,                                        ; --            ; --                ; auto_signaltap_0 ;
 ; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_TRIGGER_LEVEL_PIPELINE=1                                                ; --            ; --                ; auto_signaltap_0 ;
@@ -148,6 +147,7 @@ https://fpgasoftware.intel.com/eula.
 ; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_STORAGE_QUALIFIER_BITS=10                                               ; --            ; --                ; auto_signaltap_0 ;
 ; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_INVERSION_MASK=00000000000000000000000000000000000000000000000000000000 ; --            ; --                ; auto_signaltap_0 ;
 ; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_INVERSION_MASK_LENGTH=56                                                ; --            ; --                ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_RAM_PIPELINE=1                                                          ; --            ; --                ; auto_signaltap_0 ;
 ; USE_SIGNALTAP_FILE                  ; stp1.stp                                                                    ; --            ; --                ; --               ;
 +-------------------------------------+-----------------------------------------------------------------------------+---------------+-------------------+------------------+
 
@@ -157,11 +157,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:23     ; 1.0                     ; 4908 MB             ; 00:00:43                           ;
-; Fitter               ; 00:00:10     ; 1.2                     ; 5987 MB             ; 00:00:15                           ;
-; Assembler            ; 00:00:03     ; 1.0                     ; 4743 MB             ; 00:00:04                           ;
-; Timing Analyzer      ; 00:00:03     ; 1.4                     ; 4904 MB             ; 00:00:04                           ;
-; Total                ; 00:00:39     ; --                      ; --                  ; 00:01:06                           ;
+; Analysis & Synthesis ; 00:00:16     ; 1.0                     ; 4908 MB             ; 00:00:18                           ;
+; Fitter               ; 00:00:06     ; 1.2                     ; 5954 MB             ; 00:00:07                           ;
+; Assembler            ; 00:00:02     ; 1.0                     ; 4743 MB             ; 00:00:03                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.4                     ; 4908 MB             ; 00:00:02                           ;
+; Total                ; 00:00:26     ; --                      ; --                  ; 00:00:30                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -170,10 +170,10 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; DESKTOP-AM       ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; DESKTOP-AM       ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; DESKTOP-AM       ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; DESKTOP-AM       ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; Personal-Laptop  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; Personal-Laptop  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; Personal-Laptop  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; Personal-Laptop  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for dds_fsk
-Sat Dec 17 23:47:39 2022
+Sun Dec 18 15:12:43 2022
 Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 
 
@@ -73,15 +73,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Dec 17 23:47:39 2022       ;
+; Analysis & Synthesis Status        ; Successful - Sun Dec 18 15:12:43 2022       ;
 ; Quartus Prime Version              ; 21.1.1 Build 850 06/23/2022 SJ Lite Edition ;
 ; Revision Name                      ; dds_fsk                                     ;
 ; Top-level Entity Name              ; dds_fsk                                     ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 1,280                                       ;
-;     Total combinational functions  ; 1,002                                       ;
-;     Dedicated logic registers      ; 704                                         ;
-; Total registers                    ; 704                                         ;
+; Total logic elements               ; 1,320                                       ;
+;     Total combinational functions  ; 1,005                                       ;
+;     Dedicated logic registers      ; 742                                         ;
+; Total registers                    ; 742                                         ;
 ; Total pins                         ; 76                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 46,080                                      ;
@@ -183,7 +183,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
+; Number detected on machine ; 16          ;
 ; Maximum allowed            ; 8           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
@@ -195,121 +195,121 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                         ;
-+--------------------------------------------------------------------+-----------------+----------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+-------------+
-; File Name with User-Entered Path                                   ; Used in Netlist ; File Type                                    ; File Name with Absolute Path                                                                                               ; Library     ;
-+--------------------------------------------------------------------+-----------------+----------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+-------------+
-; phase_accum.v                                                      ; yes             ; User Verilog HDL File                        ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v                                                      ;             ;
-; pll.v                                                              ; yes             ; User Wizard-Generated File                   ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/pll.v                                                              ;             ;
-; dds_fsk.bdf                                                        ; yes             ; User Block Diagram/Schematic File            ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/dds_fsk.bdf                                                        ;             ;
-; mux_LUT.v                                                          ; yes             ; User Wizard-Generated File                   ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/mux_LUT.v                                                          ;             ;
-; sinLUT.v                                                           ; yes             ; User Wizard-Generated File                   ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/sinLUT.v                                                           ;             ;
-; triLUT.mif                                                         ; yes             ; User Memory Initialization File              ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/triLUT.mif                                                         ;             ;
-; triLUT.v                                                           ; yes             ; User Wizard-Generated File                   ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/triLUT.v                                                           ;             ;
-; decOutput.v                                                        ; yes             ; User Verilog HDL File                        ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/decOutput.v                                                        ;             ;
-; changeFout.v                                                       ; yes             ; User Verilog HDL File                        ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/changeFout.v                                                       ;             ;
-; sinLUT.mif                                                         ; yes             ; User Memory Initialization File              ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/sinLUT.mif                                                         ;             ;
-; updateOut.v                                                        ; yes             ; User Verilog HDL File                        ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/updateOut.v                                                        ;             ;
-; altpll.tdf                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altpll.tdf                                                          ;             ;
-; aglobal211.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/aglobal211.inc                                                      ;             ;
-; stratix_pll.inc                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/stratix_pll.inc                                                     ;             ;
-; stratixii_pll.inc                                                  ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/stratixii_pll.inc                                                   ;             ;
-; cycloneii_pll.inc                                                  ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/cycloneii_pll.inc                                                   ;             ;
-; db/pll_altpll.v                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/pll_altpll.v                                                    ;             ;
-; lpm_mux.tdf                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_mux.tdf                                                         ;             ;
-; muxlut.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/muxlut.inc                                                          ;             ;
-; bypassff.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/bypassff.inc                                                        ;             ;
-; altshift.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altshift.inc                                                        ;             ;
-; db/mux_f7c.tdf                                                     ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/mux_f7c.tdf                                                     ;             ;
-; altsyncram.tdf                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altsyncram.tdf                                                      ;             ;
-; stratix_ram_block.inc                                              ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                               ;             ;
-; lpm_mux.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_mux.inc                                                         ;             ;
-; lpm_decode.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_decode.inc                                                      ;             ;
-; a_rdenreg.inc                                                      ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/a_rdenreg.inc                                                       ;             ;
-; altrom.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altrom.inc                                                          ;             ;
-; altram.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altram.inc                                                          ;             ;
-; altdpram.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altdpram.inc                                                        ;             ;
-; db/altsyncram_3l81.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/altsyncram_3l81.tdf                                             ;             ;
-; db/altsyncram_uk81.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/altsyncram_uk81.tdf                                             ;             ;
-; sld_signaltap.vhd                                                  ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/sld_signaltap.vhd                                                   ;             ;
-; sld_signaltap_impl.vhd                                             ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/sld_signaltap_impl.vhd                                              ;             ;
-; sld_ela_control.vhd                                                ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/sld_ela_control.vhd                                                 ;             ;
-; lpm_shiftreg.tdf                                                   ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_shiftreg.tdf                                                    ;             ;
-; lpm_constant.inc                                                   ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_constant.inc                                                    ;             ;
-; dffeea.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/dffeea.inc                                                          ;             ;
-; sld_mbpmg.vhd                                                      ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/sld_mbpmg.vhd                                                       ;             ;
-; sld_ela_trigger_flow_mgr.vhd                                       ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/sld_ela_trigger_flow_mgr.vhd                                        ;             ;
-; sld_buffer_manager.vhd                                             ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/sld_buffer_manager.vhd                                              ;             ;
-; db/altsyncram_ml14.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/altsyncram_ml14.tdf                                             ;             ;
-; altdpram.tdf                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altdpram.tdf                                                        ;             ;
-; memmodes.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/others/maxplus2/memmodes.inc                                                      ;             ;
-; a_hdffe.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/a_hdffe.inc                                                         ;             ;
-; alt_le_rden_reg.inc                                                ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/alt_le_rden_reg.inc                                                 ;             ;
-; altsyncram.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altsyncram.inc                                                      ;             ;
-; db/mux_j7c.tdf                                                     ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/mux_j7c.tdf                                                     ;             ;
-; lpm_decode.tdf                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_decode.tdf                                                      ;             ;
-; declut.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/declut.inc                                                          ;             ;
-; lpm_compare.inc                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_compare.inc                                                     ;             ;
-; db/decode_3af.tdf                                                  ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/decode_3af.tdf                                                  ;             ;
-; lpm_counter.tdf                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_counter.tdf                                                     ;             ;
-; lpm_add_sub.inc                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_add_sub.inc                                                     ;             ;
-; cmpconst.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/cmpconst.inc                                                        ;             ;
-; lpm_counter.inc                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_counter.inc                                                     ;             ;
-; alt_counter_stratix.inc                                            ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/alt_counter_stratix.inc                                             ;             ;
-; db/cntr_vqh.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/cntr_vqh.tdf                                                    ;             ;
-; db/cmpr_grb.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/cmpr_grb.tdf                                                    ;             ;
-; db/cntr_cki.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/cntr_cki.tdf                                                    ;             ;
-; db/cntr_6rh.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/cntr_6rh.tdf                                                    ;             ;
-; db/cmpr_hrb.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/cmpr_hrb.tdf                                                    ;             ;
-; db/cntr_odi.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/cntr_odi.tdf                                                    ;             ;
-; db/cmpr_drb.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/cmpr_drb.tdf                                                    ;             ;
-; sld_rom_sr.vhd                                                     ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/sld_rom_sr.vhd                                                      ;             ;
-; sld_jtag_endpoint_adapter.vhd                                      ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd                                       ;             ;
-; sld_jtag_endpoint_adapter_impl.sv                                  ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter_impl.sv                                   ;             ;
-; sld_hub.vhd                                                        ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/sld_hub.vhd                                                         ; altera_sld  ;
-; db/ip/sld7592f0f3/alt_sld_fab.v                                    ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/ip/sld7592f0f3/alt_sld_fab.v                                    ; alt_sld_fab ;
-; db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab.v             ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab.v             ; alt_sld_fab ;
-; db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; yes             ; Auto-Found SystemVerilog HDL File            ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; alt_sld_fab ;
-; db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; alt_sld_fab ;
-; db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; yes             ; Encrypted Auto-Found VHDL File               ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; alt_sld_fab ;
-; db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; alt_sld_fab ;
-; sld_jtag_hub.vhd                                                   ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                                    ;             ;
-; lpm_divide.tdf                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_divide.tdf                                                      ;             ;
-; abs_divider.inc                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/abs_divider.inc                                                     ;             ;
-; sign_div_unsign.inc                                                ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/sign_div_unsign.inc                                                 ;             ;
-; db/lpm_divide_rll.tdf                                              ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/lpm_divide_rll.tdf                                              ;             ;
-; db/sign_div_unsign_qlh.tdf                                         ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/sign_div_unsign_qlh.tdf                                         ;             ;
-; db/alt_u_div_uhe.tdf                                               ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/alt_u_div_uhe.tdf                                               ;             ;
-; db/add_sub_t3c.tdf                                                 ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/add_sub_t3c.tdf                                                 ;             ;
-; db/add_sub_u3c.tdf                                                 ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/add_sub_u3c.tdf                                                 ;             ;
-; db/lpm_divide_otl.tdf                                              ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/lpm_divide_otl.tdf                                              ;             ;
-; db/lpm_divide_rtl.tdf                                              ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/lpm_divide_rtl.tdf                                              ;             ;
-; db/sign_div_unsign_tlh.tdf                                         ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/sign_div_unsign_tlh.tdf                                         ;             ;
-; db/alt_u_div_4ie.tdf                                               ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/alt_u_div_4ie.tdf                                               ;             ;
-; db/lpm_divide_5vl.tdf                                              ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/lpm_divide_5vl.tdf                                              ;             ;
-; db/sign_div_unsign_7nh.tdf                                         ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/sign_div_unsign_7nh.tdf                                         ;             ;
-; db/alt_u_div_oke.tdf                                               ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/alt_u_div_oke.tdf                                               ;             ;
-; lpm_mult.tdf                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_mult.tdf                                                        ;             ;
-; multcore.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/multcore.inc                                                        ;             ;
-; multcore.tdf                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/multcore.tdf                                                        ;             ;
-; csa_add.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/csa_add.inc                                                         ;             ;
-; mpar_add.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/mpar_add.inc                                                        ;             ;
-; muleabz.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/muleabz.inc                                                         ;             ;
-; mul_lfrg.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/mul_lfrg.inc                                                        ;             ;
-; mul_boothc.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/mul_boothc.inc                                                      ;             ;
-; alt_ded_mult.inc                                                   ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/alt_ded_mult.inc                                                    ;             ;
-; alt_ded_mult_y.inc                                                 ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/alt_ded_mult_y.inc                                                  ;             ;
-; dffpipe.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/dffpipe.inc                                                         ;             ;
-; mpar_add.tdf                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/mpar_add.tdf                                                        ;             ;
-; lpm_add_sub.tdf                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_add_sub.tdf                                                     ;             ;
-; addcore.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/addcore.inc                                                         ;             ;
-; look_add.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/look_add.inc                                                        ;             ;
-; alt_stratix_add_sub.inc                                            ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/alt_stratix_add_sub.inc                                             ;             ;
-; db/add_sub_irg.tdf                                                 ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/add_sub_irg.tdf                                                 ;             ;
-; db/add_sub_drg.tdf                                                 ; yes             ; Auto-Generated Megafunction                  ; C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/add_sub_drg.tdf                                                 ;             ;
-; altshift.tdf                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altshift.tdf                                                        ;             ;
-+--------------------------------------------------------------------+-----------------+----------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+-------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                        ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+---------------------------------------------------------------------------------------------------------------------------+-------------+
+; File Name with User-Entered Path                                   ; Used in Netlist ; File Type                                    ; File Name with Absolute Path                                                                                              ; Library     ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+---------------------------------------------------------------------------------------------------------------------------+-------------+
+; phase_accum.v                                                      ; yes             ; User Verilog HDL File                        ; C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/phase_accum.v                                                      ;             ;
+; pll.v                                                              ; yes             ; User Wizard-Generated File                   ; C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/pll.v                                                              ;             ;
+; dds_fsk.bdf                                                        ; yes             ; User Block Diagram/Schematic File            ; C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/dds_fsk.bdf                                                        ;             ;
+; mux_LUT.v                                                          ; yes             ; User Wizard-Generated File                   ; C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/mux_LUT.v                                                          ;             ;
+; sinLUT.v                                                           ; yes             ; User Wizard-Generated File                   ; C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/sinLUT.v                                                           ;             ;
+; triLUT.mif                                                         ; yes             ; User Memory Initialization File              ; C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/triLUT.mif                                                         ;             ;
+; triLUT.v                                                           ; yes             ; User Wizard-Generated File                   ; C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/triLUT.v                                                           ;             ;
+; decOutput.v                                                        ; yes             ; User Verilog HDL File                        ; C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/decOutput.v                                                        ;             ;
+; changeFout.v                                                       ; yes             ; User Verilog HDL File                        ; C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/changeFout.v                                                       ;             ;
+; sinLUT.mif                                                         ; yes             ; User Memory Initialization File              ; C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/sinLUT.mif                                                         ;             ;
+; updateOut.v                                                        ; yes             ; User Verilog HDL File                        ; C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/updateOut.v                                                        ;             ;
+; altpll.tdf                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altpll.tdf                                                         ;             ;
+; aglobal211.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/aglobal211.inc                                                     ;             ;
+; stratix_pll.inc                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/stratix_pll.inc                                                    ;             ;
+; stratixii_pll.inc                                                  ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/stratixii_pll.inc                                                  ;             ;
+; cycloneii_pll.inc                                                  ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/cycloneii_pll.inc                                                  ;             ;
+; db/pll_altpll.v                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/pll_altpll.v                                                    ;             ;
+; lpm_mux.tdf                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_mux.tdf                                                        ;             ;
+; muxlut.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/muxlut.inc                                                         ;             ;
+; bypassff.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/bypassff.inc                                                       ;             ;
+; altshift.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altshift.inc                                                       ;             ;
+; db/mux_f7c.tdf                                                     ; yes             ; Auto-Generated Megafunction                  ; C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/mux_f7c.tdf                                                     ;             ;
+; altsyncram.tdf                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altsyncram.tdf                                                     ;             ;
+; stratix_ram_block.inc                                              ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                              ;             ;
+; lpm_mux.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_mux.inc                                                        ;             ;
+; lpm_decode.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_decode.inc                                                     ;             ;
+; a_rdenreg.inc                                                      ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/a_rdenreg.inc                                                      ;             ;
+; altrom.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altrom.inc                                                         ;             ;
+; altram.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altram.inc                                                         ;             ;
+; altdpram.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altdpram.inc                                                       ;             ;
+; db/altsyncram_3l81.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/altsyncram_3l81.tdf                                             ;             ;
+; db/altsyncram_uk81.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/altsyncram_uk81.tdf                                             ;             ;
+; sld_signaltap.vhd                                                  ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/sld_signaltap.vhd                                                  ;             ;
+; sld_signaltap_impl.vhd                                             ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/sld_signaltap_impl.vhd                                             ;             ;
+; sld_ela_control.vhd                                                ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/sld_ela_control.vhd                                                ;             ;
+; lpm_shiftreg.tdf                                                   ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_shiftreg.tdf                                                   ;             ;
+; lpm_constant.inc                                                   ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_constant.inc                                                   ;             ;
+; dffeea.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/dffeea.inc                                                         ;             ;
+; sld_mbpmg.vhd                                                      ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/sld_mbpmg.vhd                                                      ;             ;
+; sld_ela_trigger_flow_mgr.vhd                                       ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/sld_ela_trigger_flow_mgr.vhd                                       ;             ;
+; sld_buffer_manager.vhd                                             ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/sld_buffer_manager.vhd                                             ;             ;
+; db/altsyncram_ml14.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/altsyncram_ml14.tdf                                             ;             ;
+; altdpram.tdf                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altdpram.tdf                                                       ;             ;
+; memmodes.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/others/maxplus2/memmodes.inc                                                     ;             ;
+; a_hdffe.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/a_hdffe.inc                                                        ;             ;
+; alt_le_rden_reg.inc                                                ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/alt_le_rden_reg.inc                                                ;             ;
+; altsyncram.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altsyncram.inc                                                     ;             ;
+; db/mux_j7c.tdf                                                     ; yes             ; Auto-Generated Megafunction                  ; C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/mux_j7c.tdf                                                     ;             ;
+; lpm_decode.tdf                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_decode.tdf                                                     ;             ;
+; declut.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/declut.inc                                                         ;             ;
+; lpm_compare.inc                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_compare.inc                                                    ;             ;
+; db/decode_3af.tdf                                                  ; yes             ; Auto-Generated Megafunction                  ; C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/decode_3af.tdf                                                  ;             ;
+; lpm_counter.tdf                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_counter.tdf                                                    ;             ;
+; lpm_add_sub.inc                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_add_sub.inc                                                    ;             ;
+; cmpconst.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/cmpconst.inc                                                       ;             ;
+; lpm_counter.inc                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_counter.inc                                                    ;             ;
+; alt_counter_stratix.inc                                            ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/alt_counter_stratix.inc                                            ;             ;
+; db/cntr_vqh.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/cntr_vqh.tdf                                                    ;             ;
+; db/cmpr_grb.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/cmpr_grb.tdf                                                    ;             ;
+; db/cntr_cki.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/cntr_cki.tdf                                                    ;             ;
+; db/cntr_6rh.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/cntr_6rh.tdf                                                    ;             ;
+; db/cmpr_hrb.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/cmpr_hrb.tdf                                                    ;             ;
+; db/cntr_odi.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/cntr_odi.tdf                                                    ;             ;
+; db/cmpr_drb.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/cmpr_drb.tdf                                                    ;             ;
+; sld_rom_sr.vhd                                                     ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/sld_rom_sr.vhd                                                     ;             ;
+; sld_jtag_endpoint_adapter.vhd                                      ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd                                      ;             ;
+; sld_jtag_endpoint_adapter_impl.sv                                  ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter_impl.sv                                  ;             ;
+; sld_hub.vhd                                                        ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/sld_hub.vhd                                                        ; altera_sld  ;
+; db/ip/sld7592f0f3/alt_sld_fab.v                                    ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/ip/sld7592f0f3/alt_sld_fab.v                                    ; alt_sld_fab ;
+; db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab.v             ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab.v             ; alt_sld_fab ;
+; db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; yes             ; Auto-Found SystemVerilog HDL File            ; C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; alt_sld_fab ;
+; db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; alt_sld_fab ;
+; db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; yes             ; Encrypted Auto-Found VHDL File               ; C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; alt_sld_fab ;
+; db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; alt_sld_fab ;
+; sld_jtag_hub.vhd                                                   ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                                   ;             ;
+; lpm_divide.tdf                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_divide.tdf                                                     ;             ;
+; abs_divider.inc                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/abs_divider.inc                                                    ;             ;
+; sign_div_unsign.inc                                                ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/sign_div_unsign.inc                                                ;             ;
+; db/lpm_divide_rll.tdf                                              ; yes             ; Auto-Generated Megafunction                  ; C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/lpm_divide_rll.tdf                                              ;             ;
+; db/sign_div_unsign_qlh.tdf                                         ; yes             ; Auto-Generated Megafunction                  ; C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/sign_div_unsign_qlh.tdf                                         ;             ;
+; db/alt_u_div_uhe.tdf                                               ; yes             ; Auto-Generated Megafunction                  ; C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/alt_u_div_uhe.tdf                                               ;             ;
+; db/add_sub_t3c.tdf                                                 ; yes             ; Auto-Generated Megafunction                  ; C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/add_sub_t3c.tdf                                                 ;             ;
+; db/add_sub_u3c.tdf                                                 ; yes             ; Auto-Generated Megafunction                  ; C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/add_sub_u3c.tdf                                                 ;             ;
+; db/lpm_divide_otl.tdf                                              ; yes             ; Auto-Generated Megafunction                  ; C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/lpm_divide_otl.tdf                                              ;             ;
+; db/lpm_divide_rtl.tdf                                              ; yes             ; Auto-Generated Megafunction                  ; C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/lpm_divide_rtl.tdf                                              ;             ;
+; db/sign_div_unsign_tlh.tdf                                         ; yes             ; Auto-Generated Megafunction                  ; C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/sign_div_unsign_tlh.tdf                                         ;             ;
+; db/alt_u_div_4ie.tdf                                               ; yes             ; Auto-Generated Megafunction                  ; C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/alt_u_div_4ie.tdf                                               ;             ;
+; db/lpm_divide_5vl.tdf                                              ; yes             ; Auto-Generated Megafunction                  ; C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/lpm_divide_5vl.tdf                                              ;             ;
+; db/sign_div_unsign_7nh.tdf                                         ; yes             ; Auto-Generated Megafunction                  ; C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/sign_div_unsign_7nh.tdf                                         ;             ;
+; db/alt_u_div_oke.tdf                                               ; yes             ; Auto-Generated Megafunction                  ; C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/alt_u_div_oke.tdf                                               ;             ;
+; lpm_mult.tdf                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_mult.tdf                                                       ;             ;
+; multcore.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/multcore.inc                                                       ;             ;
+; multcore.tdf                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/multcore.tdf                                                       ;             ;
+; csa_add.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/csa_add.inc                                                        ;             ;
+; mpar_add.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/mpar_add.inc                                                       ;             ;
+; muleabz.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/muleabz.inc                                                        ;             ;
+; mul_lfrg.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/mul_lfrg.inc                                                       ;             ;
+; mul_boothc.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/mul_boothc.inc                                                     ;             ;
+; alt_ded_mult.inc                                                   ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/alt_ded_mult.inc                                                   ;             ;
+; alt_ded_mult_y.inc                                                 ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/alt_ded_mult_y.inc                                                 ;             ;
+; dffpipe.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/dffpipe.inc                                                        ;             ;
+; mpar_add.tdf                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/mpar_add.tdf                                                       ;             ;
+; lpm_add_sub.tdf                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_add_sub.tdf                                                    ;             ;
+; addcore.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/addcore.inc                                                        ;             ;
+; look_add.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/look_add.inc                                                       ;             ;
+; alt_stratix_add_sub.inc                                            ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/alt_stratix_add_sub.inc                                            ;             ;
+; db/add_sub_irg.tdf                                                 ; yes             ; Auto-Generated Megafunction                  ; C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/add_sub_irg.tdf                                                 ;             ;
+; db/add_sub_drg.tdf                                                 ; yes             ; Auto-Generated Megafunction                  ; C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/add_sub_drg.tdf                                                 ;             ;
+; altshift.tdf                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altshift.tdf                                                       ;             ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+---------------------------------------------------------------------------------------------------------------------------+-------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -317,20 +317,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                       ;
 +---------------------------------------------+-----------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 1,280                                                                       ;
+; Estimated Total logic elements              ; 1,320                                                                       ;
 ;                                             ;                                                                             ;
-; Total combinational functions               ; 1002                                                                        ;
+; Total combinational functions               ; 1005                                                                        ;
 ; Logic element usage by number of LUT inputs ;                                                                             ;
-;     -- 4 input functions                    ; 298                                                                         ;
-;     -- 3 input functions                    ; 308                                                                         ;
-;     -- <=2 input functions                  ; 396                                                                         ;
+;     -- 4 input functions                    ; 308                                                                         ;
+;     -- 3 input functions                    ; 313                                                                         ;
+;     -- <=2 input functions                  ; 384                                                                         ;
 ;                                             ;                                                                             ;
 ; Logic elements by mode                      ;                                                                             ;
-;     -- normal mode                          ; 745                                                                         ;
+;     -- normal mode                          ; 748                                                                         ;
 ;     -- arithmetic mode                      ; 257                                                                         ;
 ;                                             ;                                                                             ;
-; Total registers                             ; 704                                                                         ;
-;     -- Dedicated logic registers            ; 704                                                                         ;
+; Total registers                             ; 742                                                                         ;
+;     -- Dedicated logic registers            ; 742                                                                         ;
 ;     -- I/O registers                        ; 0                                                                           ;
 ;                                             ;                                                                             ;
 ; I/O pins                                    ; 76                                                                          ;
@@ -342,9 +342,9 @@ https://fpgasoftware.intel.com/eula.
 ;     -- PLLs                                 ; 1                                                                           ;
 ;                                             ;                                                                             ;
 ; Maximum fan-out node                        ; pll:inst|altpll:altpll_component|pll_altpll:auto_generated|wire_pll1_clk[0] ;
-; Maximum fan-out                             ; 393                                                                         ;
-; Total fan-out                               ; 5738                                                                        ;
-; Average fan-out                             ; 3.02                                                                        ;
+; Maximum fan-out                             ; 431                                                                         ;
+; Total fan-out                               ; 5845                                                                        ;
+; Average fan-out                             ; 3.01                                                                        ;
 +---------------------------------------------+-----------------------------------------------------------------------------+
 
 
@@ -353,7 +353,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                 ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |dds_fsk                                                                                                                                ; 1002 (0)            ; 704 (0)                   ; 46080       ; 0          ; 0            ; 0       ; 0         ; 76   ; 0            ; 0          ; |dds_fsk                                                                                                                                                                                                                                                                                                                                            ; dds_fsk                           ; work         ;
+; |dds_fsk                                                                                                                                ; 1005 (0)            ; 742 (0)                   ; 46080       ; 0          ; 0            ; 0       ; 0         ; 76   ; 0            ; 0          ; |dds_fsk                                                                                                                                                                                                                                                                                                                                            ; dds_fsk                           ; work         ;
 ;    |changeFout:inst5|                                                                                                                   ; 8 (8)               ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|changeFout:inst5                                                                                                                                                                                                                                                                                                                           ; changeFout                        ; work         ;
 ;    |decOutput:inst4|                                                                                                                    ; 335 (28)            ; 40 (40)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|decOutput:inst4                                                                                                                                                                                                                                                                                                                            ; decOutput                         ; work         ;
 ;       |lpm_divide:Div0|                                                                                                                 ; 83 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|decOutput:inst4|lpm_divide:Div0                                                                                                                                                                                                                                                                                                            ; lpm_divide                        ; work         ;
@@ -395,17 +395,17 @@ https://fpgasoftware.intel.com/eula.
 ;    |sinLUT:inst1|                                                                                                                       ; 0 (0)               ; 0 (0)                     ; 2560        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|sinLUT:inst1                                                                                                                                                                                                                                                                                                                               ; sinLUT                            ; work         ;
 ;       |altsyncram:altsyncram_component|                                                                                                 ; 0 (0)               ; 0 (0)                     ; 2560        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|sinLUT:inst1|altsyncram:altsyncram_component                                                                                                                                                                                                                                                                                               ; altsyncram                        ; work         ;
 ;          |altsyncram_uk81:auto_generated|                                                                                               ; 0 (0)               ; 0 (0)                     ; 2560        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|sinLUT:inst1|altsyncram:altsyncram_component|altsyncram_uk81:auto_generated                                                                                                                                                                                                                                                                ; altsyncram_uk81                   ; work         ;
-;    |sld_hub:auto_hub|                                                                                                                   ; 123 (1)             ; 90 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                           ; sld_hub                           ; altera_sld   ;
-;       |alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric| ; 122 (0)             ; 90 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric                                                                                                                                                                                           ; alt_sld_fab_with_jtag_input       ; altera_sld   ;
-;          |alt_sld_fab:instrumentation_fabric|                                                                                           ; 122 (0)             ; 90 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric                                                                                                                                                        ; alt_sld_fab                       ; alt_sld_fab  ;
-;             |alt_sld_fab_alt_sld_fab:alt_sld_fab|                                                                                       ; 122 (1)             ; 90 (5)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab                                                                                                                    ; alt_sld_fab_alt_sld_fab           ; alt_sld_fab  ;
-;                |alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|                                                                            ; 121 (0)             ; 85 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric                                                                        ; alt_sld_fab_alt_sld_fab_sldfabric ; alt_sld_fab  ;
-;                   |sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|                                                                        ; 121 (82)            ; 85 (57)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub                           ; sld_jtag_hub                      ; work         ;
+;    |sld_hub:auto_hub|                                                                                                                   ; 126 (1)             ; 90 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                           ; sld_hub                           ; altera_sld   ;
+;       |alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric| ; 125 (0)             ; 90 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric                                                                                                                                                                                           ; alt_sld_fab_with_jtag_input       ; altera_sld   ;
+;          |alt_sld_fab:instrumentation_fabric|                                                                                           ; 125 (0)             ; 90 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric                                                                                                                                                        ; alt_sld_fab                       ; alt_sld_fab  ;
+;             |alt_sld_fab_alt_sld_fab:alt_sld_fab|                                                                                       ; 125 (1)             ; 90 (5)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab                                                                                                                    ; alt_sld_fab_alt_sld_fab           ; alt_sld_fab  ;
+;                |alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|                                                                            ; 124 (0)             ; 85 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric                                                                        ; alt_sld_fab_alt_sld_fab_sldfabric ; alt_sld_fab  ;
+;                   |sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|                                                                        ; 124 (85)            ; 85 (57)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub                           ; sld_jtag_hub                      ; work         ;
 ;                      |sld_rom_sr:hub_info_reg|                                                                                          ; 21 (21)             ; 9 (9)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg   ; sld_rom_sr                        ; work         ;
 ;                      |sld_shadow_jsm:shadow_jsm|                                                                                        ; 18 (18)             ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm ; sld_shadow_jsm                    ; altera_sld   ;
-;    |sld_signaltap:auto_signaltap_0|                                                                                                     ; 393 (2)             ; 487 (20)                  ; 40960       ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|sld_signaltap:auto_signaltap_0                                                                                                                                                                                                                                                                                                             ; sld_signaltap                     ; work         ;
-;       |sld_signaltap_impl:sld_signaltap_body|                                                                                           ; 391 (0)             ; 467 (0)                   ; 40960       ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body                                                                                                                                                                                                                                                                       ; sld_signaltap_impl                ; work         ;
-;          |sld_signaltap_implb:sld_signaltap_body|                                                                                       ; 391 (88)            ; 467 (124)                 ; 40960       ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body                                                                                                                                                                                                                                ; sld_signaltap_implb               ; work         ;
+;    |sld_signaltap:auto_signaltap_0|                                                                                                     ; 393 (2)             ; 525 (20)                  ; 40960       ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|sld_signaltap:auto_signaltap_0                                                                                                                                                                                                                                                                                                             ; sld_signaltap                     ; work         ;
+;       |sld_signaltap_impl:sld_signaltap_body|                                                                                           ; 391 (0)             ; 505 (0)                   ; 40960       ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body                                                                                                                                                                                                                                                                       ; sld_signaltap_impl                ; work         ;
+;          |sld_signaltap_implb:sld_signaltap_body|                                                                                       ; 391 (89)            ; 505 (162)                 ; 40960       ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body                                                                                                                                                                                                                                ; sld_signaltap_implb               ; work         ;
 ;             |altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|                                                            ; 27 (0)              ; 76 (76)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem                                                                                                                                                                 ; altdpram                          ; work         ;
 ;                |lpm_decode:wdecoder|                                                                                                    ; 2 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|lpm_decode:wdecoder                                                                                                                                             ; lpm_decode                        ; work         ;
 ;                   |decode_3af:auto_generated|                                                                                           ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|lpm_decode:wdecoder|decode_3af:auto_generated                                                                                                                   ; decode_3af                        ; work         ;
@@ -416,7 +416,7 @@ https://fpgasoftware.intel.com/eula.
 ;             |lpm_shiftreg:segment_offset_config_deserialize|                                                                            ; 0 (0)               ; 12 (12)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|lpm_shiftreg:segment_offset_config_deserialize                                                                                                                                                                                 ; lpm_shiftreg                      ; work         ;
 ;             |lpm_shiftreg:status_register|                                                                                              ; 17 (17)             ; 17 (17)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|lpm_shiftreg:status_register                                                                                                                                                                                                   ; lpm_shiftreg                      ; work         ;
 ;             |serial_crc_16:\tdo_crc_gen:tdo_crc_calc|                                                                                   ; 14 (14)             ; 13 (13)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|serial_crc_16:\tdo_crc_gen:tdo_crc_calc                                                                                                                                                                                        ; serial_crc_16                     ; work         ;
-;             |sld_buffer_manager:sld_buffer_manager_inst|                                                                                ; 93 (93)             ; 69 (69)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst                                                                                                                                                                                     ; sld_buffer_manager                ; work         ;
+;             |sld_buffer_manager:sld_buffer_manager_inst|                                                                                ; 92 (92)             ; 69 (69)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst                                                                                                                                                                                     ; sld_buffer_manager                ; work         ;
 ;             |sld_ela_control:ela_control|                                                                                               ; 25 (1)              ; 66 (1)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control                                                                                                                                                                                                    ; sld_ela_control                   ; work         ;
 ;                |lpm_shiftreg:trigger_config_deserialize|                                                                                ; 0 (0)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|lpm_shiftreg:trigger_config_deserialize                                                                                                                                                            ; lpm_shiftreg                      ; work         ;
 ;                |sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|                                 ; 20 (0)              ; 50 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm                                                                                                             ; sld_ela_basic_multi_level_trigger ; work         ;
@@ -509,6 +509,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:offset_count[10] ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:next_address[10] ;
 ; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:offset_count[11] ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:next_address[11] ;
 ; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|current_offset_delayed[0]                                                   ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|buffer_write_address_delayed[0]                                             ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|buffer_write_address_delayed_pipe_reg[0][0]                                 ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|status_data_pipe_reg[0][13]                                                 ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|buffer_write_enable_delayed_pipe_reg[0]                                     ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|segment_shift_clk_ena_pipe_reg[0]                                           ;
 ; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|current_offset_delayed[1]                                                   ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|buffer_write_address_delayed[1]                                             ;
 ; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|current_offset_delayed[2]                                                   ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|buffer_write_address_delayed[2]                                             ;
 ; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|current_offset_delayed[3]                                                   ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|buffer_write_address_delayed[3]                                             ;
@@ -520,8 +522,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|current_offset_delayed[9]                                                   ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|buffer_write_address_delayed[9]                                             ;
 ; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|current_offset_delayed[10]                                                  ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|buffer_write_address_delayed[10]                                            ;
 ; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|current_offset_delayed[11]                                                  ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|buffer_write_address_delayed[11]                                            ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|buffer_write_address_delayed_pipe_reg[0][1]                                 ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|status_data_pipe_reg[0][14]                                                 ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|buffer_write_address_delayed_pipe_reg[0][2]                                 ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|status_data_pipe_reg[0][15]                                                 ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|buffer_write_address_delayed_pipe_reg[0][3]                                 ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|status_data_pipe_reg[0][16]                                                 ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|buffer_write_address_delayed_pipe_reg[0][4]                                 ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|status_data_pipe_reg[0][17]                                                 ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|buffer_write_address_delayed_pipe_reg[0][5]                                 ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|status_data_pipe_reg[0][18]                                                 ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|buffer_write_address_delayed_pipe_reg[0][6]                                 ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|status_data_pipe_reg[0][19]                                                 ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|buffer_write_address_delayed_pipe_reg[0][7]                                 ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|status_data_pipe_reg[0][20]                                                 ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|buffer_write_address_delayed_pipe_reg[0][8]                                 ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|status_data_pipe_reg[0][21]                                                 ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|buffer_write_address_delayed_pipe_reg[0][9]                                 ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|status_data_pipe_reg[0][22]                                                 ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|buffer_write_address_delayed_pipe_reg[0][10]                                ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|status_data_pipe_reg[0][23]                                                 ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|buffer_write_address_delayed_pipe_reg[0][11]                                ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|status_data_pipe_reg[0][24]                                                 ;
 ; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|serial_crc_16:\tdo_crc_gen:tdo_crc_calc|lfsr[13..15]                        ; Stuck at GND due to stuck port data_in                                                                                                                                                              ;
-; Total Number of Removed Registers = 28                                                                                                                                                  ;                                                                                                                                                                                                     ;
+; Total Number of Removed Registers = 41                                                                                                                                                  ;                                                                                                                                                                                                     ;
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -544,7 +557,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 704   ;
+; Total registers                              ; 742   ;
 ; Number of registers using Synchronous Clear  ; 74    ;
 ; Number of registers using Synchronous Load   ; 68    ;
 ; Number of registers using Asynchronous Clear ; 312   ;
@@ -1221,7 +1234,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; sld_advanced_trigger_entity                     ; basic,1,                                                 ; Untyped        ;
 ; sld_trigger_level_pipeline                      ; 1                                                        ; Untyped        ;
 ; sld_trigger_pipeline                            ; 0                                                        ; Untyped        ;
-; sld_ram_pipeline                                ; 0                                                        ; Untyped        ;
+; sld_ram_pipeline                                ; 1                                                        ; Untyped        ;
 ; sld_counter_pipeline                            ; 0                                                        ; Untyped        ;
 ; sld_enable_advanced_trigger                     ; 0                                                        ; Untyped        ;
 ; SLD_ADVANCED_TRIGGER_1                          ; NONE                                                     ; String         ;
@@ -1563,14 +1576,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                                                  ;
 +-----------------------+--------------------------------------------------------+
 ; boundary_port         ; 134                                                    ;
-; cycloneiii_ff         ; 487                                                    ;
+; cycloneiii_ff         ; 525                                                    ;
 ;     CLR               ; 64                                                     ;
 ;     ENA               ; 138                                                    ;
 ;     ENA CLR           ; 112                                                    ;
 ;     ENA SCLR SLD      ; 36                                                     ;
 ;     ENA SLD           ; 13                                                     ;
 ;     SLD               ; 9                                                      ;
-;     plain             ; 115                                                    ;
+;     plain             ; 153                                                    ;
 ; cycloneiii_lcell_comb ; 393                                                    ;
 ;     arith             ; 86                                                     ;
 ;         2 data inputs ; 85                                                     ;
@@ -1578,13 +1591,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     normal            ; 307                                                    ;
 ;         0 data inputs ; 6                                                      ;
 ;         1 data inputs ; 5                                                      ;
-;         2 data inputs ; 35                                                     ;
-;         3 data inputs ; 121                                                    ;
-;         4 data inputs ; 140                                                    ;
+;         2 data inputs ; 24                                                     ;
+;         3 data inputs ; 122                                                    ;
+;         4 data inputs ; 150                                                    ;
 ; cycloneiii_ram_block  ; 10                                                     ;
 ;                       ;                                                        ;
 ; Max LUT depth         ; 5.10                                                   ;
-; Average LUT depth     ; 2.14                                                   ;
+; Average LUT depth     ; 2.06                                                   ;
 +-----------------------+--------------------------------------------------------+
 
 
@@ -1603,18 +1616,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA SLD           ; 9                                        ;
 ;     SCLR              ; 7                                        ;
 ;     plain             ; 16                                       ;
-; cycloneiii_lcell_comb ; 123                                      ;
+; cycloneiii_lcell_comb ; 126                                      ;
 ;     arith             ; 8                                        ;
 ;         2 data inputs ; 8                                        ;
-;     normal            ; 115                                      ;
+;     normal            ; 118                                      ;
 ;         0 data inputs ; 1                                        ;
 ;         1 data inputs ; 6                                        ;
-;         2 data inputs ; 22                                       ;
-;         3 data inputs ; 33                                       ;
+;         2 data inputs ; 21                                       ;
+;         3 data inputs ; 37                                       ;
 ;         4 data inputs ; 53                                       ;
 ;                       ;                                          ;
 ; Max LUT depth         ; 4.00                                     ;
-; Average LUT depth     ; 1.81                                     ;
+; Average LUT depth     ; 1.79                                     ;
 +-----------------------+------------------------------------------+
 
 
@@ -1623,7 +1636,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------------------------------+--------------+
 ; Partition Name                 ; Elapsed Time ;
 +--------------------------------+--------------+
-; sld_signaltap:auto_signaltap_0 ; 00:00:01     ;
+; sld_signaltap:auto_signaltap_0 ; 00:00:00     ;
 ; Top                            ; 00:00:01     ;
 ; sld_hub:auto_hub               ; 00:00:00     ;
 +--------------------------------+--------------+
@@ -1696,44 +1709,44 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
-    Info: Processing started: Sat Dec 17 23:47:15 2022
+    Info: Processing started: Sun Dec 18 15:12:26 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off dds_fsk_sinTri -c dds_fsk
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file phase_accum.v
-    Info (12023): Found entity 1: phase_accum File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 1
+    Info (12023): Found entity 1: phase_accum File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file pll.v
-    Info (12023): Found entity 1: pll File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/pll.v Line: 40
+    Info (12023): Found entity 1: pll File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/pll.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file mux_in.v
-    Info (12023): Found entity 1: mux_in File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/mux_in.v Line: 40
+    Info (12023): Found entity 1: mux_in File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/mux_in.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file dds_fsk.bdf
     Info (12023): Found entity 1: dds_fsk
 Info (12021): Found 1 design units, including 1 entities, in source file mux_tune.v
-    Info (12023): Found entity 1: mux_tune File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/mux_tune.v Line: 40
+    Info (12023): Found entity 1: mux_tune File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/mux_tune.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file freq0.v
-    Info (12023): Found entity 1: freq0 File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/freq0.v Line: 40
+    Info (12023): Found entity 1: freq0 File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/freq0.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file freq1.v
-    Info (12023): Found entity 1: freq1 File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/freq1.v Line: 40
+    Info (12023): Found entity 1: freq1 File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/freq1.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file mux_lut.v
-    Info (12023): Found entity 1: mux_LUT File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/mux_LUT.v Line: 40
+    Info (12023): Found entity 1: mux_LUT File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/mux_LUT.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file sinlut.v
-    Info (12023): Found entity 1: sinLUT File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/sinLUT.v Line: 40
+    Info (12023): Found entity 1: sinLUT File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/sinLUT.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file trilut.v
-    Info (12023): Found entity 1: triLUT File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/triLUT.v Line: 40
+    Info (12023): Found entity 1: triLUT File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/triLUT.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file decoutput.v
-    Info (12023): Found entity 1: decOutput File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/decOutput.v Line: 1
+    Info (12023): Found entity 1: decOutput File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/decOutput.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file deczero.v
-    Info (12023): Found entity 1: decZero File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/decZero.v Line: 40
+    Info (12023): Found entity 1: decZero File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/decZero.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file point.v
-    Info (12023): Found entity 1: point File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/point.v Line: 40
+    Info (12023): Found entity 1: point File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/point.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file changefout.v
-    Info (12023): Found entity 1: changeFout File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/changeFout.v Line: 1
+    Info (12023): Found entity 1: changeFout File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/changeFout.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file updateout.v
-    Info (12023): Found entity 1: updateOut File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/updateOut.v Line: 1
+    Info (12023): Found entity 1: updateOut File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/updateOut.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file const1.v
-    Info (12023): Found entity 1: const1 File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/const1.v Line: 40
+    Info (12023): Found entity 1: const1 File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/const1.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file const2.v
-    Info (12023): Found entity 1: const2 File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/const2.v Line: 40
+    Info (12023): Found entity 1: const2 File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/const2.v Line: 40
 Info (12127): Elaborating entity "dds_fsk" for the top level hierarchy
 Warning (275080): Converted elements in bus name "fout" using legacy naming rules. Make any assignments on the new names, not on the original names.
     Warning (275081): Converted element name(s) from "fout[27]" to "fout27"
@@ -1744,14 +1757,14 @@ Warning (275080): Converted elements in bus name "fout2" using legacy naming rul
     Warning (275081): Converted element name(s) from "fout2[7..0]" to "fout27..0"
 Warning (275043): Pin "GPIO_3" is missing source
 Info (12128): Elaborating entity "changeFout" for hierarchy "changeFout:inst5"
-Warning (10230): Verilog HDL assignment warning at changeFout.v(8): truncated value with size 10 to match size of target (8) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/changeFout.v Line: 8
-Warning (10230): Verilog HDL assignment warning at changeFout.v(9): truncated value with size 32 to match size of target (8) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/changeFout.v Line: 9
-Warning (10230): Verilog HDL assignment warning at changeFout.v(10): truncated value with size 32 to match size of target (8) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/changeFout.v Line: 10
-Warning (10230): Verilog HDL assignment warning at changeFout.v(11): truncated value with size 32 to match size of target (8) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/changeFout.v Line: 11
+Warning (10230): Verilog HDL assignment warning at changeFout.v(8): truncated value with size 10 to match size of target (8) File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/changeFout.v Line: 8
+Warning (10230): Verilog HDL assignment warning at changeFout.v(9): truncated value with size 32 to match size of target (8) File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/changeFout.v Line: 9
+Warning (10230): Verilog HDL assignment warning at changeFout.v(10): truncated value with size 32 to match size of target (8) File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/changeFout.v Line: 10
+Warning (10230): Verilog HDL assignment warning at changeFout.v(11): truncated value with size 32 to match size of target (8) File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/changeFout.v Line: 11
 Info (12128): Elaborating entity "pll" for hierarchy "pll:inst"
-Info (12128): Elaborating entity "altpll" for hierarchy "pll:inst|altpll:altpll_component" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/pll.v Line: 100
-Info (12130): Elaborated megafunction instantiation "pll:inst|altpll:altpll_component" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/pll.v Line: 100
-Info (12133): Instantiated megafunction "pll:inst|altpll:altpll_component" with the following parameter: File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/pll.v Line: 100
+Info (12128): Elaborating entity "altpll" for hierarchy "pll:inst|altpll:altpll_component" File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/pll.v Line: 100
+Info (12130): Elaborated megafunction instantiation "pll:inst|altpll:altpll_component" File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/pll.v Line: 100
+Info (12133): Instantiated megafunction "pll:inst|altpll:altpll_component" with the following parameter: File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/pll.v Line: 100
     Info (12134): Parameter "bandwidth_type" = "AUTO"
     Info (12134): Parameter "clk0_divide_by" = "5"
     Info (12134): Parameter "clk0_duty_cycle" = "50"
@@ -1807,29 +1820,29 @@ Info (12133): Instantiated megafunction "pll:inst|altpll:altpll_component" with 
     Info (12134): Parameter "port_extclk3" = "PORT_UNUSED"
     Info (12134): Parameter "width_clock" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/pll_altpll.v
-    Info (12023): Found entity 1: pll_altpll File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/pll_altpll.v Line: 30
+    Info (12023): Found entity 1: pll_altpll File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/pll_altpll.v Line: 30
 Info (12128): Elaborating entity "pll_altpll" for hierarchy "pll:inst|altpll:altpll_component|pll_altpll:auto_generated" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altpll.tdf Line: 898
 Info (12128): Elaborating entity "phase_accum" for hierarchy "phase_accum:inst6"
-Warning (10230): Verilog HDL assignment warning at phase_accum.v(7): truncated value with size 64 to match size of target (32) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 7
-Warning (10230): Verilog HDL assignment warning at phase_accum.v(24): truncated value with size 32 to match size of target (16) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 24
-Warning (10230): Verilog HDL assignment warning at phase_accum.v(25): truncated value with size 32 to match size of target (28) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 25
+Warning (10230): Verilog HDL assignment warning at phase_accum.v(7): truncated value with size 64 to match size of target (32) File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 7
+Warning (10230): Verilog HDL assignment warning at phase_accum.v(24): truncated value with size 32 to match size of target (16) File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 24
+Warning (10230): Verilog HDL assignment warning at phase_accum.v(25): truncated value with size 32 to match size of target (28) File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 25
 Info (12128): Elaborating entity "mux_LUT" for hierarchy "mux_LUT:inst13"
-Info (12128): Elaborating entity "lpm_mux" for hierarchy "mux_LUT:inst13|lpm_mux:LPM_MUX_component" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/mux_LUT.v Line: 70
-Info (12130): Elaborated megafunction instantiation "mux_LUT:inst13|lpm_mux:LPM_MUX_component" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/mux_LUT.v Line: 70
-Info (12133): Instantiated megafunction "mux_LUT:inst13|lpm_mux:LPM_MUX_component" with the following parameter: File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/mux_LUT.v Line: 70
+Info (12128): Elaborating entity "lpm_mux" for hierarchy "mux_LUT:inst13|lpm_mux:LPM_MUX_component" File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/mux_LUT.v Line: 70
+Info (12130): Elaborated megafunction instantiation "mux_LUT:inst13|lpm_mux:LPM_MUX_component" File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/mux_LUT.v Line: 70
+Info (12133): Instantiated megafunction "mux_LUT:inst13|lpm_mux:LPM_MUX_component" with the following parameter: File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/mux_LUT.v Line: 70
     Info (12134): Parameter "lpm_size" = "3"
     Info (12134): Parameter "lpm_type" = "LPM_MUX"
     Info (12134): Parameter "lpm_width" = "10"
     Info (12134): Parameter "lpm_widths" = "2"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_f7c.tdf
-    Info (12023): Found entity 1: mux_f7c File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/mux_f7c.tdf Line: 23
+    Info (12023): Found entity 1: mux_f7c File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/mux_f7c.tdf Line: 23
 Info (12128): Elaborating entity "mux_f7c" for hierarchy "mux_LUT:inst13|lpm_mux:LPM_MUX_component|mux_f7c:auto_generated" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_mux.tdf Line: 87
 Info (12128): Elaborating entity "updateOut" for hierarchy "updateOut:inst7"
-Warning (10230): Verilog HDL assignment warning at updateOut.v(9): truncated value with size 32 to match size of target (10) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/updateOut.v Line: 9
+Warning (10230): Verilog HDL assignment warning at updateOut.v(9): truncated value with size 32 to match size of target (10) File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/updateOut.v Line: 9
 Info (12128): Elaborating entity "triLUT" for hierarchy "triLUT:inst2"
-Info (12128): Elaborating entity "altsyncram" for hierarchy "triLUT:inst2|altsyncram:altsyncram_component" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/triLUT.v Line: 82
-Info (12130): Elaborated megafunction instantiation "triLUT:inst2|altsyncram:altsyncram_component" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/triLUT.v Line: 82
-Info (12133): Instantiated megafunction "triLUT:inst2|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/triLUT.v Line: 82
+Info (12128): Elaborating entity "altsyncram" for hierarchy "triLUT:inst2|altsyncram:altsyncram_component" File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/triLUT.v Line: 82
+Info (12130): Elaborated megafunction instantiation "triLUT:inst2|altsyncram:altsyncram_component" File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/triLUT.v Line: 82
+Info (12133): Instantiated megafunction "triLUT:inst2|altsyncram:altsyncram_component" with the following parameter: File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/triLUT.v Line: 82
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
@@ -1845,12 +1858,12 @@ Info (12133): Instantiated megafunction "triLUT:inst2|altsyncram:altsyncram_comp
     Info (12134): Parameter "width_a" = "10"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_3l81.tdf
-    Info (12023): Found entity 1: altsyncram_3l81 File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/altsyncram_3l81.tdf Line: 28
+    Info (12023): Found entity 1: altsyncram_3l81 File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/altsyncram_3l81.tdf Line: 28
 Info (12128): Elaborating entity "altsyncram_3l81" for hierarchy "triLUT:inst2|altsyncram:altsyncram_component|altsyncram_3l81:auto_generated" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
 Info (12128): Elaborating entity "sinLUT" for hierarchy "sinLUT:inst1"
-Info (12128): Elaborating entity "altsyncram" for hierarchy "sinLUT:inst1|altsyncram:altsyncram_component" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/sinLUT.v Line: 82
-Info (12130): Elaborated megafunction instantiation "sinLUT:inst1|altsyncram:altsyncram_component" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/sinLUT.v Line: 82
-Info (12133): Instantiated megafunction "sinLUT:inst1|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/sinLUT.v Line: 82
+Info (12128): Elaborating entity "altsyncram" for hierarchy "sinLUT:inst1|altsyncram:altsyncram_component" File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/sinLUT.v Line: 82
+Info (12130): Elaborated megafunction instantiation "sinLUT:inst1|altsyncram:altsyncram_component" File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/sinLUT.v Line: 82
+Info (12133): Instantiated megafunction "sinLUT:inst1|altsyncram:altsyncram_component" with the following parameter: File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/sinLUT.v Line: 82
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
@@ -1866,32 +1879,32 @@ Info (12133): Instantiated megafunction "sinLUT:inst1|altsyncram:altsyncram_comp
     Info (12134): Parameter "width_a" = "10"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_uk81.tdf
-    Info (12023): Found entity 1: altsyncram_uk81 File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/altsyncram_uk81.tdf Line: 28
+    Info (12023): Found entity 1: altsyncram_uk81 File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/altsyncram_uk81.tdf Line: 28
 Info (12128): Elaborating entity "altsyncram_uk81" for hierarchy "sinLUT:inst1|altsyncram:altsyncram_component|altsyncram_uk81:auto_generated" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
 Info (12128): Elaborating entity "decOutput" for hierarchy "decOutput:inst4"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ml14.tdf
-    Info (12023): Found entity 1: altsyncram_ml14 File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/altsyncram_ml14.tdf Line: 28
+    Info (12023): Found entity 1: altsyncram_ml14 File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/altsyncram_ml14.tdf Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_j7c.tdf
-    Info (12023): Found entity 1: mux_j7c File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/mux_j7c.tdf Line: 23
+    Info (12023): Found entity 1: mux_j7c File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/mux_j7c.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_3af.tdf
-    Info (12023): Found entity 1: decode_3af File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/decode_3af.tdf Line: 23
+    Info (12023): Found entity 1: decode_3af File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/decode_3af.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_vqh.tdf
-    Info (12023): Found entity 1: cntr_vqh File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/cntr_vqh.tdf Line: 28
+    Info (12023): Found entity 1: cntr_vqh File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/cntr_vqh.tdf Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_grb.tdf
-    Info (12023): Found entity 1: cmpr_grb File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/cmpr_grb.tdf Line: 23
+    Info (12023): Found entity 1: cmpr_grb File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/cmpr_grb.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_cki.tdf
-    Info (12023): Found entity 1: cntr_cki File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/cntr_cki.tdf Line: 26
+    Info (12023): Found entity 1: cntr_cki File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/cntr_cki.tdf Line: 26
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_6rh.tdf
-    Info (12023): Found entity 1: cntr_6rh File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/cntr_6rh.tdf Line: 28
+    Info (12023): Found entity 1: cntr_6rh File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/cntr_6rh.tdf Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_hrb.tdf
-    Info (12023): Found entity 1: cmpr_hrb File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/cmpr_hrb.tdf Line: 23
+    Info (12023): Found entity 1: cmpr_hrb File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/cmpr_hrb.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_odi.tdf
-    Info (12023): Found entity 1: cntr_odi File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/cntr_odi.tdf Line: 28
+    Info (12023): Found entity 1: cntr_odi File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/cntr_odi.tdf Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_drb.tdf
-    Info (12023): Found entity 1: cmpr_drb File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/cmpr_drb.tdf Line: 23
+    Info (12023): Found entity 1: cmpr_drb File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/cmpr_drb.tdf Line: 23
 Info (12033): Analysis and Synthesis generated Signal Tap or debug node instance "auto_signaltap_0"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2022.12.17.23:47:28 Progress: Loading sld7592f0f3/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2022.12.18.15:12:35 Progress: Loading sld7592f0f3/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -1902,83 +1915,83 @@ Info (11172): Ident: "alt_sld_fab" instantiated altera_connection_identification
 Info (11172): Alt_sld_fab: Done "alt_sld_fab" with 6 modules, 6 files
 Info (11171): Finished IP generation for the debug fabric: alt_sld_fab.
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld7592f0f3/alt_sld_fab.v
-    Info (12023): Found entity 1: alt_sld_fab File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/ip/sld7592f0f3/alt_sld_fab.v Line: 9
+    Info (12023): Found entity 1: alt_sld_fab File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/ip/sld7592f0f3/alt_sld_fab.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab.v
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab.v Line: 9
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_ident.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_ident File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_ident.sv Line: 33
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_ident File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_ident.sv Line: 33
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_presplit.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_presplit File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_presplit.sv Line: 3
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_presplit File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_presplit.sv Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd
-    Info (12022): Found design unit 1: alt_sld_fab_alt_sld_fab_sldfabric-rtl File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 102
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
+    Info (12022): Found design unit 1: alt_sld_fab_alt_sld_fab_sldfabric-rtl File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 102
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_splitter.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/ip/sld7592f0f3/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
 Info (278001): Inferred 8 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "decOutput:inst4|Mod0" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/decOutput.v Line: 18
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "decOutput:inst4|Div0" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/decOutput.v Line: 31
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "decOutput:inst4|Mod1" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/decOutput.v Line: 31
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "decOutput:inst4|Div1" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/decOutput.v Line: 44
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "decOutput:inst4|Mod2" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/decOutput.v Line: 44
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "decOutput:inst4|Div2" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/decOutput.v Line: 57
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "decOutput:inst4|Mod3" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/decOutput.v Line: 57
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "phase_accum:inst6|Mult0" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 25
-Info (12130): Elaborated megafunction instantiation "decOutput:inst4|lpm_divide:Mod0" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/decOutput.v Line: 18
-Info (12133): Instantiated megafunction "decOutput:inst4|lpm_divide:Mod0" with the following parameter: File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/decOutput.v Line: 18
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "decOutput:inst4|Mod0" File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/decOutput.v Line: 18
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "decOutput:inst4|Div0" File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/decOutput.v Line: 31
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "decOutput:inst4|Mod1" File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/decOutput.v Line: 31
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "decOutput:inst4|Div1" File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/decOutput.v Line: 44
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "decOutput:inst4|Mod2" File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/decOutput.v Line: 44
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "decOutput:inst4|Div2" File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/decOutput.v Line: 57
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "decOutput:inst4|Mod3" File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/decOutput.v Line: 57
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "phase_accum:inst6|Mult0" File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 25
+Info (12130): Elaborated megafunction instantiation "decOutput:inst4|lpm_divide:Mod0" File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/decOutput.v Line: 18
+Info (12133): Instantiated megafunction "decOutput:inst4|lpm_divide:Mod0" with the following parameter: File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/decOutput.v Line: 18
     Info (12134): Parameter "LPM_WIDTHN" = "16"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_rll.tdf
-    Info (12023): Found entity 1: lpm_divide_rll File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/lpm_divide_rll.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_rll File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/lpm_divide_rll.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_qlh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_qlh File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/sign_div_unsign_qlh.tdf Line: 25
+    Info (12023): Found entity 1: sign_div_unsign_qlh File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/sign_div_unsign_qlh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_uhe.tdf
-    Info (12023): Found entity 1: alt_u_div_uhe File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/alt_u_div_uhe.tdf Line: 27
+    Info (12023): Found entity 1: alt_u_div_uhe File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/alt_u_div_uhe.tdf Line: 27
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_t3c.tdf
-    Info (12023): Found entity 1: add_sub_t3c File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/add_sub_t3c.tdf Line: 23
+    Info (12023): Found entity 1: add_sub_t3c File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/add_sub_t3c.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_u3c.tdf
-    Info (12023): Found entity 1: add_sub_u3c File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/add_sub_u3c.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "decOutput:inst4|lpm_divide:Div0" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/decOutput.v Line: 31
-Info (12133): Instantiated megafunction "decOutput:inst4|lpm_divide:Div0" with the following parameter: File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/decOutput.v Line: 31
+    Info (12023): Found entity 1: add_sub_u3c File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/add_sub_u3c.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "decOutput:inst4|lpm_divide:Div0" File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/decOutput.v Line: 31
+Info (12133): Instantiated megafunction "decOutput:inst4|lpm_divide:Div0" with the following parameter: File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/decOutput.v Line: 31
     Info (12134): Parameter "LPM_WIDTHN" = "16"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_otl.tdf
-    Info (12023): Found entity 1: lpm_divide_otl File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/lpm_divide_otl.tdf Line: 25
-Info (12130): Elaborated megafunction instantiation "decOutput:inst4|lpm_divide:Mod1" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/decOutput.v Line: 31
-Info (12133): Instantiated megafunction "decOutput:inst4|lpm_divide:Mod1" with the following parameter: File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/decOutput.v Line: 31
+    Info (12023): Found entity 1: lpm_divide_otl File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/lpm_divide_otl.tdf Line: 25
+Info (12130): Elaborated megafunction instantiation "decOutput:inst4|lpm_divide:Mod1" File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/decOutput.v Line: 31
+Info (12133): Instantiated megafunction "decOutput:inst4|lpm_divide:Mod1" with the following parameter: File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/decOutput.v Line: 31
     Info (12134): Parameter "LPM_WIDTHN" = "16"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12130): Elaborated megafunction instantiation "decOutput:inst4|lpm_divide:Div1" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/decOutput.v Line: 44
-Info (12133): Instantiated megafunction "decOutput:inst4|lpm_divide:Div1" with the following parameter: File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/decOutput.v Line: 44
+Info (12130): Elaborated megafunction instantiation "decOutput:inst4|lpm_divide:Div1" File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/decOutput.v Line: 44
+Info (12133): Instantiated megafunction "decOutput:inst4|lpm_divide:Div1" with the following parameter: File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/decOutput.v Line: 44
     Info (12134): Parameter "LPM_WIDTHN" = "16"
     Info (12134): Parameter "LPM_WIDTHD" = "7"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_rtl.tdf
-    Info (12023): Found entity 1: lpm_divide_rtl File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/lpm_divide_rtl.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_rtl File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/lpm_divide_rtl.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_tlh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_tlh File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/sign_div_unsign_tlh.tdf Line: 25
+    Info (12023): Found entity 1: sign_div_unsign_tlh File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/sign_div_unsign_tlh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_4ie.tdf
-    Info (12023): Found entity 1: alt_u_div_4ie File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/alt_u_div_4ie.tdf Line: 27
-Info (12130): Elaborated megafunction instantiation "decOutput:inst4|lpm_divide:Div2" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/decOutput.v Line: 57
-Info (12133): Instantiated megafunction "decOutput:inst4|lpm_divide:Div2" with the following parameter: File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/decOutput.v Line: 57
+    Info (12023): Found entity 1: alt_u_div_4ie File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/alt_u_div_4ie.tdf Line: 27
+Info (12130): Elaborated megafunction instantiation "decOutput:inst4|lpm_divide:Div2" File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/decOutput.v Line: 57
+Info (12133): Instantiated megafunction "decOutput:inst4|lpm_divide:Div2" with the following parameter: File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/decOutput.v Line: 57
     Info (12134): Parameter "LPM_WIDTHN" = "16"
     Info (12134): Parameter "LPM_WIDTHD" = "10"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_5vl.tdf
-    Info (12023): Found entity 1: lpm_divide_5vl File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/lpm_divide_5vl.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_5vl File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/lpm_divide_5vl.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_7nh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_7nh File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/sign_div_unsign_7nh.tdf Line: 25
+    Info (12023): Found entity 1: sign_div_unsign_7nh File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/sign_div_unsign_7nh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_oke.tdf
-    Info (12023): Found entity 1: alt_u_div_oke File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/alt_u_div_oke.tdf Line: 27
-Info (12130): Elaborated megafunction instantiation "phase_accum:inst6|lpm_mult:Mult0" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 25
-Info (12133): Instantiated megafunction "phase_accum:inst6|lpm_mult:Mult0" with the following parameter: File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 25
+    Info (12023): Found entity 1: alt_u_div_oke File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/alt_u_div_oke.tdf Line: 27
+Info (12130): Elaborated megafunction instantiation "phase_accum:inst6|lpm_mult:Mult0" File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 25
+Info (12133): Instantiated megafunction "phase_accum:inst6|lpm_mult:Mult0" with the following parameter: File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 25
     Info (12134): Parameter "LPM_WIDTHA" = "15"
     Info (12134): Parameter "LPM_WIDTHB" = "10"
     Info (12134): Parameter "LPM_WIDTHP" = "25"
@@ -1992,13 +2005,13 @@ Info (12131): Elaborated megafunction instantiation "phase_accum:inst6|lpm_mult:
 Info (12131): Elaborated megafunction instantiation "phase_accum:inst6|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "phase_accum:inst6|lpm_mult:Mult0" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/multcore.tdf Line: 229
 Info (12131): Elaborated megafunction instantiation "phase_accum:inst6|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]", which is child of megafunction instantiation "phase_accum:inst6|lpm_mult:Mult0" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 78
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_irg.tdf
-    Info (12023): Found entity 1: add_sub_irg File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/add_sub_irg.tdf Line: 23
+    Info (12023): Found entity 1: add_sub_irg File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/add_sub_irg.tdf Line: 23
 Info (12131): Elaborated megafunction instantiation "phase_accum:inst6|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add", which is child of megafunction instantiation "phase_accum:inst6|lpm_mult:Mult0" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 138
 Info (12131): Elaborated megafunction instantiation "phase_accum:inst6|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]", which is child of megafunction instantiation "phase_accum:inst6|lpm_mult:Mult0" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 78
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_drg.tdf
-    Info (12023): Found entity 1: add_sub_drg File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/add_sub_drg.tdf Line: 23
+    Info (12023): Found entity 1: add_sub_drg File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/add_sub_drg.tdf Line: 23
 Info (12131): Elaborated megafunction instantiation "phase_accum:inst6|lpm_mult:Mult0|altshift:external_latency_ffs", which is child of megafunction instantiation "phase_accum:inst6|lpm_mult:Mult0" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_mult.tdf Line: 352
-Info (13000): Registers with preset signals will power-up high File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/decOutput.v Line: 12
+Info (13000): Registers with preset signals will power-up high File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/decOutput.v Line: 12
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "GPIO_3" is stuck at GND
@@ -2012,9 +2025,9 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX5[6]" is stuck at VCC
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
 Info (17016): Found the following redundant logic cells in design
-    Info (17048): Logic cell "decOutput:inst4|lpm_divide:Mod1|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_15_result_int[0]~0" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/alt_u_div_uhe.tdf Line: 62
-    Info (17048): Logic cell "decOutput:inst4|lpm_divide:Div1|lpm_divide_rtl:auto_generated|sign_div_unsign_tlh:divider|alt_u_div_4ie:divider|add_sub_12_result_int[1]~14" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/alt_u_div_4ie.tdf Line: 47
-    Info (17048): Logic cell "decOutput:inst4|lpm_divide:Mod2|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_15_result_int[0]~0" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/alt_u_div_uhe.tdf Line: 62
+    Info (17048): Logic cell "decOutput:inst4|lpm_divide:Mod1|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_15_result_int[0]~0" File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/alt_u_div_uhe.tdf Line: 62
+    Info (17048): Logic cell "decOutput:inst4|lpm_divide:Div1|lpm_divide_rtl:auto_generated|sign_div_unsign_tlh:divider|alt_u_div_4ie:divider|add_sub_12_result_int[1]~14" File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/alt_u_div_4ie.tdf Line: 47
+    Info (17048): Logic cell "decOutput:inst4|lpm_divide:Mod2|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_15_result_int[0]~0" File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/db/alt_u_div_uhe.tdf Line: 62
 Info (13000): Registers with preset signals will power-up high File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/sld_buffer_manager.vhd Line: 356
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (286031): Timing-Driven Synthesis is running on partition "sld_signaltap:auto_signaltap_0"
@@ -2046,26 +2059,26 @@ Warning (20013): Ignored 24 assignments for entity "DE10_LITE_Default" -- entity
     Warning (20014): Assignment for entity set_global_assignment -name ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS ON -entity DE10_LITE_Default -section_id Top was ignored
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_EXTRACT_HARD_BLOCK_NODES ON -entity DE10_LITE_Default -section_id Top was ignored
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity DE10_LITE_Default -section_id Top was ignored
-Info (144001): Generated suppressed messages file C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/output_files/dds_fsk.map.smsg
+Info (144001): Generated suppressed messages file C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/output_files/dds_fsk.map.smsg
 Info (35024): Successfully connected in-system debug instance "auto_signaltap_0" to all 53 required data inputs, trigger inputs, acquisition clocks, and dynamic pins
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1422 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1462 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 18 input pins
     Info (21059): Implemented 62 output pins
-    Info (21061): Implemented 1310 logic cells
+    Info (21061): Implemented 1350 logic cells
     Info (21064): Implemented 30 RAM segments
     Info (21065): Implemented 1 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 52 warnings
     Info: Peak virtual memory: 4908 megabytes
-    Info: Processing ended: Sat Dec 17 23:47:39 2022
-    Info: Elapsed time: 00:00:24
-    Info: Total CPU time (on all processors): 00:00:44
+    Info: Processing ended: Sun Dec 18 15:12:43 2022
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:18
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/output_files/dds_fsk.map.smsg.
+The suppressed messages can be found in C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/output_files/dds_fsk.map.smsg.
 
 
