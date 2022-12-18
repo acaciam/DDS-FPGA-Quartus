@@ -5,7 +5,7 @@ module decOutput(dec, clr, clk, lights);
 	output reg [47:0] lights;
 	
 	
-	always@(posedge clk) begin
+	always@(posedge clk, posedge clr) begin
 		if(clr) begin
 			lights[47:0] <= 48'hffffffffffff;
 		end

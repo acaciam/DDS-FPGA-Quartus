@@ -1,5 +1,5 @@
 Analysis & Synthesis report for dds_fsk
-Thu Dec 15 23:08:28 2022
+Sat Dec 17 23:04:49 2022
 Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 
 
@@ -15,8 +15,8 @@ Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
   9. Analysis & Synthesis IP Cores Summary
- 10. User-Specified and Inferred Latches
- 11. Registers Removed During Synthesis
+ 10. Registers Removed During Synthesis
+ 11. Removed Registers Triggering Further Register Optimizations
  12. General Register Statistics
  13. Inverted Register Statistics
  14. Multiplexer Restructuring Statistics (Restructuring Performed)
@@ -71,15 +71,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Dec 15 23:08:28 2022       ;
+; Analysis & Synthesis Status        ; Successful - Sat Dec 17 23:04:49 2022       ;
 ; Quartus Prime Version              ; 21.1.1 Build 850 06/23/2022 SJ Lite Edition ;
 ; Revision Name                      ; dds_fsk                                     ;
 ; Top-level Entity Name              ; dds_fsk                                     ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 1,574                                       ;
-;     Total combinational functions  ; 1,047                                       ;
-;     Dedicated logic registers      ; 986                                         ;
-; Total registers                    ; 986                                         ;
+; Total logic elements               ; 1,636                                       ;
+;     Total combinational functions  ; 1,087                                       ;
+;     Dedicated logic registers      ; 1,023                                       ;
+; Total registers                    ; 1023                                        ;
 ; Total pins                         ; 76                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 82,944                                      ;
@@ -315,20 +315,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                       ;
 +---------------------------------------------+-----------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 1,574                                                                       ;
+; Estimated Total logic elements              ; 1,636                                                                       ;
 ;                                             ;                                                                             ;
-; Total combinational functions               ; 1047                                                                        ;
+; Total combinational functions               ; 1087                                                                        ;
 ; Logic element usage by number of LUT inputs ;                                                                             ;
-;     -- 4 input functions                    ; 380                                                                         ;
-;     -- 3 input functions                    ; 308                                                                         ;
-;     -- <=2 input functions                  ; 359                                                                         ;
+;     -- 4 input functions                    ; 361                                                                         ;
+;     -- 3 input functions                    ; 332                                                                         ;
+;     -- <=2 input functions                  ; 394                                                                         ;
 ;                                             ;                                                                             ;
 ; Logic elements by mode                      ;                                                                             ;
-;     -- normal mode                          ; 820                                                                         ;
-;     -- arithmetic mode                      ; 227                                                                         ;
+;     -- normal mode                          ; 832                                                                         ;
+;     -- arithmetic mode                      ; 255                                                                         ;
 ;                                             ;                                                                             ;
-; Total registers                             ; 986                                                                         ;
-;     -- Dedicated logic registers            ; 986                                                                         ;
+; Total registers                             ; 1023                                                                        ;
+;     -- Dedicated logic registers            ; 1023                                                                        ;
 ;     -- I/O registers                        ; 0                                                                           ;
 ;                                             ;                                                                             ;
 ; I/O pins                                    ; 76                                                                          ;
@@ -340,8 +340,8 @@ https://fpgasoftware.intel.com/eula.
 ;     -- PLLs                                 ; 1                                                                           ;
 ;                                             ;                                                                             ;
 ; Maximum fan-out node                        ; pll:inst|altpll:altpll_component|pll_altpll:auto_generated|wire_pll1_clk[0] ;
-; Maximum fan-out                             ; 597                                                                         ;
-; Total fan-out                               ; 7355                                                                        ;
+; Maximum fan-out                             ; 634                                                                         ;
+; Total fan-out                               ; 7605                                                                        ;
 ; Average fan-out                             ; 3.26                                                                        ;
 +---------------------------------------------+-----------------------------------------------------------------------------+
 
@@ -351,17 +351,21 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                 ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |dds_fsk                                                                                                                                ; 1047 (1)            ; 986 (0)                   ; 82944       ; 0          ; 0            ; 0       ; 0         ; 76   ; 0            ; 0          ; |dds_fsk                                                                                                                                                                                                                                                                                                                                            ; dds_fsk                           ; work         ;
+; |dds_fsk                                                                                                                                ; 1087 (0)            ; 1023 (0)                  ; 82944       ; 0          ; 0            ; 0       ; 0         ; 76   ; 0            ; 0          ; |dds_fsk                                                                                                                                                                                                                                                                                                                                            ; dds_fsk                           ; work         ;
 ;    |changeFout:inst5|                                                                                                                   ; 8 (8)               ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|changeFout:inst5                                                                                                                                                                                                                                                                                                                           ; changeFout                        ; work         ;
-;    |decOutput:inst4|                                                                                                                    ; 261 (33)            ; 36 (36)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|decOutput:inst4                                                                                                                                                                                                                                                                                                                            ; decOutput                         ; work         ;
+;    |decOutput:inst4|                                                                                                                    ; 335 (28)            ; 40 (40)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|decOutput:inst4                                                                                                                                                                                                                                                                                                                            ; decOutput                         ; work         ;
 ;       |lpm_divide:Div0|                                                                                                                 ; 83 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|decOutput:inst4|lpm_divide:Div0                                                                                                                                                                                                                                                                                                            ; lpm_divide                        ; work         ;
 ;          |lpm_divide_otl:auto_generated|                                                                                                ; 83 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|decOutput:inst4|lpm_divide:Div0|lpm_divide_otl:auto_generated                                                                                                                                                                                                                                                                              ; lpm_divide_otl                    ; work         ;
 ;             |sign_div_unsign_qlh:divider|                                                                                               ; 83 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|decOutput:inst4|lpm_divide:Div0|lpm_divide_otl:auto_generated|sign_div_unsign_qlh:divider                                                                                                                                                                                                                                                  ; sign_div_unsign_qlh               ; work         ;
 ;                |alt_u_div_uhe:divider|                                                                                                  ; 83 (83)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|decOutput:inst4|lpm_divide:Div0|lpm_divide_otl:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider                                                                                                                                                                                                                            ; alt_u_div_uhe                     ; work         ;
-;       |lpm_divide:Div2|                                                                                                                 ; 10 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|decOutput:inst4|lpm_divide:Div2                                                                                                                                                                                                                                                                                                            ; lpm_divide                        ; work         ;
-;          |lpm_divide_5vl:auto_generated|                                                                                                ; 10 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|decOutput:inst4|lpm_divide:Div2|lpm_divide_5vl:auto_generated                                                                                                                                                                                                                                                                              ; lpm_divide_5vl                    ; work         ;
-;             |sign_div_unsign_7nh:divider|                                                                                               ; 10 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|decOutput:inst4|lpm_divide:Div2|lpm_divide_5vl:auto_generated|sign_div_unsign_7nh:divider                                                                                                                                                                                                                                                  ; sign_div_unsign_7nh               ; work         ;
-;                |alt_u_div_oke:divider|                                                                                                  ; 10 (10)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|decOutput:inst4|lpm_divide:Div2|lpm_divide_5vl:auto_generated|sign_div_unsign_7nh:divider|alt_u_div_oke:divider                                                                                                                                                                                                                            ; alt_u_div_oke                     ; work         ;
+;       |lpm_divide:Div1|                                                                                                                 ; 70 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|decOutput:inst4|lpm_divide:Div1                                                                                                                                                                                                                                                                                                            ; lpm_divide                        ; work         ;
+;          |lpm_divide_rtl:auto_generated|                                                                                                ; 70 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|decOutput:inst4|lpm_divide:Div1|lpm_divide_rtl:auto_generated                                                                                                                                                                                                                                                                              ; lpm_divide_rtl                    ; work         ;
+;             |sign_div_unsign_tlh:divider|                                                                                               ; 70 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|decOutput:inst4|lpm_divide:Div1|lpm_divide_rtl:auto_generated|sign_div_unsign_tlh:divider                                                                                                                                                                                                                                                  ; sign_div_unsign_tlh               ; work         ;
+;                |alt_u_div_4ie:divider|                                                                                                  ; 70 (70)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|decOutput:inst4|lpm_divide:Div1|lpm_divide_rtl:auto_generated|sign_div_unsign_tlh:divider|alt_u_div_4ie:divider                                                                                                                                                                                                                            ; alt_u_div_4ie                     ; work         ;
+;       |lpm_divide:Div2|                                                                                                                 ; 9 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|decOutput:inst4|lpm_divide:Div2                                                                                                                                                                                                                                                                                                            ; lpm_divide                        ; work         ;
+;          |lpm_divide_5vl:auto_generated|                                                                                                ; 9 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|decOutput:inst4|lpm_divide:Div2|lpm_divide_5vl:auto_generated                                                                                                                                                                                                                                                                              ; lpm_divide_5vl                    ; work         ;
+;             |sign_div_unsign_7nh:divider|                                                                                               ; 9 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|decOutput:inst4|lpm_divide:Div2|lpm_divide_5vl:auto_generated|sign_div_unsign_7nh:divider                                                                                                                                                                                                                                                  ; sign_div_unsign_7nh               ; work         ;
+;                |alt_u_div_oke:divider|                                                                                                  ; 9 (9)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|decOutput:inst4|lpm_divide:Div2|lpm_divide_5vl:auto_generated|sign_div_unsign_7nh:divider|alt_u_div_oke:divider                                                                                                                                                                                                                            ; alt_u_div_oke                     ; work         ;
 ;       |lpm_divide:Mod0|                                                                                                                 ; 86 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|decOutput:inst4|lpm_divide:Mod0                                                                                                                                                                                                                                                                                                            ; lpm_divide                        ; work         ;
 ;          |lpm_divide_rll:auto_generated|                                                                                                ; 86 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|decOutput:inst4|lpm_divide:Mod0|lpm_divide_rll:auto_generated                                                                                                                                                                                                                                                                              ; lpm_divide_rll                    ; work         ;
 ;             |sign_div_unsign_qlh:divider|                                                                                               ; 86 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|decOutput:inst4|lpm_divide:Mod0|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider                                                                                                                                                                                                                                                  ; sign_div_unsign_qlh               ; work         ;
@@ -370,18 +374,19 @@ https://fpgasoftware.intel.com/eula.
 ;          |lpm_divide_rll:auto_generated|                                                                                                ; 49 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|decOutput:inst4|lpm_divide:Mod1|lpm_divide_rll:auto_generated                                                                                                                                                                                                                                                                              ; lpm_divide_rll                    ; work         ;
 ;             |sign_div_unsign_qlh:divider|                                                                                               ; 49 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|decOutput:inst4|lpm_divide:Mod1|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider                                                                                                                                                                                                                                                  ; sign_div_unsign_qlh               ; work         ;
 ;                |alt_u_div_uhe:divider|                                                                                                  ; 49 (49)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|decOutput:inst4|lpm_divide:Mod1|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider                                                                                                                                                                                                                            ; alt_u_div_uhe                     ; work         ;
+;       |lpm_divide:Mod2|                                                                                                                 ; 10 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|decOutput:inst4|lpm_divide:Mod2                                                                                                                                                                                                                                                                                                            ; lpm_divide                        ; work         ;
+;          |lpm_divide_rll:auto_generated|                                                                                                ; 10 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|decOutput:inst4|lpm_divide:Mod2|lpm_divide_rll:auto_generated                                                                                                                                                                                                                                                                              ; lpm_divide_rll                    ; work         ;
+;             |sign_div_unsign_qlh:divider|                                                                                               ; 10 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|decOutput:inst4|lpm_divide:Mod2|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider                                                                                                                                                                                                                                                  ; sign_div_unsign_qlh               ; work         ;
+;                |alt_u_div_uhe:divider|                                                                                                  ; 10 (10)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|decOutput:inst4|lpm_divide:Mod2|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider                                                                                                                                                                                                                            ; alt_u_div_uhe                     ; work         ;
 ;    |mux_LUT:inst13|                                                                                                                     ; 20 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|mux_LUT:inst13                                                                                                                                                                                                                                                                                                                             ; mux_LUT                           ; work         ;
 ;       |lpm_mux:LPM_MUX_component|                                                                                                       ; 20 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|mux_LUT:inst13|lpm_mux:LPM_MUX_component                                                                                                                                                                                                                                                                                                   ; lpm_mux                           ; work         ;
 ;          |mux_f7c:auto_generated|                                                                                                       ; 20 (20)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|mux_LUT:inst13|lpm_mux:LPM_MUX_component|mux_f7c:auto_generated                                                                                                                                                                                                                                                                            ; mux_f7c                           ; work         ;
-;    |phase_accum:inst6|                                                                                                                  ; 136 (67)            ; 26 (26)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|phase_accum:inst6                                                                                                                                                                                                                                                                                                                          ; phase_accum                       ; work         ;
-;       |lpm_mult:Mult0|                                                                                                                  ; 69 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|phase_accum:inst6|lpm_mult:Mult0                                                                                                                                                                                                                                                                                                           ; lpm_mult                          ; work         ;
-;          |multcore:mult_core|                                                                                                           ; 69 (37)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|phase_accum:inst6|lpm_mult:Mult0|multcore:mult_core                                                                                                                                                                                                                                                                                        ; multcore                          ; work         ;
-;             |mpar_add:padder|                                                                                                           ; 32 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|phase_accum:inst6|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder                                                                                                                                                                                                                                                                        ; mpar_add                          ; work         ;
+;    |phase_accum:inst6|                                                                                                                  ; 103 (49)            ; 59 (59)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|phase_accum:inst6                                                                                                                                                                                                                                                                                                                          ; phase_accum                       ; work         ;
+;       |lpm_mult:Mult0|                                                                                                                  ; 54 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|phase_accum:inst6|lpm_mult:Mult0                                                                                                                                                                                                                                                                                                           ; lpm_mult                          ; work         ;
+;          |multcore:mult_core|                                                                                                           ; 54 (37)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|phase_accum:inst6|lpm_mult:Mult0|multcore:mult_core                                                                                                                                                                                                                                                                                        ; multcore                          ; work         ;
+;             |mpar_add:padder|                                                                                                           ; 17 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|phase_accum:inst6|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder                                                                                                                                                                                                                                                                        ; mpar_add                          ; work         ;
 ;                |lpm_add_sub:adder[0]|                                                                                                   ; 17 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|phase_accum:inst6|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                                                                                                                                                                                                                   ; lpm_add_sub                       ; work         ;
 ;                   |add_sub_irg:auto_generated|                                                                                          ; 17 (17)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|phase_accum:inst6|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_irg:auto_generated                                                                                                                                                                                                                        ; add_sub_irg                       ; work         ;
-;                |mpar_add:sub_par_add|                                                                                                   ; 15 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|phase_accum:inst6|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                                                                                                                                                                                                                   ; mpar_add                          ; work         ;
-;                   |lpm_add_sub:adder[0]|                                                                                                ; 15 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|phase_accum:inst6|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                                                                                                                                                                                                                              ; lpm_add_sub                       ; work         ;
-;                      |add_sub_drg:auto_generated|                                                                                       ; 15 (15)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|phase_accum:inst6|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_drg:auto_generated                                                                                                                                                                                                   ; add_sub_drg                       ; work         ;
 ;    |pll:inst|                                                                                                                           ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|pll:inst                                                                                                                                                                                                                                                                                                                                   ; pll                               ; work         ;
 ;       |altpll:altpll_component|                                                                                                         ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|pll:inst|altpll:altpll_component                                                                                                                                                                                                                                                                                                           ; altpll                            ; work         ;
 ;          |pll_altpll:auto_generated|                                                                                                    ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dds_fsk|pll:inst|altpll:altpll_component|pll_altpll:auto_generated                                                                                                                                                                                                                                                                                 ; pll_altpll                        ; work         ;
@@ -505,58 +510,30 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
 
 
-+----------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                ;
-+-----------------------------------------------------+---------------------+------------------------+
-; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
-+-----------------------------------------------------+---------------------+------------------------+
-; phase_accum:inst6|tuner[24]                         ; KEY[0]              ; yes                    ;
-; phase_accum:inst6|tuner[23]                         ; KEY[0]              ; yes                    ;
-; phase_accum:inst6|tuner[22]                         ; KEY[0]              ; yes                    ;
-; phase_accum:inst6|tuner[21]                         ; KEY[0]              ; yes                    ;
-; phase_accum:inst6|tuner[20]                         ; KEY[0]              ; yes                    ;
-; phase_accum:inst6|tuner[19]                         ; KEY[0]              ; yes                    ;
-; phase_accum:inst6|tuner[18]                         ; KEY[0]              ; yes                    ;
-; phase_accum:inst6|tuner[17]                         ; KEY[0]              ; yes                    ;
-; phase_accum:inst6|tuner[16]                         ; KEY[0]              ; yes                    ;
-; phase_accum:inst6|tuner[15]                         ; KEY[0]              ; yes                    ;
-; phase_accum:inst6|tuner[14]                         ; KEY[0]              ; yes                    ;
-; phase_accum:inst6|tuner[13]                         ; KEY[0]              ; yes                    ;
-; phase_accum:inst6|tuner[12]                         ; KEY[0]              ; yes                    ;
-; phase_accum:inst6|tuner[11]                         ; KEY[0]              ; yes                    ;
-; phase_accum:inst6|tuner[10]                         ; KEY[0]              ; yes                    ;
-; phase_accum:inst6|tuner[9]                          ; KEY[0]              ; yes                    ;
-; phase_accum:inst6|tuner[8]                          ; KEY[0]              ; yes                    ;
-; phase_accum:inst6|tuner[7]                          ; KEY[0]              ; yes                    ;
-; phase_accum:inst6|tuner[6]                          ; KEY[0]              ; yes                    ;
-; phase_accum:inst6|tuner[5]                          ; KEY[0]              ; yes                    ;
-; phase_accum:inst6|tuner[4]                          ; KEY[0]              ; yes                    ;
-; phase_accum:inst6|tuner[3]                          ; KEY[0]              ; yes                    ;
-; phase_accum:inst6|tuner[2]                          ; KEY[0]              ; yes                    ;
-; phase_accum:inst6|decVal[2]                         ; KEY[0]              ; yes                    ;
-; phase_accum:inst6|decVal[1]                         ; KEY[0]              ; yes                    ;
-; phase_accum:inst6|decVal[3]                         ; KEY[0]              ; yes                    ;
-; phase_accum:inst6|decVal[0]                         ; KEY[0]              ; yes                    ;
-; phase_accum:inst6|decVal[8]                         ; KEY[0]              ; yes                    ;
-; phase_accum:inst6|decVal[9]                         ; KEY[0]              ; yes                    ;
-; phase_accum:inst6|decVal[4]                         ; KEY[0]              ; yes                    ;
-; phase_accum:inst6|decVal[5]                         ; KEY[0]              ; yes                    ;
-; phase_accum:inst6|decVal[6]                         ; KEY[0]              ; yes                    ;
-; phase_accum:inst6|decVal[7]                         ; KEY[0]              ; yes                    ;
-; Number of user-specified and inferred latches = 33  ;                     ;                        ;
-+-----------------------------------------------------+---------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
++-------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                  ;
++--------------------------------------------+----------------------------------------+
+; Register name                              ; Reason for Removal                     ;
++--------------------------------------------+----------------------------------------+
+; decOutput:inst4|lights[6,7,14,15,31,39,47] ; Stuck at VCC due to stuck port data_in ;
+; phase_accum:inst6|decVal[10..15]           ; Stuck at GND due to stuck port data_in ;
+; phase_accum:inst6|tuner[0,1,25..27]        ; Stuck at GND due to stuck port data_in ;
+; phase_accum:inst6|fout[0,1]                ; Stuck at GND due to stuck port data_in ;
+; decOutput:inst4|lights[46]                 ; Stuck at VCC due to stuck port data_in ;
+; Total Number of Removed Registers = 21     ;                                        ;
++--------------------------------------------+----------------------------------------+
 
 
-+-----------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                ;
-+------------------------------------------+----------------------------------------+
-; Register name                            ; Reason for Removal                     ;
-+------------------------------------------+----------------------------------------+
-; decOutput:inst4|lights[6,7,14,15,40..47] ; Stuck at VCC due to stuck port data_in ;
-; phase_accum:inst6|fout[0,1]              ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 14   ;                                        ;
-+------------------------------------------+----------------------------------------+
++----------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                          ;
++------------------------------+---------------------------+-----------------------------------------------------------+
+; Register name                ; Reason for Removal        ; Registers Removed due to This Register                    ;
++------------------------------+---------------------------+-----------------------------------------------------------+
+; phase_accum:inst6|decVal[15] ; Stuck at GND              ; phase_accum:inst6|tuner[27], phase_accum:inst6|tuner[26], ;
+;                              ; due to stuck port data_in ; phase_accum:inst6|tuner[25], decOutput:inst4|lights[46]   ;
+; phase_accum:inst6|tuner[1]   ; Stuck at GND              ; phase_accum:inst6|fout[1], phase_accum:inst6|fout[0]      ;
+;                              ; due to stuck port data_in ;                                                           ;
++------------------------------+---------------------------+-----------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -564,12 +541,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 986   ;
+; Total registers                              ; 1023  ;
 ; Number of registers using Synchronous Clear  ; 74    ;
-; Number of registers using Synchronous Load   ; 92    ;
-; Number of registers using Asynchronous Clear ; 316   ;
+; Number of registers using Synchronous Load   ; 68    ;
+; Number of registers using Asynchronous Clear ; 415   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 446   ;
+; Number of registers using Clock Enable       ; 486   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -579,6 +556,46 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 ; Inverted Register                                                                                                                                                                                                                                                                                                               ; Fan out ;
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; decOutput:inst4|lights[5]                                                                                                                                                                                                                                                                                                       ; 1       ;
+; decOutput:inst4|lights[4]                                                                                                                                                                                                                                                                                                       ; 1       ;
+; decOutput:inst4|lights[3]                                                                                                                                                                                                                                                                                                       ; 1       ;
+; decOutput:inst4|lights[2]                                                                                                                                                                                                                                                                                                       ; 1       ;
+; decOutput:inst4|lights[1]                                                                                                                                                                                                                                                                                                       ; 1       ;
+; decOutput:inst4|lights[0]                                                                                                                                                                                                                                                                                                       ; 1       ;
+; decOutput:inst4|lights[13]                                                                                                                                                                                                                                                                                                      ; 1       ;
+; decOutput:inst4|lights[12]                                                                                                                                                                                                                                                                                                      ; 1       ;
+; decOutput:inst4|lights[11]                                                                                                                                                                                                                                                                                                      ; 1       ;
+; decOutput:inst4|lights[10]                                                                                                                                                                                                                                                                                                      ; 1       ;
+; decOutput:inst4|lights[9]                                                                                                                                                                                                                                                                                                       ; 1       ;
+; decOutput:inst4|lights[8]                                                                                                                                                                                                                                                                                                       ; 1       ;
+; decOutput:inst4|lights[23]                                                                                                                                                                                                                                                                                                      ; 2       ;
+; decOutput:inst4|lights[22]                                                                                                                                                                                                                                                                                                      ; 1       ;
+; decOutput:inst4|lights[21]                                                                                                                                                                                                                                                                                                      ; 1       ;
+; decOutput:inst4|lights[20]                                                                                                                                                                                                                                                                                                      ; 1       ;
+; decOutput:inst4|lights[19]                                                                                                                                                                                                                                                                                                      ; 1       ;
+; decOutput:inst4|lights[18]                                                                                                                                                                                                                                                                                                      ; 1       ;
+; decOutput:inst4|lights[17]                                                                                                                                                                                                                                                                                                      ; 1       ;
+; decOutput:inst4|lights[16]                                                                                                                                                                                                                                                                                                      ; 1       ;
+; decOutput:inst4|lights[30]                                                                                                                                                                                                                                                                                                      ; 1       ;
+; decOutput:inst4|lights[29]                                                                                                                                                                                                                                                                                                      ; 1       ;
+; decOutput:inst4|lights[28]                                                                                                                                                                                                                                                                                                      ; 1       ;
+; decOutput:inst4|lights[27]                                                                                                                                                                                                                                                                                                      ; 1       ;
+; decOutput:inst4|lights[26]                                                                                                                                                                                                                                                                                                      ; 1       ;
+; decOutput:inst4|lights[25]                                                                                                                                                                                                                                                                                                      ; 1       ;
+; decOutput:inst4|lights[24]                                                                                                                                                                                                                                                                                                      ; 1       ;
+; decOutput:inst4|lights[38]                                                                                                                                                                                                                                                                                                      ; 1       ;
+; decOutput:inst4|lights[37]                                                                                                                                                                                                                                                                                                      ; 1       ;
+; decOutput:inst4|lights[36]                                                                                                                                                                                                                                                                                                      ; 1       ;
+; decOutput:inst4|lights[35]                                                                                                                                                                                                                                                                                                      ; 1       ;
+; decOutput:inst4|lights[34]                                                                                                                                                                                                                                                                                                      ; 1       ;
+; decOutput:inst4|lights[33]                                                                                                                                                                                                                                                                                                      ; 1       ;
+; decOutput:inst4|lights[32]                                                                                                                                                                                                                                                                                                      ; 1       ;
+; decOutput:inst4|lights[45]                                                                                                                                                                                                                                                                                                      ; 1       ;
+; decOutput:inst4|lights[44]                                                                                                                                                                                                                                                                                                      ; 1       ;
+; decOutput:inst4|lights[43]                                                                                                                                                                                                                                                                                                      ; 1       ;
+; decOutput:inst4|lights[42]                                                                                                                                                                                                                                                                                                      ; 1       ;
+; decOutput:inst4|lights[41]                                                                                                                                                                                                                                                                                                      ; 1       ;
+; decOutput:inst4|lights[40]                                                                                                                                                                                                                                                                                                      ; 1       ;
 ; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[2] ; 2       ;
 ; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[1] ; 3       ;
 ; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|modified_post_count[1]                                                                                                                                                   ; 1       ;
@@ -593,7 +610,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|modified_post_count[10]                                                                                                                                                  ; 1       ;
 ; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|modified_post_count[11]                                                                                                                                                  ; 1       ;
 ; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|modified_post_count[0]                                                                                                                                                   ; 1       ;
-; Total number of inverted registers = 14                                                                                                                                                                                                                                                                                         ;         ;
+; Total number of inverted registers = 54                                                                                                                                                                                                                                                                                         ;         ;
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -602,11 +619,11 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------+
-; 3:1                ; 26 bits   ; 52 LEs        ; 26 LEs               ; 26 LEs                 ; Yes        ; |dds_fsk|phase_accum:inst6|fout[15]                                                     ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |dds_fsk|changeFout:inst5|fout[6]                                                       ;
-; 17:1               ; 7 bits    ; 77 LEs        ; 49 LEs               ; 28 LEs                 ; Yes        ; |dds_fsk|decOutput:inst4|lights[19]                                                     ;
-; 17:1               ; 7 bits    ; 77 LEs        ; 49 LEs               ; 28 LEs                 ; Yes        ; |dds_fsk|decOutput:inst4|lights[30]                                                     ;
-; 27:1               ; 7 bits    ; 126 LEs       ; 98 LEs               ; 28 LEs                 ; Yes        ; |dds_fsk|decOutput:inst4|lights[32]                                                     ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |dds_fsk|changeFout:inst5|fout[1]                                                       ;
+; 16:1               ; 7 bits    ; 70 LEs        ; 42 LEs               ; 28 LEs                 ; Yes        ; |dds_fsk|decOutput:inst4|lights[19]                                                     ;
+; 16:1               ; 7 bits    ; 70 LEs        ; 42 LEs               ; 28 LEs                 ; Yes        ; |dds_fsk|decOutput:inst4|lights[24]                                                     ;
+; 16:1               ; 7 bits    ; 70 LEs        ; 42 LEs               ; 28 LEs                 ; Yes        ; |dds_fsk|decOutput:inst4|lights[38]                                                     ;
+; 16:1               ; 7 bits    ; 70 LEs        ; 42 LEs               ; 28 LEs                 ; Yes        ; |dds_fsk|decOutput:inst4|lights[46]                                                     ;
 ; 3:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |dds_fsk|mux_LUT:inst13|lpm_mux:LPM_MUX_component|mux_f7c:auto_generated|result_node[9] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------+
 
@@ -1498,27 +1515,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 105                         ;
-; cycloneiii_ff         ; 90                          ;
-;     ENA SLD           ; 14                          ;
-;     SCLR              ; 26                          ;
-;     SLD               ; 10                          ;
-;     plain             ; 40                          ;
-; cycloneiii_lcell_comb ; 447                         ;
-;     arith             ; 135                         ;
-;         1 data inputs ; 4                           ;
-;         2 data inputs ; 22                          ;
-;         3 data inputs ; 109                         ;
-;     normal            ; 312                         ;
-;         0 data inputs ; 21                          ;
-;         1 data inputs ; 16                          ;
-;         2 data inputs ; 132                         ;
-;         3 data inputs ; 18                          ;
-;         4 data inputs ; 125                         ;
+; cycloneiii_ff         ; 127                         ;
+;     CLR               ; 19                          ;
+;     CLR SCLR          ; 26                          ;
+;     ENA CLR           ; 54                          ;
+;     plain             ; 28                          ;
+; cycloneiii_lcell_comb ; 529                         ;
+;     arith             ; 163                         ;
+;         1 data inputs ; 6                           ;
+;         2 data inputs ; 30                          ;
+;         3 data inputs ; 127                         ;
+;     normal            ; 366                         ;
+;         0 data inputs ; 26                          ;
+;         1 data inputs ; 45                          ;
+;         2 data inputs ; 165                         ;
+;         3 data inputs ; 24                          ;
+;         4 data inputs ; 106                         ;
 ; cycloneiii_pll        ; 1                           ;
 ; cycloneiii_ram_block  ; 20                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 18.80                       ;
-; Average LUT depth     ; 9.02                        ;
+; Average LUT depth     ; 9.22                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1527,7 +1544,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -1654,7 +1671,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
-    Info: Processing started: Thu Dec 15 23:08:02 2022
+    Info: Processing started: Sat Dec 17 23:04:27 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off dds_fsk_sinTri -c dds_fsk
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -1769,54 +1786,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/pll_
 Info (12128): Elaborating entity "pll_altpll" for hierarchy "pll:inst|altpll:altpll_component|pll_altpll:auto_generated" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altpll.tdf Line: 898
 Info (12128): Elaborating entity "phase_accum" for hierarchy "phase_accum:inst6"
 Warning (10230): Verilog HDL assignment warning at phase_accum.v(7): truncated value with size 64 to match size of target (32) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 7
-Warning (10230): Verilog HDL assignment warning at phase_accum.v(18): truncated value with size 32 to match size of target (16) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 18
-Warning (10230): Verilog HDL assignment warning at phase_accum.v(19): truncated value with size 32 to match size of target (28) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 19
-Warning (10240): Verilog HDL Always Construct warning at phase_accum.v(12): inferring latch(es) for variable "decVal", which holds its previous value in one or more paths through the always construct File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 12
-Warning (10240): Verilog HDL Always Construct warning at phase_accum.v(12): inferring latch(es) for variable "tuner", which holds its previous value in one or more paths through the always construct File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 12
-Info (10041): Inferred latch for "tuner[0]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "tuner[1]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "tuner[2]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "tuner[3]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "tuner[4]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "tuner[5]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "tuner[6]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "tuner[7]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "tuner[8]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "tuner[9]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "tuner[10]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "tuner[11]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "tuner[12]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "tuner[13]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "tuner[14]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "tuner[15]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "tuner[16]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "tuner[17]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "tuner[18]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "tuner[19]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "tuner[20]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "tuner[21]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "tuner[22]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "tuner[23]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "tuner[24]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "tuner[25]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "tuner[26]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "tuner[27]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "decVal[0]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "decVal[1]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "decVal[2]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "decVal[3]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "decVal[4]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "decVal[5]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "decVal[6]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "decVal[7]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "decVal[8]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "decVal[9]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "decVal[10]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "decVal[11]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "decVal[12]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "decVal[13]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "decVal[14]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
-Info (10041): Inferred latch for "decVal[15]" at phase_accum.v(17) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 17
+Warning (10230): Verilog HDL assignment warning at phase_accum.v(24): truncated value with size 32 to match size of target (16) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 24
+Warning (10230): Verilog HDL assignment warning at phase_accum.v(25): truncated value with size 32 to match size of target (28) File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 25
 Info (12128): Elaborating entity "mux_LUT" for hierarchy "mux_LUT:inst13"
 Info (12128): Elaborating entity "lpm_mux" for hierarchy "mux_LUT:inst13|lpm_mux:LPM_MUX_component" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/mux_LUT.v Line: 70
 Info (12130): Elaborated megafunction instantiation "mux_LUT:inst13|lpm_mux:LPM_MUX_component" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/mux_LUT.v Line: 70
@@ -1895,7 +1866,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
     Info (12023): Found entity 1: cmpr_drb File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/cmpr_drb.tdf Line: 23
 Info (12033): Analysis and Synthesis generated Signal Tap or debug node instance "auto_signaltap_0"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2022.12.15.23:08:17 Progress: Loading sld7592f0f3/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2022.12.17.23:04:40 Progress: Loading sld7592f0f3/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -1926,7 +1897,7 @@ Info (278001): Inferred 8 megafunctions from design logic
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "decOutput:inst4|Mod2" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/decOutput.v Line: 44
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "decOutput:inst4|Div2" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/decOutput.v Line: 57
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "decOutput:inst4|Mod3" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/decOutput.v Line: 57
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "phase_accum:inst6|Mult0" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 19
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "phase_accum:inst6|Mult0" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 25
 Info (12130): Elaborated megafunction instantiation "decOutput:inst4|lpm_divide:Mod0" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/decOutput.v Line: 18
 Info (12133): Instantiated megafunction "decOutput:inst4|lpm_divide:Mod0" with the following parameter: File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/decOutput.v Line: 18
     Info (12134): Parameter "LPM_WIDTHN" = "16"
@@ -1981,8 +1952,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_7nh File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/sign_div_unsign_7nh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_oke.tdf
     Info (12023): Found entity 1: alt_u_div_oke File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/alt_u_div_oke.tdf Line: 27
-Info (12130): Elaborated megafunction instantiation "phase_accum:inst6|lpm_mult:Mult0" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 19
-Info (12133): Instantiated megafunction "phase_accum:inst6|lpm_mult:Mult0" with the following parameter: File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 19
+Info (12130): Elaborated megafunction instantiation "phase_accum:inst6|lpm_mult:Mult0" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 25
+Info (12133): Instantiated megafunction "phase_accum:inst6|lpm_mult:Mult0" with the following parameter: File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/phase_accum.v Line: 25
     Info (12134): Parameter "LPM_WIDTHA" = "15"
     Info (12134): Parameter "LPM_WIDTHB" = "10"
     Info (12134): Parameter "LPM_WIDTHP" = "25"
@@ -2002,23 +1973,23 @@ Info (12131): Elaborated megafunction instantiation "phase_accum:inst6|lpm_mult:
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_drg.tdf
     Info (12023): Found entity 1: add_sub_drg File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/add_sub_drg.tdf Line: 23
 Info (12131): Elaborated megafunction instantiation "phase_accum:inst6|lpm_mult:Mult0|altshift:external_latency_ffs", which is child of megafunction instantiation "phase_accum:inst6|lpm_mult:Mult0" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_mult.tdf Line: 352
+Info (13000): Registers with preset signals will power-up high File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/decOutput.v Line: 12
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "GPIO_3" is stuck at GND
     Warning (13410): Pin "HEX0[7]" is stuck at VCC
     Warning (13410): Pin "HEX0[6]" is stuck at VCC
     Warning (13410): Pin "HEX1[7]" is stuck at VCC
     Warning (13410): Pin "HEX1[6]" is stuck at VCC
+    Warning (13410): Pin "HEX3[7]" is stuck at VCC
+    Warning (13410): Pin "HEX4[7]" is stuck at VCC
     Warning (13410): Pin "HEX5[7]" is stuck at VCC
     Warning (13410): Pin "HEX5[6]" is stuck at VCC
-    Warning (13410): Pin "HEX5[5]" is stuck at VCC
-    Warning (13410): Pin "HEX5[4]" is stuck at VCC
-    Warning (13410): Pin "HEX5[3]" is stuck at VCC
-    Warning (13410): Pin "HEX5[2]" is stuck at VCC
-    Warning (13410): Pin "HEX5[1]" is stuck at VCC
-    Warning (13410): Pin "HEX5[0]" is stuck at VCC
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
 Info (17016): Found the following redundant logic cells in design
-    Info (17048): Logic cell "decOutput:inst4|lpm_divide:Mod1|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_15_result_int[0]~10" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/alt_u_div_uhe.tdf Line: 62
+    Info (17048): Logic cell "decOutput:inst4|lpm_divide:Mod1|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_15_result_int[0]~0" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/alt_u_div_uhe.tdf Line: 62
+    Info (17048): Logic cell "decOutput:inst4|lpm_divide:Div1|lpm_divide_rtl:auto_generated|sign_div_unsign_tlh:divider|alt_u_div_4ie:divider|add_sub_12_result_int[1]~14" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/alt_u_div_4ie.tdf Line: 47
+    Info (17048): Logic cell "decOutput:inst4|lpm_divide:Mod2|lpm_divide_rll:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_uhe:divider|add_sub_15_result_int[0]~0" File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/db/alt_u_div_uhe.tdf Line: 62
 Warning (20013): Ignored 24 assignments for entity "DE10_LITE_Default" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity DE10_LITE_Default -section_id Top was ignored
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity DE10_LITE_Default -section_id Top was ignored
@@ -2048,17 +2019,17 @@ Info (144001): Generated suppressed messages file C:/Users/acaci/Fall 2022/SoC/D
 Info (35024): Successfully connected in-system debug instance "auto_signaltap_0" to all 109 required data inputs, trigger inputs, acquisition clocks, and dynamic pins
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1743 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1805 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 18 input pins
     Info (21059): Implemented 62 output pins
-    Info (21061): Implemented 1603 logic cells
+    Info (21061): Implemented 1665 logic cells
     Info (21064): Implemented 58 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 58 warnings
-    Info: Peak virtual memory: 4913 megabytes
-    Info: Processing ended: Thu Dec 15 23:08:28 2022
-    Info: Elapsed time: 00:00:26
-    Info: Total CPU time (on all processors): 00:00:49
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 52 warnings
+    Info: Peak virtual memory: 4909 megabytes
+    Info: Processing ended: Sat Dec 17 23:04:49 2022
+    Info: Elapsed time: 00:00:22
+    Info: Total CPU time (on all processors): 00:00:40
 
 
 +------------------------------------------+
