@@ -1000,11 +1000,6 @@ https://fpgasoftware.intel.com/eula.
 	(bus)
 )
 (connector
-	(text "clk10" (rect 1448 184 1482 203)(font "Intel Clear" ))
-	(pt 1496 200)
-	(pt 1440 200)
-)
-(connector
 	(text "fout1[27..18]" (rect 1420 168 1503 187)(font "Intel Clear" ))
 	(pt 1496 184)
 	(pt 1416 184)
@@ -1072,14 +1067,6 @@ https://fpgasoftware.intel.com/eula.
 )
 (connector
 	(pt 1496 184)
-	(pt 1512 184)
-)
-(connector
-	(pt 1496 200)
-	(pt 1496 184)
-)
-(connector
-	(pt 1496 184)
 	(pt 1496 168)
 	(bus)
 )
@@ -1088,14 +1075,25 @@ https://fpgasoftware.intel.com/eula.
 	(pt 1512 168)
 	(bus)
 )
-(junction (pt 1496 184))
+(connector
+	(text "clk10" (rect 1448 184 1482 203)(font "Intel Clear" ))
+	(pt 1504 200)
+	(pt 1440 200)
+)
+(connector
+	(pt 1504 200)
+	(pt 1504 184)
+)
+(connector
+	(pt 1512 184)
+	(pt 1504 184)
+)
 (text "square wave output" (rect 1992 120 2133 140)(font "Intel Clear" (font_size 8)))
 (text "Output to DAC" (rect 1872 88 1975 108)(font "Intel Clear" (font_size 8)))
 (text "Taking in 50Mhz clock, and outputting 10Mhz clock" (rect 296 352 658 372)(font "Intel Clear" (font_size 8)))
 (text "Reading the switch values, and updating the tuning word " (rect 328 80 731 100)(font "Intel Clear" (font_size 8)))
 (text "to produce the desired output frequecny" (rect 328 104 615 124)(font "Intel Clear" (font_size 8)))
 (text "[11] - SIN Wave" (rect 1728 472 1836 492)(font "Intel Clear" (font_size 8)))
-(text "[10 or 01] - TRI Wave" (rect 1728 496 1876 516)(font "Intel Clear" (font_size 8)))
 (text "[00] - SAWTOOTH Wave" (rect 1728 520 1897 540)(font "Intel Clear" (font_size 8)))
 (text "If  original data between [0-511], dont change the lut[9..0]" (rect 1384 72 1792 92)(font "Intel Clear" (font_size 8)))
 (text "if original data between [512-1023], invert the lut[9..0], \"flip across x-axis\"" (rect 1384 88 1900 108)(font "Intel Clear" (font_size 8)))
@@ -1103,6 +1101,7 @@ https://fpgasoftware.intel.com/eula.
 (text "so the .mif file can be reduced by 1/4" (rect 1280 -64 1537 -44)(font "Intel Clear" (font_size 8)))
 (text "Keep output between [0-255], so the .mif file can be reduced by 1/4" (rect 808 32 1282 52)(font "Intel Clear" (font_size 8)))
 (text "\"Flipping\" output across y-axis for [256-511] and [769-1023]" (rect 808 48 1236 68)(font "Intel Clear" (font_size 8)))
+(text "[ 01] - TRI Wave" (rect 1728 496 1838 516)(font "Intel Clear" (font_size 8)))
 (line (pt 1312 -40)(pt 1224 8))
 (line (pt 1224 8)(pt 1224 -32))
 (line (pt 1224 8)(pt 1272 16))

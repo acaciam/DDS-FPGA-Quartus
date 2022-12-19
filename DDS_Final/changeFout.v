@@ -3,7 +3,7 @@ module changeFout(fin, clk, fout);
 	input clk;
 	output reg [7:0] fout;
 	
-	always @(posedge clk)
+	always @(fin)
 	begin
 		if(fin >= 0 && fin < 256) fout =  fin;
 		else if(fin >= 256 && fin < 512) fout =  511 - fin;
