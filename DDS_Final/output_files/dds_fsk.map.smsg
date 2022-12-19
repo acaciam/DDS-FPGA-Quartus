@@ -1,1 +1,1 @@
-Warning (10268): Verilog HDL information at decOutput.v(8): always construct contains both blocking and non-blocking assignments File: C:/Quartus/SoC/FinalProject/DDS-FPGA-Quartus/DDS_Final/decOutput.v Line: 8
+Warning (10268): Verilog HDL information at decOutput.v(8): always construct contains both blocking and non-blocking assignments File: C:/Users/acaci/Fall 2022/SoC/DDS-FPGA-Quartus/DDS_Final/decOutput.v Line: 8

@@ -66,6 +66,13 @@ https://fpgasoftware.intel.com/eula.
 		(text "decVal[15..0]" (rect 112 43 163 55)(font "Arial" ))
 		(line (pt 184 48)(pt 168 48)(line_width 3))
 	)
+	(port
+		(pt 184 64)
+		(output)
+		(text "out1hz[27..0]" (rect 0 0 48 12)(font "Arial" ))
+		(text "out1hz[27..0]" (rect 115 59 163 71)(font "Arial" ))
+		(line (pt 184 64)(pt 168 64)(line_width 3))
+	)
 	(drawing
 		(rectangle (rect 16 16 168 96)(line_width 1))
 	)

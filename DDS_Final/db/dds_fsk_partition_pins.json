@@ -212,11 +212,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "GPIO_0",
+					"name" : "GPIO_14",
 					"strict" : false
 				},
 				{
-					"name" : "GPIO_1",
+					"name" : "GPIO_15",
 					"strict" : false
 				},
 				{

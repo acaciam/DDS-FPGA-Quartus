@@ -1,6 +1,6 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="90641b501b1c00646eb0"/>
+    <hash md5_digest_80b="ad2c292ee109448a76ea"/>
   </project>
   <file_info>
     <file device="10M50DAF484C7G" path="dds_fsk.sof" usercode="0xFFFFFFFF"/>
@@ -37,7 +37,7 @@
         <parameter name="sld_advanced_trigger_entity" type="unknown" value="basic,1,"/>
         <parameter name="sld_trigger_level_pipeline" type="unknown" value="1"/>
         <parameter name="sld_trigger_pipeline" type="unknown" value="0"/>
-        <parameter name="sld_ram_pipeline" type="unknown" value="1"/>
+        <parameter name="sld_ram_pipeline" type="unknown" value="0"/>
         <parameter name="sld_counter_pipeline" type="unknown" value="0"/>
         <parameter name="sld_enable_advanced_trigger" type="unknown" value="0"/>
         <parameter name="SLD_ADVANCED_TRIGGER_1" type="string" value="NONE"/>
