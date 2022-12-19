@@ -318,7 +318,7 @@ https://fpgasoftware.intel.com/eula.
 	)
 )
 (symbol
-	(rect 296 384 584 560)
+	(rect 296 608 584 784)
 	(text "pll" (rect 137 0 154 19)(font "Arial" (font_size 10)))
 	(text "inst" (rect 8 157 31 172)(font "Arial" ))
 	(port
@@ -782,14 +782,6 @@ https://fpgasoftware.intel.com/eula.
 	(bus)
 )
 (connector
-	(pt 280 480)
-	(pt 296 480)
-)
-(connector
-	(pt 192 456)
-	(pt 296 456)
-)
-(connector
 	(pt 384 216)
 	(pt 384 232)
 )
@@ -812,18 +804,9 @@ https://fpgasoftware.intel.com/eula.
 	(pt 200 520)
 )
 (connector
-	(pt 280 480)
-	(pt 280 520)
-)
-(connector
 	(text "clr" (rect 258 496 273 515)(font "Intel Clear" ))
 	(pt 248 520)
 	(pt 280 520)
-)
-(connector
-	(text "clk10" (rect 618 432 652 451)(font "Intel Clear" ))
-	(pt 584 456)
-	(pt 696 456)
 )
 (connector
 	(text "lights[47..0]" (rect 1418 632 1494 651)(font "Intel Clear" ))
@@ -1087,6 +1070,31 @@ https://fpgasoftware.intel.com/eula.
 (connector
 	(pt 1512 184)
 	(pt 1504 184)
+)
+(connector
+	(pt 280 704)
+	(pt 296 704)
+)
+(connector
+	(pt 288 456)
+	(pt 288 680)
+)
+(connector
+	(pt 192 456)
+	(pt 288 456)
+)
+(connector
+	(pt 288 680)
+	(pt 296 680)
+)
+(connector
+	(pt 280 520)
+	(pt 280 704)
+)
+(connector
+	(text "clk10" (rect 618 656 652 675)(font "Intel Clear" ))
+	(pt 584 680)
+	(pt 696 680)
 )
 (text "square wave output" (rect 1992 120 2133 140)(font "Intel Clear" (font_size 8)))
 (text "Output to DAC" (rect 1872 88 1975 108)(font "Intel Clear" (font_size 8)))
